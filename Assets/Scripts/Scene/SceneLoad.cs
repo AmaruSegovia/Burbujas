@@ -12,10 +12,6 @@ public class SceneLoad : MonoBehaviour
     }
 
     void Update(){
-        
-            if(transitionAnimator!= null){
-                Debug.Log("hay un animador");
-            }
         if(Input.GetKeyDown(KeyCode.Space)){
             LoadNextScene();
         }
