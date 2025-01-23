@@ -20,7 +20,7 @@ public class GestorBebidas : MonoBehaviour
         rigidBodyJugador = GetComponent<Rigidbody2D>();
 
         bebidas.Add(new Vodka(10, 2000, transformJugador));
-        bebidas.Add(new Sidra(10, transformJugador, rigidBodyJugador));
+        bebidas.Add(new Sidra(100, transformJugador, rigidBodyJugador));
         bebidas.Add(new Cerveza());
         ActualizarSprite();
     }
