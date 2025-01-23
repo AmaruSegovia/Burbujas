@@ -102,6 +102,7 @@ GameObject:
   - component: {fileID: 1446062703658893915}
   - component: {fileID: 7928025132116279460}
   - component: {fileID: 8445670135684062618}
+  - component: {fileID: 7211068714445045968}
   m_Layer: 0
   m_Name: Character
   m_TagString: Untagged
@@ -289,9 +290,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jumpForce: 50
-  rayDistance: 0.64
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
   rCircle: 0.23
   posCircle: {x: 0, y: -0.36}
+--- !u!114 &7211068714445045968
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7156892654438087758}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eba10af6150e88d4bbd77ef2e59ccaac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
