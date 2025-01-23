@@ -6,7 +6,6 @@ public class PlayerJump : MonoBehaviour
 {
 
     [SerializeField] private float jumpForce = 5f; // Fuerza del salto
-    [SerializeField] private float rayDistance = 0.2f; // Distancia del Raycast para comprobar si estamos en el suelo
     [SerializeField] private LayerMask groundLayer; // Capa para detectar el suelo
     [SerializeField] private float rCircle;
     [SerializeField] private Vector2 posCircle;

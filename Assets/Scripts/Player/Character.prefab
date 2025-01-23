@@ -288,7 +288,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe071ba8eb2b89f4ea90d258ab7a258e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpForce: 31.2
+  jumpForce: 50
   rayDistance: 0.64
   groundLayer:
     serializedVersion: 2
