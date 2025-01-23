@@ -1,48 +1,47 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    [SerializeField] 
+    private float speed = 5.0f;  // Velocidad máxima
+    [SerializeField] 
+    private float acceleration = 10.0f;  // Qué tan rápido alcanza la velocidad máxima
+    [SerializeField] 
+    private float deceleration = 10.0f;  // Qué tan rápido se detiene
 
-    [SerializeField]
-    private float speed = 5.0f;  // Velocidad m�xima
-
-    [SerializeField]
-    private float acceleration = 10.0f;  // Qu� tan r�pido alcanza la velocidad m�xima
-    [SerializeField]
-    private float deceleration = 10.0f;  // Qu� tan r�pido se detiene
-
-    [SerializeField]
     private Rigidbody2D rb;
-
     private Vector2 movementInput;
     private Vector2 currentVelocity;
+
+    void Start()
+    {
+        rb = GetComponent<Rigidbody2D>(); // Conseguimos el Rigidbody2D del jugador
+    }
 
     void Update()
     {
         // Obtener entrada del jugador
         float horizontalInput = Input.GetAxis("Horizontal");
-        float verticalInput = Input.GetAxis("Vertical");
+        Move(horizontalInput);
 
-        // Almacenar la direcci�n en un vector2
-        movementInput = new Vector2(horizontalInput, verticalInput).normalized;
+        // Almacenar la dirección del movimiento
+        movementInput = new Vector2(horizontalInput, 0).normalized;
     }
 
-    void FixedUpdate()
+    void Move(float horizontalInput)
     {
-        // Si hay movimiento input, aceleramos hacia la velocidad deseada
+        // Si hay movimiento de entrada, aceleramos hacia la velocidad deseada
         if (movementInput != Vector2.zero)
         {
-            currentVelocity = Vector2.MoveTowards(currentVelocity, movementInput * speed, acceleration * Time.fixedDeltaTime);
+            currentVelocity = Vector2.MoveTowards(currentVelocity, movementInput * speed, acceleration * Time.deltaTime);
         }
         else
         {
-            // Si no hay input, desaceleramos
-            currentVelocity = Vector2.MoveTowards(currentVelocity, Vector2.zero, deceleration * Time.fixedDeltaTime);
+            // Si no hay entrada, desaceleramos
+            currentVelocity = Vector2.MoveTowards(currentVelocity, Vector2.zero, deceleration * Time.deltaTime);
         }
 
-        // Aplicar la velocidad al Rigidbody2D
-        rb.linearVelocity = currentVelocity;
+        // Aplicar la velocidad horizontal al Rigidbody2D (sin afectar la velocidad en Y)
+        rb.linearVelocity = new Vector2(currentVelocity.x, rb.linearVelocity.y);
     }
 }
