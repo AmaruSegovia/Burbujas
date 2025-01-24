@@ -14,7 +14,7 @@ public class Vodka : Bebida
     }
 
     public override string Nombre => "Vodka";
-
+    public override string AnimTrigger => "BeberVodka";
 
     public override void Activate()
     {

@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -5,7 +6,7 @@ public class GestorBebidas : MonoBehaviour
 {
     private List<Bebida> bebidas = new List<Bebida>();
     private int indiceBebidaActual = 0;
-    private float tiempoEspera = 1.5f;
+    private float tiempoEspera = 3f;
     private float tiempoUltimaBebidaUsada = -Mathf.Infinity;
 
     [Header("Bebidas UI")]
@@ -14,13 +15,18 @@ public class GestorBebidas : MonoBehaviour
 
     private Transform transformJugador;
     private Rigidbody2D rigidBodyJugador;
+    private Animator animatorJugador;
+
+    [Header("Partículas")]
+    public ParticleSystem sistemaParticulasBurbujas;
     void Start()
     {
         transformJugador = GetComponent<Transform>();
         rigidBodyJugador = GetComponent<Rigidbody2D>();
+        animatorJugador = GetComponent<Animator>(); 
 
         bebidas.Add(new Vodka(10, 2000, transformJugador));
-        bebidas.Add(new Sidra(100, transformJugador, rigidBodyJugador));
+        bebidas.Add(new Sidra(75, transformJugador, rigidBodyJugador, sistemaParticulasBurbujas));
         bebidas.Add(new Cerveza());
         ActualizarSprite();
     }
@@ -71,7 +77,19 @@ public class GestorBebidas : MonoBehaviour
     void TomarBebidaActual()
     {
         bebidas[indiceBebidaActual].Activate();
+
+        string animTrigger = bebidas[indiceBebidaActual].AnimTrigger;
+        if (!string.IsNullOrEmpty(animTrigger) && animatorJugador != null)
+        {
+            animatorJugador.SetTrigger(animTrigger);
+        }
         tiempoUltimaBebidaUsada = Time.time;
+
+        StartCoroutine(DesactivarSpriteConRetraso(0.1f));
+    }
+    IEnumerator DesactivarSpriteConRetraso(float delay)
+    {
+        yield return new WaitForSeconds(delay);
         spriteRendererBebidas.enabled = false;
     }
 

@@ -1,0 +1,824 @@
+fileFormatVersion: 2
+guid: 78e700e3751b8564a8b5a2ba85faee25
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6353188423015019806
+    second: JugadorBebidaSidra_0
+  - first:
+      213: 5527661914750898205
+    second: JugadorBebidaSidra_1
+  - first:
+      213: 8086190643817247983
+    second: JugadorBebidaSidra_2
+  - first:
+      213: -4336583225669251968
+    second: JugadorBebidaSidra_3
+  - first:
+      213: 4449649790897792213
+    second: JugadorBebidaSidra_4
+  - first:
+      213: 2289029558021062585
+    second: JugadorBebidaSidra_5
+  - first:
+      213: 6861282217462716097
+    second: JugadorBebidaSidra_6
+  - first:
+      213: -8730348419764553132
+    second: JugadorBebidaSidra_7
+  - first:
+      213: -1295769926687839880
+    second: JugadorBebidaSidra_8
+  - first:
+      213: 7656322901137575304
+    second: JugadorBebidaSidra_9
+  - first:
+      213: -3937811902031171410
+    second: JugadorBebidaSidra_10
+  - first:
+      213: -391985755220277946
+    second: JugadorBebidaSidra_11
+  - first:
+      213: 3881744556198176702
+    second: JugadorBebidaSidra_12
+  - first:
+      213: 5120267955000891154
+    second: JugadorBebidaSidra_13
+  - first:
+      213: -5187679390469944296
+    second: JugadorBebidaSidra_14
+  - first:
+      213: 8767155416923898144
+    second: JugadorBebidaSidra_15
+  - first:
+      213: -4005491592686264766
+    second: JugadorBebidaSidra_16
+  - first:
+      213: 8889393221679239561
+    second: JugadorBebidaSidra_17
+  - first:
+      213: -1494688068406449682
+    second: JugadorBebidaSidra_18
+  - first:
+      213: -1637200206074206689
+    second: JugadorBebidaSidra_19
+  - first:
+      213: -640301046056133569
+    second: JugadorBebidaSidra_20
+  - first:
+      213: -735827835891037195
+    second: JugadorBebidaSidra_21
+  - first:
+      213: 5091821319034334190
+    second: JugadorBebidaSidra_22
+  - first:
+      213: 3690902973235865684
+    second: JugadorBebidaSidra_23
+  - first:
+      213: -64238033198859759
+    second: JugadorBebidaSidra_24
+  - first:
+      213: -3626062918285004195
+    second: JugadorBebidaSidra_25
+  - first:
+      213: 2293489149944226057
+    second: JugadorBebidaSidra_26
+  - first:
+      213: -8651370604302863448
+    second: JugadorBebidaSidra_27
+  - first:
+      213: 1059243825391897916
+    second: JugadorBebidaSidra_28
+  - first:
+      213: 7782916165185262585
+    second: JugadorBebidaSidra_29
+  - first:
+      213: 2279828603371607438
+    second: JugadorBebidaSidra_30
+  - first:
+      213: 543154335724815336
+    second: JugadorBebidaSidra_31
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: JugadorBebidaSidra_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 150
+        width: 170
+        height: 150
+      alignment: 9
+      pivot: {x: 0.34, y: 0.378}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b9df6301c48a904d8296d896d6423bb
+      internalID: 1220721002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JugadorBebidaSidra_1
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 150
+        width: 170
+        height: 150
+      alignment: 9
+      pivot: {x: 0.34, y: 0.378}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6a522f1d521a5a4e985705a1c5cded0
+      internalID: 1352502024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JugadorBebidaSidra_2
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 150
+        width: 170
+        height: 150
+      alignment: 9
+      pivot: {x: 0.34, y: 0.378}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40c4c238dfebc0c478a6ac381f415b62
+      internalID: -109324677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JugadorBebidaSidra_3
+      rect:
+        serializedVersion: 2
+        x: 510
+        y: 150
+        width: 170
+        height: 150
+      alignment: 9
+      pivot: {x: 0.34, y: 0.378}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45757d59dc275524bbfd51cf1c976101
+      internalID: 1198026423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JugadorBebidaSidra_4
+      rect:
+        serializedVersion: 2
+        x: 680
+        y: 150
+        width: 170
+        height: 150
+      alignment: 9
+      pivot: {x: 0.34, y: 0.378}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a54cb489a755af4468b0662ef4449e5d
+      internalID: -452831559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JugadorBebidaSidra_5
+      rect:
+        serializedVersion: 2
+        x: 850
+        y: 150
+        width: 170
+        height: 150
+      alignment: 9
+      pivot: {x: 0.34, y: 0.378}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: daf8ac3fc07fe6847aa42d928a4fc77c
+      internalID: 652018374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JugadorBebidaSidra_6
+      rect:
+        serializedVersion: 2
+        x: 1020
+        y: 150
+        width: 170
+        height: 150
+      alignment: 9
+      pivot: {x: 0.34, y: 0.378}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a86cc5737e69d8438773595b8995e41
+      internalID: -1430398782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JugadorBebidaSidra_7
+      rect:
+        serializedVersion: 2
+        x: 1190
+        y: 150
+        width: 170
+        height: 150
+      alignment: 9
+      pivot: {x: 0.34, y: 0.378}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 144d0ccf7726c3448bb8f73e932522d5
+      internalID: -1956553605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JugadorBebidaSidra_8
+      rect:
+        serializedVersion: 2
+        x: 1360
+        y: 150
+        width: 170
+        height: 150
+      alignment: 9
+      pivot: {x: 0.34, y: 0.378}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ca1a48d61f4d5b4ca1bfc10af237559
+      internalID: -831744491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JugadorBebidaSidra_9
+      rect:
+        serializedVersion: 2
+        x: 1530
+        y: 150
+        width: 170
+        height: 150
+      alignment: 9
+      pivot: {x: 0.34, y: 0.378}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e88691631e95aab4b83c7ed1581ff4a1
+      internalID: 1895599589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JugadorBebidaSidra_10
+      rect:
+        serializedVersion: 2
+        x: 1700
+        y: 150
+        width: 170
+        height: 150
+      alignment: 9
+      pivot: {x: 0.34, y: 0.378}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ca1d61039020144486b85650a4b7721
+      internalID: 1462063287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JugadorBebidaSidra_11
+      rect:
+        serializedVersion: 2
+        x: 1870
+        y: 150
+        width: 170
+        height: 150
+      alignment: 9
+      pivot: {x: 0.34, y: 0.378}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8d442a006074be4abd4d3369294099f
+      internalID: 1304805612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JugadorBebidaSidra_12
+      rect:
+        serializedVersion: 2
+        x: 2040
+        y: 150
+        width: 170
+        height: 150
+      alignment: 9
+      pivot: {x: 0.34, y: 0.378}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47aa8316b6832274daa9366800ce464e
+      internalID: -498853226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JugadorBebidaSidra_13
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 170
+        height: 150
+      alignment: 9
+      pivot: {x: 0.34, y: 0.378}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5390611b1c0a9d41bb15439dece4cf2
+      internalID: -1730502433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JugadorBebidaSidra_14
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 0
+        width: 170
+        height: 150
+      alignment: 9
+      pivot: {x: 0.34, y: 0.378}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3315fb84ed7d19044a8a000cbaaa60ad
+      internalID: 1638206198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JugadorBebidaSidra_15
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 0
+        width: 170
+        height: 150
+      alignment: 9
+      pivot: {x: 0.34, y: 0.378}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e88957d5e1c308e4dbc17b6a1a236d5c
+      internalID: -1895622640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JugadorBebidaSidra_16
+      rect:
+        serializedVersion: 2
+        x: 510
+        y: 0
+        width: 170
+        height: 150
+      alignment: 9
+      pivot: {x: 0.34, y: 0.378}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca799f9ac6f2cd1438a6bb727ed01a5a
+      internalID: -1441722736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JugadorBebidaSidra_17
+      rect:
+        serializedVersion: 2
+        x: 680
+        y: 0
+        width: 170
+        height: 150
+      alignment: 9
+      pivot: {x: 0.34, y: 0.378}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b31751ba0f54a0d45b10f316c3505f7d
+      internalID: 3007682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JugadorBebidaSidra_18
+      rect:
+        serializedVersion: 2
+        x: 850
+        y: 0
+        width: 170
+        height: 150
+      alignment: 9
+      pivot: {x: 0.34, y: 0.378}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68554929cdc0abd44a784037f6464d78
+      internalID: 1972956313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JugadorBebidaSidra_19
+      rect:
+        serializedVersion: 2
+        x: 1020
+        y: 0
+        width: 170
+        height: 150
+      alignment: 9
+      pivot: {x: 0.34, y: 0.378}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d56bf0a6cf8eabc4ca57baa52a6568fe
+      internalID: 1414984043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JugadorBebidaSidra_20
+      rect:
+        serializedVersion: 2
+        x: 1190
+        y: 0
+        width: 170
+        height: 150
+      alignment: 9
+      pivot: {x: 0.34, y: 0.378}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9fff9bd12a5e954794b968edf7ebe36
+      internalID: -1255017122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JugadorBebidaSidra_21
+      rect:
+        serializedVersion: 2
+        x: 1360
+        y: 0
+        width: 170
+        height: 150
+      alignment: 9
+      pivot: {x: 0.34, y: 0.378}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0e1b9d6bf1331646b2261d7ffbba9df
+      internalID: -1868559914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JugadorBebidaSidra_22
+      rect:
+        serializedVersion: 2
+        x: 1530
+        y: 0
+        width: 170
+        height: 150
+      alignment: 9
+      pivot: {x: 0.34, y: 0.378}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93c7954ee4a1b194b84ec67c6f959510
+      internalID: 642484770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JugadorBebidaSidra_23
+      rect:
+        serializedVersion: 2
+        x: 1700
+        y: 0
+        width: 170
+        height: 150
+      alignment: 9
+      pivot: {x: 0.34, y: 0.378}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1b8218f6894ed64f89b13d664e40703
+      internalID: 1937575759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JugadorBebidaSidra_24
+      rect:
+        serializedVersion: 2
+        x: 1870
+        y: 0
+        width: 170
+        height: 150
+      alignment: 9
+      pivot: {x: 0.34, y: 0.378}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2bacff6260265a446a17d5e5d686d5d4
+      internalID: -1391944545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JugadorBebidaSidra_25
+      rect:
+        serializedVersion: 2
+        x: 2040
+        y: 0
+        width: 170
+        height: 150
+      alignment: 9
+      pivot: {x: 0.34, y: 0.378}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2216aa15c0196284794ea1b02cb2df0f
+      internalID: 931641303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 40fea36172b4d954ea9e9b45f80fab80
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      JugadorBebidaSidra_0: 1220721002
+      JugadorBebidaSidra_1: 1352502024
+      JugadorBebidaSidra_10: 1462063287
+      JugadorBebidaSidra_11: 1304805612
+      JugadorBebidaSidra_12: -498853226
+      JugadorBebidaSidra_13: -1730502433
+      JugadorBebidaSidra_14: 1638206198
+      JugadorBebidaSidra_15: -1895622640
+      JugadorBebidaSidra_16: -1441722736
+      JugadorBebidaSidra_17: 3007682
+      JugadorBebidaSidra_18: 1972956313
+      JugadorBebidaSidra_19: 1414984043
+      JugadorBebidaSidra_2: -109324677
+      JugadorBebidaSidra_20: -1255017122
+      JugadorBebidaSidra_21: -1868559914
+      JugadorBebidaSidra_22: 642484770
+      JugadorBebidaSidra_23: 1937575759
+      JugadorBebidaSidra_24: -1391944545
+      JugadorBebidaSidra_25: 931641303
+      JugadorBebidaSidra_3: 1198026423
+      JugadorBebidaSidra_4: -452831559
+      JugadorBebidaSidra_5: 652018374
+      JugadorBebidaSidra_6: -1430398782
+      JugadorBebidaSidra_7: -1956553605
+      JugadorBebidaSidra_8: -831744491
+      JugadorBebidaSidra_9: 1895599589
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
