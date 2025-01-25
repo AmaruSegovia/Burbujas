@@ -23,7 +23,7 @@ public class Play_Video : MonoBehaviour
         // Configura los videos para que no se reproduzcan en loop
         foreach (var video in videos)
         {
-            video.isLooping = false;
+            video.isLooping = true;
             video.gameObject.SetActive(false); // Asegúrate de que todos los videos estén inicialmente ocultos
         }
 
@@ -42,19 +42,19 @@ public class Play_Video : MonoBehaviour
         // Detiene el video anterior, si hay uno
         if (currentVideoIndex > 0)
         {
-            videos[currentVideoIndex - 1].Stop();
-            videos[currentVideoIndex - 1].gameObject.SetActive(false);
+            videos[currentVideoIndex - 1].Pause();  // Pausa el video actual
+            videos[currentVideoIndex - 1].gameObject.SetActive(false); // Oculta el video actual
         }
 
         // Reproduce el video actual
         videos[currentVideoIndex].gameObject.SetActive(true); // Muestra el video
         videos[currentVideoIndex].Play(); // Reproduce el video
 
+        // Establece el siguiente video para que se reproduzca después del tiempo correspondiente
+        Invoke(nameof(PlayNextVideo), videoDurations[currentVideoIndex]); // Llama al siguiente video después del tiempo de duración
+
         // Incrementa el índice para el siguiente video
         currentVideoIndex++;
-
-        // Establece el siguiente video para que se reproduzca después del tiempo correspondiente
-        Invoke(nameof(PlayNextVideo), videoDurations[currentVideoIndex - 1]); // Llama al siguiente video después del tiempo de duración
     }
 
     void GoToGameScene()
