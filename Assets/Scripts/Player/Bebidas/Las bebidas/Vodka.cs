@@ -6,12 +6,13 @@ public class Vodka : Bebida
     private float radioExplosion;
     private float fuerzaExplosion;
     private Transform playerTransform;
-
-    public Vodka(float radio, float fuerza, Transform player)
+    private ParticleSystem sistemaParticulasExplosion;
+    public Vodka(float radio, float fuerza, Transform player, ParticleSystem sistemaParticulasExplosion)
     {
         this.radioExplosion = radio;
         this.fuerzaExplosion = fuerza;
         this.playerTransform = player;
+        this.sistemaParticulasExplosion = sistemaParticulasExplosion;
     }
 
     public override string Nombre => "Vodka";
@@ -44,5 +45,7 @@ public class Vodka : Bebida
                 rb2D.AddForce(direccion * fuerzaFinal);
             }
         }
+        sistemaParticulasExplosion.Play();
     }
 }
+

@@ -18,15 +18,16 @@ public class GestorBebidas : MonoBehaviour
     private Animator animatorJugador;
 
     [Header("Partículas")]
-    public ParticleSystem sistemaParticulasBurbujas;
+    public ParticleSystem sistemaParticulasBurbujasSidra;
+    public ParticleSystem particulasCerveza;
     void Start()
     {
         transformJugador = GetComponent<Transform>();
         rigidBodyJugador = GetComponent<Rigidbody2D>();
         animatorJugador = GetComponent<Animator>(); 
 
-        bebidas.Add(new Vodka(10, 2000, transformJugador));
-        bebidas.Add(new Sidra(75, transformJugador, rigidBodyJugador, sistemaParticulasBurbujas));
+        bebidas.Add(new Vodka(8, 5000, transformJugador, particulasCerveza));
+        bebidas.Add(new Sidra(75, transformJugador, rigidBodyJugador, sistemaParticulasBurbujasSidra));
         bebidas.Add(new Cerveza());
         ActualizarSprite();
     }
@@ -50,7 +51,7 @@ public class GestorBebidas : MonoBehaviour
             }
             else
             {
-                Debug.Log($"Debes esperar {tiempoEspera - (Time.time - tiempoUltimaBebidaUsada):F2} segundos para tomar otra bebida");
+                Debug.Log($"Debes esperar {tiempoEspera - (Time.time - tiempoUltimaBebidaUsada):F2} segundos para tomar otra bebida"); // :V
             }
         }
 

@@ -9,7 +9,7 @@ public class CameraFollow : MonoBehaviour
     void LateUpdate()
     {
         // Calculamos la posición deseada de la cámara (sin mover el eje Z)
-        Vector3 desiredPosition = new Vector3(player.position.x, player.position.y, transform.position.z) + offset;
+        Vector3 desiredPosition = new Vector3(player.position.x, -0.17f, transform.position.z) + offset;
         
         // Suavizamos el movimiento de la cámara hacia la posición deseada
         Vector3 smoothedPosition = Vector3.Lerp(transform.position, desiredPosition, smoothSpeed);
