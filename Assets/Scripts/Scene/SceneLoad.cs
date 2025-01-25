@@ -38,6 +38,16 @@ public class SceneLoad : MonoBehaviour
         StartCoroutine(LoadingScene(index));
     }
 
+    public void LoadAnimation()
+    {
+        StartCoroutine(PlayAnimation());
+    }
+
+    public IEnumerator PlayAnimation() {
+        transitionAnimator.SetTrigger("startBarrido");
+        yield return 0;
+    }
+
     public void LoadPreviousScene (){ // Cargar la escena anterior con respecto a la actual
         int currentScene = SceneManager.GetActiveScene().buildIndex;
         int previousScene = currentScene - 1;

@@ -16,8 +16,9 @@ public class AlcoholBar : MonoBehaviour
     [SerializeField] private float tiempoParaQuitarBurbuja;
     [SerializeField] private float tiempoParaAgregarBurbuja;
 
-    [SerializeField] private int minutes;
+    [SerializeField] private float timeContador;
     [SerializeField] private TextMeshProUGUI countDownText;
+    [SerializeField] private TextMeshProUGUI mensajeText;
     private bool isCountdownActive = false; // Verifica si el contador está activo
 
     void Awake()
@@ -46,6 +47,12 @@ public class AlcoholBar : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.F1))
         {
             PerderBubble();
+        }
+
+        // Con espacio, quita 1 burbuja ( para depurar)
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            StartCoroutine(AgregarBurbujas(6));
         }
         // Codigo para agregar burbujas desde otro script
         // StartCoroutine(AlcoholBar.Instance.AgregarBurbujas(4));
@@ -104,6 +111,7 @@ public class AlcoholBar : MonoBehaviour
         if (bubblesCant < MaxBubbles)
         {
             int newBubbles = Mathf.Min(bubblesCant + cantidad, MaxBubbles);
+            yield return new WaitForSeconds(1f);
             for (int i = bubblesCant; i < newBubbles; i++)
             {
                 yield return new WaitForSeconds(tiempoParaAgregarBurbuja);
@@ -130,29 +138,35 @@ public class AlcoholBar : MonoBehaviour
     private IEnumerator CountdownToGameOver()
     {
         isCountdownActive = true;
-        int countdownTime = minutes ; // *60
+        float countdownTime = timeContador ;
 
-        while (countdownTime > 0)
+        while (countdownTime >= 0)
         {
-            // Calcula minutos y segundos
-            int minutes = countdownTime / 60;
-            int seconds = countdownTime % 60;
+            // Calcula segundos y milisegundos
+            int seconds = Mathf.FloorToInt(countdownTime);
+            int milliseconds = Mathf.FloorToInt((countdownTime % 1f) * 1000f);
 
             // Actualiza el texto del contador
             if (countDownText != null)
             {
-                countDownText.text = $" {minutes:D2}:{seconds:D2}";
+                countDownText.text = $"{seconds:D2}:{milliseconds:D3}";
             }
 
             // Espera un segundo antes de decrementar
-            yield return new WaitForSeconds(1f);
-            countdownTime--;
+            yield return null;
+            countdownTime -= Time.deltaTime;
+        }
+
+        if (countDownText != null)
+        {
+            countDownText.text = "00:000";
         }
 
         // Cuando el tiempo llega a 0, cargar la escena de GameOver
         if (countDownText != null)
         {
-            countDownText.text = "Tiempo Fuera!";
+            mensajeText.gameObject.SetActive(true);
+            yield return new WaitForSecondsRealtime(4f);
         }
 
         SceneManager.LoadScene("GameOver");
