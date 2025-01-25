@@ -21,7 +21,7 @@ public class Play_Video : MonoBehaviour
             return;
         }
 
-        // Configura los videos para que no se reproduzcan en loop
+        // Configura los videos
         foreach (var video in videos)
         {
             video.isLooping = true;
@@ -43,12 +43,6 @@ public class Play_Video : MonoBehaviour
 
     IEnumerator PlayNextVideo()
     {
-        if (currentVideoIndex >= videos.Length) // Si ya no hay mas videos, cargar la siguiente escena
-        {
-            GoToGameScene();
-            yield break;
-        }
-
         // Detiener el video anterior, si hay uno
         if (currentVideoIndex > 0)
         {
@@ -62,22 +56,22 @@ public class Play_Video : MonoBehaviour
         // Reproducir el video actual
         videos[currentVideoIndex].gameObject.SetActive(true); // Mostrar el video
         videos[currentVideoIndex].Play(); // Reproducir el video
+        Debug.Log("esperar el tiempo");
 
         // Esperar la duración del video actual
         yield return new WaitForSeconds(videoDurations[currentVideoIndex]);
 
+        Debug.Log("tiempo terminado");
         // Incrementa el índice para el siguiente video
         currentVideoIndex++;
 
-        // Si hay más videos, continúa con la siguiente llamada
-        if (currentVideoIndex < videos.Length)
+        if (currentVideoIndex >= videos.Length) // Si ya no hay mas videos, cargar la siguiente escena
         {
-            StartCoroutine(PlayNextVideo());
+            GoToGameScene();
         }
         else
         {
-            // Si ya no hay más videos, llama a la función para cargar la escena
-            GoToGameScene();
+            yield return StartCoroutine(PlayNextVideo());
         }
     }
 
