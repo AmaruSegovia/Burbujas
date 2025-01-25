@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class Vodka : Bebida
@@ -6,7 +7,7 @@ public class Vodka : Bebida
     private float fuerzaExplosion;
     private Transform playerTransform;
 
-    public Vodka( float radio, float fuerza, Transform player)
+    public Vodka(float radio, float fuerza, Transform player)
     {
         this.radioExplosion = radio;
         this.fuerzaExplosion = fuerza;
@@ -19,7 +20,14 @@ public class Vodka : Bebida
     public override void Activate()
     {
         Debug.Log("Oh no hermano");
-        Explosion();
+
+        playerTransform.GetComponent<MonoBehaviour>().StartCoroutine(DelayExplosion());
+    }
+
+    private IEnumerator DelayExplosion()
+    {
+        yield return new WaitForSeconds(2f);
+        Explosion(); 
     }
 
     private void Explosion()

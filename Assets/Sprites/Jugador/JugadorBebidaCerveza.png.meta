@@ -1,0 +1,943 @@
+fileFormatVersion: 2
+guid: 04178007a92b33145a349468e5f68cba
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5708429470185127836
+    second: JugadorBebidaCerveza_0
+  - first:
+      213: -7545117186151519270
+    second: JugadorBebidaCerveza_1
+  - first:
+      213: 694292221638715567
+    second: JugadorBebidaCerveza_2
+  - first:
+      213: 1542524913254579264
+    second: JugadorBebidaCerveza_3
+  - first:
+      213: -4482176131820780464
+    second: JugadorBebidaCerveza_4
+  - first:
+      213: 5859532138227707462
+    second: JugadorBebidaCerveza_5
+  - first:
+      213: 7528669004520547927
+    second: JugadorBebidaCerveza_6
+  - first:
+      213: 6819553364689296712
+    second: JugadorBebidaCerveza_7
+  - first:
+      213: -2006349993081745584
+    second: JugadorBebidaCerveza_8
+  - first:
+      213: 628614997706909049
+    second: JugadorBebidaCerveza_9
+  - first:
+      213: -4435985952443530045
+    second: JugadorBebidaCerveza_10
+  - first:
+      213: 6276212310827060743
+    second: JugadorBebidaCerveza_11
+  - first:
+      213: 6661736369434167147
+    second: JugadorBebidaCerveza_12
+  - first:
+      213: 7542614336393133079
+    second: JugadorBebidaCerveza_13
+  - first:
+      213: 5274644561712944360
+    second: JugadorBebidaCerveza_14
+  - first:
+      213: 7322124982915144602
+    second: JugadorBebidaCerveza_15
+  - first:
+      213: -6656135795837678750
+    second: JugadorBebidaCerveza_16
+  - first:
+      213: -3631871113725010922
+    second: JugadorBebidaCerveza_17
+  - first:
+      213: -1419218745190113686
+    second: JugadorBebidaCerveza_18
+  - first:
+      213: 1329286141888032287
+    second: JugadorBebidaCerveza_19
+  - first:
+      213: 1066763201534704778
+    second: JugadorBebidaCerveza_20
+  - first:
+      213: -5939763119323909254
+    second: JugadorBebidaCerveza_21
+  - first:
+      213: -1010466568619128615
+    second: JugadorBebidaCerveza_22
+  - first:
+      213: -2110880871850666386
+    second: JugadorBebidaCerveza_23
+  - first:
+      213: -6293540292782927793
+    second: JugadorBebidaCerveza_24
+  - first:
+      213: 6016404343453820557
+    second: JugadorBebidaCerveza_25
+  - first:
+      213: -2701596203364636292
+    second: JugadorBebidaCerveza_26
+  - first:
+      213: 6289696163450301076
+    second: JugadorBebidaCerveza_27
+  - first:
+      213: 3113838217538228224
+    second: JugadorBebidaCerveza_28
+  - first:
+      213: -8349564058043458540
+    second: JugadorBebidaCerveza_29
+  - first:
+      213: -6016003660704773933
+    second: JugadorBebidaCerveza_30
+  - first:
+      213: -3771718006444944707
+    second: JugadorBebidaCerveza_31
+  - first:
+      213: 836253747689600096
+    second: JugadorBebidaCerveza_32
+  - first:
+      213: -1100448663608537376
+    second: JugadorBebidaCerveza_33
+  - first:
+      213: -2320428465882485887
+    second: JugadorBebidaCerveza_34
+  - first:
+      213: 7145436307324239266
+    second: JugadorBebidaCerveza_35
+  - first:
+      213: -3473210176196327055
+    second: JugadorBebidaCerveza_36
+  - first:
+      213: -3943622728087901576
+    second: JugadorBebidaCerveza_37
+  - first:
+      213: 3462391014587008655
+    second: JugadorBebidaCerveza_38
+  - first:
+      213: -3342131538085064608
+    second: JugadorBebidaCerveza_39
+  - first:
+      213: 3091482318280329714
+    second: JugadorBebidaCerveza_40
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: JugadorBebidaCerveza_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 750
+        width: 170
+        height: 150
+      alignment: 9
+      pivot: {x: 0.34, y: 0.378}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f50ba0d5cbc875243b3985d12c3ec03b
+      internalID: -1888230126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JugadorBebidaCerveza_1
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 750
+        width: 170
+        height: 150
+      alignment: 9
+      pivot: {x: 0.34, y: 0.378}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2055e7604421a2f43885762f95624c7b
+      internalID: -750116776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JugadorBebidaCerveza_2
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 750
+        width: 170
+        height: 150
+      alignment: 9
+      pivot: {x: 0.34, y: 0.378}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38be6530b0bc3bf4990541e2d882d660
+      internalID: 1212003436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JugadorBebidaCerveza_3
+      rect:
+        serializedVersion: 2
+        x: 510
+        y: 750
+        width: 170
+        height: 150
+      alignment: 9
+      pivot: {x: 0.34, y: 0.378}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e6d3fc12382052488629ff530182203
+      internalID: -1089183212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JugadorBebidaCerveza_4
+      rect:
+        serializedVersion: 2
+        x: 680
+        y: 750
+        width: 170
+        height: 150
+      alignment: 9
+      pivot: {x: 0.34, y: 0.378}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a288ed1afe913e4084f056997bfbb1b
+      internalID: -1372643909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JugadorBebidaCerveza_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 600
+        width: 170
+        height: 150
+      alignment: 9
+      pivot: {x: 0.34, y: 0.378}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f199b5c4e1ec21e4383cd54a70025ae1
+      internalID: 1720825765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JugadorBebidaCerveza_6
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 600
+        width: 170
+        height: 150
+      alignment: 9
+      pivot: {x: 0.34, y: 0.378}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2d830beca13184429042503ee46e2cf
+      internalID: 2080057523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JugadorBebidaCerveza_7
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 600
+        width: 170
+        height: 150
+      alignment: 9
+      pivot: {x: 0.34, y: 0.378}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f46815acafa0a0249a9477b26cb1945c
+      internalID: 605463898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JugadorBebidaCerveza_8
+      rect:
+        serializedVersion: 2
+        x: 510
+        y: 600
+        width: 170
+        height: 150
+      alignment: 9
+      pivot: {x: 0.34, y: 0.378}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d01c2a986b156b4abaf4d58157dd902
+      internalID: -1943305314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JugadorBebidaCerveza_9
+      rect:
+        serializedVersion: 2
+        x: 680
+        y: 600
+        width: 170
+        height: 150
+      alignment: 9
+      pivot: {x: 0.34, y: 0.378}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 167995d66968e3a40a94d9563eee58b7
+      internalID: -1404918416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JugadorBebidaCerveza_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 450
+        width: 170
+        height: 150
+      alignment: 9
+      pivot: {x: 0.34, y: 0.378}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e73b41a3cc25ad4e98a02a88b77809e
+      internalID: 5703212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JugadorBebidaCerveza_11
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 450
+        width: 170
+        height: 150
+      alignment: 9
+      pivot: {x: 0.34, y: 0.378}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 864e081df95d79a4f81663caf13c3d4a
+      internalID: -2102428021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JugadorBebidaCerveza_12
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 450
+        width: 170
+        height: 150
+      alignment: 9
+      pivot: {x: 0.34, y: 0.378}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 190e263554c86d146b42525308e8c59a
+      internalID: -536014282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JugadorBebidaCerveza_13
+      rect:
+        serializedVersion: 2
+        x: 510
+        y: 450
+        width: 170
+        height: 150
+      alignment: 9
+      pivot: {x: 0.34, y: 0.378}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62074cefcd71eca49abd2b1fd0b4e96d
+      internalID: 2031699018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JugadorBebidaCerveza_14
+      rect:
+        serializedVersion: 2
+        x: 680
+        y: 450
+        width: 170
+        height: 150
+      alignment: 9
+      pivot: {x: 0.34, y: 0.378}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 342ddd398459aad4783213bb1072df62
+      internalID: 1178789525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JugadorBebidaCerveza_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 300
+        width: 170
+        height: 150
+      alignment: 9
+      pivot: {x: 0.34, y: 0.378}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fc5486c444c7734db3631f7d3e4f392
+      internalID: 1541851582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JugadorBebidaCerveza_16
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 300
+        width: 170
+        height: 150
+      alignment: 9
+      pivot: {x: 0.34, y: 0.378}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86fba732b90e6934097c0596ae08ac11
+      internalID: 1582611985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JugadorBebidaCerveza_17
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 300
+        width: 170
+        height: 150
+      alignment: 9
+      pivot: {x: 0.34, y: 0.378}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f7b59b907ae0654e9133a48ac2cbefc
+      internalID: -106695242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JugadorBebidaCerveza_18
+      rect:
+        serializedVersion: 2
+        x: 510
+        y: 300
+        width: 170
+        height: 150
+      alignment: 9
+      pivot: {x: 0.34, y: 0.378}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 682afd3dde5fe5f4baa06e712e9ddc28
+      internalID: -26604514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JugadorBebidaCerveza_19
+      rect:
+        serializedVersion: 2
+        x: 678
+        y: 300
+        width: 170
+        height: 150
+      alignment: 9
+      pivot: {x: 0.34, y: 0.378}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 317a51c171344184fb5d1cec74d5bf1b
+      internalID: -1157522412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JugadorBebidaCerveza_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 150
+        width: 170
+        height: 150
+      alignment: 9
+      pivot: {x: 0.34, y: 0.378}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f219833b02305ff44b14298ba597f02d
+      internalID: -409142931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JugadorBebidaCerveza_21
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 150
+        width: 170
+        height: 150
+      alignment: 9
+      pivot: {x: 0.34, y: 0.378}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8308fcd62a7a8844e8ddd117d0720c99
+      internalID: 1634384257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JugadorBebidaCerveza_22
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 150
+        width: 170
+        height: 150
+      alignment: 9
+      pivot: {x: 0.34, y: 0.378}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b582d38ac3193c345be55ebab5bfd66b
+      internalID: 395894801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JugadorBebidaCerveza_23
+      rect:
+        serializedVersion: 2
+        x: 510
+        y: 150
+        width: 170
+        height: 150
+      alignment: 9
+      pivot: {x: 0.34, y: 0.378}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bef45a0a94fe6384d95a7c6cf6c1dbbc
+      internalID: -379233992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JugadorBebidaCerveza_24
+      rect:
+        serializedVersion: 2
+        x: 680
+        y: 151
+        width: 170
+        height: 150
+      alignment: 9
+      pivot: {x: 0.34, y: 0.378}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1721dea66fce84749afc5b51a4dc6d39
+      internalID: 642482020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JugadorBebidaCerveza_25
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 170
+        height: 150
+      alignment: 9
+      pivot: {x: 0.34, y: 0.378}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 149aa9e1891394a41803940589dd8d5e
+      internalID: 528909960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JugadorBebidaCerveza_26
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 0
+        width: 170
+        height: 150
+      alignment: 9
+      pivot: {x: 0.34, y: 0.378}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77aae658e917e234c930e51d6c50e4b9
+      internalID: 318141935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JugadorBebidaCerveza_27
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 0
+        width: 170
+        height: 150
+      alignment: 9
+      pivot: {x: 0.34, y: 0.378}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 809db6d16af49d54aab04b5e20079b67
+      internalID: 1724775214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JugadorBebidaCerveza_28
+      rect:
+        serializedVersion: 2
+        x: 510
+        y: 0
+        width: 170
+        height: 150
+      alignment: 9
+      pivot: {x: 0.34, y: 0.378}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d75a27f4418efbd41840130ab2a64361
+      internalID: -337474973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JugadorBebidaCerveza_29
+      rect:
+        serializedVersion: 2
+        x: 680
+        y: 0
+        width: 170
+        height: 150
+      alignment: 9
+      pivot: {x: 0.34, y: 0.378}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3551fae8dd7c0204881ea09f449a7329
+      internalID: -16033626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 83f5c38390220f94fa60de823e10dfe5
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      JugadorBebidaCerveza_0: -1888230126
+      JugadorBebidaCerveza_1: -750116776
+      JugadorBebidaCerveza_10: 5703212
+      JugadorBebidaCerveza_11: -2102428021
+      JugadorBebidaCerveza_12: -536014282
+      JugadorBebidaCerveza_13: 2031699018
+      JugadorBebidaCerveza_14: 1178789525
+      JugadorBebidaCerveza_15: 1541851582
+      JugadorBebidaCerveza_16: 1582611985
+      JugadorBebidaCerveza_17: -106695242
+      JugadorBebidaCerveza_18: -26604514
+      JugadorBebidaCerveza_19: -1157522412
+      JugadorBebidaCerveza_2: 1212003436
+      JugadorBebidaCerveza_20: -409142931
+      JugadorBebidaCerveza_21: 1634384257
+      JugadorBebidaCerveza_22: 395894801
+      JugadorBebidaCerveza_23: -379233992
+      JugadorBebidaCerveza_24: 642482020
+      JugadorBebidaCerveza_25: 528909960
+      JugadorBebidaCerveza_26: 318141935
+      JugadorBebidaCerveza_27: 1724775214
+      JugadorBebidaCerveza_28: -337474973
+      JugadorBebidaCerveza_29: -16033626
+      JugadorBebidaCerveza_3: -1089183212
+      JugadorBebidaCerveza_4: -1372643909
+      JugadorBebidaCerveza_5: 1720825765
+      JugadorBebidaCerveza_6: 2080057523
+      JugadorBebidaCerveza_7: 605463898
+      JugadorBebidaCerveza_8: -1943305314
+      JugadorBebidaCerveza_9: -1404918416
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
