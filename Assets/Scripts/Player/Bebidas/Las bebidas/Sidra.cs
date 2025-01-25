@@ -25,7 +25,7 @@ public class Sidra : Bebida
     }
 
     public override void alcoholDrink(){
-        AlcoholBar.Instance.beber(3);
+        AlcoholBar.Instance.beber(1);
     }
 
     private IEnumerator ApplyBoost()

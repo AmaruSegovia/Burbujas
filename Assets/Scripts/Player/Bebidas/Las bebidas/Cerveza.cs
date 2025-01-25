@@ -8,6 +8,6 @@ public class Cerveza : Bebida
         Debug.Log("A�adir burbuja protectora aqui D:");
     }
     public override void alcoholDrink(){
-        AlcoholBar.Instance.beber(2);
+        AlcoholBar.Instance.beber(1);
     }
 }
