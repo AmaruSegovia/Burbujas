@@ -663,8 +663,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 669446315}
-  - {fileID: 1015242565}
+  - {fileID: 1751428581}
   m_Father: {fileID: 1053019754}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
@@ -1237,10 +1236,10 @@ RectTransform:
   m_GameObject: {fileID: 669446314}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.4329993, y: 0.4329993, z: 0.4329993}
+  m_LocalScale: {x: 0.43299928, y: 0.43299928, z: 0.43299928}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 644532116}
+  m_Father: {fileID: 1751428581}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2139,7 +2138,7 @@ RectTransform:
   m_GameObject: {fileID: 1015242564}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.8636318, y: 0.8636318, z: 0.8636318}
+  m_LocalScale: {x: 0.8636317, y: 0.8636317, z: 0.8636317}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1049688020}
@@ -2153,11 +2152,11 @@ RectTransform:
   - {fileID: 1479627845}
   - {fileID: 624070153}
   - {fileID: 1199978231}
-  m_Father: {fileID: 644532116}
+  m_Father: {fileID: 1751428581}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000007033348, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 360.1, y: 51.25}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1015242566
@@ -2925,7 +2924,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -9.450001}
+  m_AnchoredPosition: {x: 0, y: -9.450012}
   m_SizeDelta: {x: 800, y: 18.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1406104395
@@ -3405,6 +3404,83 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1672929113}
+  m_CullTransparentMesh: 1
+--- !u!1 &1751428580
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1751428581}
+  - component: {fileID: 1751428584}
+  - component: {fileID: 1751428583}
+  m_Layer: 5
+  m_Name: Alcohol Bar
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1751428581
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1751428580}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 669446315}
+  - {fileID: 1015242565}
+  m_Father: {fileID: 644532116}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 438.8041, y: 60}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1751428583
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1751428580}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1751428584
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1751428580}
   m_CullTransparentMesh: 1
 --- !u!1 &1770210606
 GameObject:
@@ -8544,6 +8620,61 @@ Transform:
   m_Children: []
   m_Father: {fileID: 932349986}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -360}
+--- !u!1 &1978599999
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1978600001}
+  - component: {fileID: 1978600000}
+  m_Layer: 0
+  m_Name: barbar
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1978600000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1978599999}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2da94b68e618d3c41a0b98ba82c660f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bubbles:
+  - {fileID: 1011971019}
+  - {fileID: 1666127400}
+  - {fileID: 287471211}
+  - {fileID: 684015810}
+  - {fileID: 2047125682}
+  - {fileID: 1274494218}
+  - {fileID: 1026592220}
+  - {fileID: 1479627844}
+  - {fileID: 624070152}
+  - {fileID: 1199978230}
+--- !u!4 &1978600001
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1978599999}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 377.25528, y: 197.0598, z: 2.4196687}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1994142531
 GameObject:
   m_ObjectHideFlags: 0
@@ -8918,3 +9049,4 @@ SceneRoots:
   - {fileID: 893278243}
   - {fileID: 1053019754}
   - {fileID: 999987784}
+  - {fileID: 1978600001}
