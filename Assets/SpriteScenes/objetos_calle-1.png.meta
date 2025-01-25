@@ -491,28 +491,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: objetos_calle-1.png_15
-      rect:
-        serializedVersion: 2
-        x: 4311
-        y: 180
-        width: 94
-        height: 80
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e1a9e6f23a26cbbe0800000000000000
-      internalID: -1460183726159914466
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: objetos_calle-1.png_16
       rect:
         serializedVersion: 2
@@ -543,7 +521,7 @@ TextureImporter:
         width: 200
         height: 30
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -565,7 +543,7 @@ TextureImporter:
         width: 39
         height: 102
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
