@@ -29,6 +29,16 @@ public class SceneLoad : MonoBehaviour
         StartCoroutine(LoadingScene(nextScene));
     }
 
+    public void LoadScene(int index)
+    {
+        SceneManager.LoadScene(index);
+        
+    }
+
+    public void LoadSceneAnimation(int index){
+        StartCoroutine(LoadingScene(index));
+    }
+
     public void LoadPreviousScene (){
         int currentScene = SceneManager.GetActiveScene().buildIndex;
         int previousScene = currentScene - 1;
@@ -41,5 +51,10 @@ public class SceneLoad : MonoBehaviour
         transitionAnimator.SetTrigger("startTransition");
         yield return new WaitForSeconds(transitionTime);
         SceneManager.LoadScene(sceneIndex);
+    }
+
+    public void ExitGame()
+    {
+        Application.Quit();
     }
 }

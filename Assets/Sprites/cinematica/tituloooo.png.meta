@@ -1,10 +1,22 @@
 fileFormatVersion: 2
-guid: dd990bbbc35912b47b5d74bb6d46f899
+guid: d8395483da81e774c827302e91e3e673
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7147959247644457799
-    second: negocios_background_0
+      213: 3703312982216223515
+    second: tituloooo_0
+  - first:
+      213: 5085750683409886239
+    second: tituloooo_1
+  - first:
+      213: 4794771325034075317
+    second: tituloooo_2
+  - first:
+      213: 7235136060340429067
+    second: tituloooo_3
+  - first:
+      213: 1562788614536381463
+    second: tituloooo_4
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -96,30 +108,17 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: negocios_background_0
+      name: tituloooo_0
       rect:
         serializedVersion: 2
-        x: 770
-        y: 6
-        width: 3693
-        height: 1285
+        x: 28
+        y: 48
+        width: 1682
+        height: 726
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +127,96 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 74bf0d07017a23360800000000000000
-      internalID: 7147959247644457799
+      spriteID: b1b271d498fc46330800000000000000
+      internalID: 3703312982216223515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tituloooo_1
+      rect:
+        serializedVersion: 2
+        x: 1755
+        y: 48
+        width: 1682
+        height: 726
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1ca8d41d47349640800000000000000
+      internalID: 5085750683409886239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tituloooo_2
+      rect:
+        serializedVersion: 2
+        x: 3482
+        y: 48
+        width: 1682
+        height: 726
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b492e7cd137a8240800000000000000
+      internalID: 4794771325034075317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tituloooo_3
+      rect:
+        serializedVersion: 2
+        x: 5209
+        y: 48
+        width: 1682
+        height: 726
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b01e53ad9ed586460800000000000000
+      internalID: 7235136060340429067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tituloooo_4
+      rect:
+        serializedVersion: 2
+        x: 6936
+        y: 48
+        width: 1682
+        height: 726
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 714477407f320b510800000000000000
+      internalID: 1562788614536381463
       vertices: []
       indices: 
       edges: []
@@ -148,7 +235,11 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      negocios_background_0: 7147959247644457799
+      tituloooo_0: 3703312982216223515
+      tituloooo_1: 5085750683409886239
+      tituloooo_2: 4794771325034075317
+      tituloooo_3: 7235136060340429067
+      tituloooo_4: 1562788614536381463
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

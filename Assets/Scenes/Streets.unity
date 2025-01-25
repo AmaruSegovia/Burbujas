@@ -4986,7 +4986,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4074483300566057407, guid: d27c30fb55faf9f4a93fb4101f21042c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -18.22
+      value: 20.24
       objectReference: {fileID: 0}
     - target: {fileID: 4074483300566057407, guid: d27c30fb55faf9f4a93fb4101f21042c, type: 3}
       propertyPath: m_LocalPosition.y
@@ -5045,6 +5045,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PuertaAtras
       objectReference: {fileID: 0}
+    - target: {fileID: 6002880117979289784, guid: d2cbce7fb7c08c6489d0c39712549fdd, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7069988659493656742, guid: d2cbce7fb7c08c6489d0c39712549fdd, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.667
@@ -5055,7 +5059,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7069988659493656742, guid: d2cbce7fb7c08c6489d0c39712549fdd, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -24.1
+      value: -20.57
       objectReference: {fileID: 0}
     - target: {fileID: 7069988659493656742, guid: d2cbce7fb7c08c6489d0c39712549fdd, type: 3}
       propertyPath: m_LocalPosition.y

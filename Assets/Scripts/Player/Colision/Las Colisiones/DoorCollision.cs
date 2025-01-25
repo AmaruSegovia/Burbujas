@@ -19,6 +19,6 @@ public class DoorCollision: ICollision
                 hasCollided = true;  // Evitar que se pause varias veces
                 Debug.Log("Juego pausado por colisión con la puerta");
             }
-        }
+        } else Debug.Log("no hay puerta");
     }
 }
