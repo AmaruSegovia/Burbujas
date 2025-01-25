@@ -71,6 +71,10 @@ public class AlcoholBar : MonoBehaviour
         }
     }
 
+    public void beber(int cant){
+        StartCoroutine(AgregarBurbujas(cant));
+    }
+
     // Agregar burbujas segun la cantidad
     public IEnumerator AgregarBurbujas(int cantidad)
     {

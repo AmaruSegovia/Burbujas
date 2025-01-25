@@ -24,6 +24,9 @@ public class Vodka : Bebida
 
         playerTransform.GetComponent<MonoBehaviour>().StartCoroutine(DelayExplosion());
     }
+    public override void alcoholDrink(){
+        AlcoholBar.Instance.beber(5);
+    }
 
     private IEnumerator DelayExplosion()
     {

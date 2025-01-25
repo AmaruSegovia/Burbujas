@@ -17,7 +17,7 @@ public class GestorBebidas : MonoBehaviour
     private Rigidbody2D rigidBodyJugador;
     private Animator animatorJugador;
 
-    [Header("Partículas")]
+    [Header("Partï¿½culas")]
     public ParticleSystem sistemaParticulasBurbujasSidra;
     public ParticleSystem particulasCerveza;
     void Start()
@@ -78,6 +78,7 @@ public class GestorBebidas : MonoBehaviour
     void TomarBebidaActual()
     {
         bebidas[indiceBebidaActual].Activate();
+        bebidas[indiceBebidaActual].alcoholDrink();        
 
         string animTrigger = bebidas[indiceBebidaActual].AnimTrigger;
         if (!string.IsNullOrEmpty(animTrigger) && animatorJugador != null)

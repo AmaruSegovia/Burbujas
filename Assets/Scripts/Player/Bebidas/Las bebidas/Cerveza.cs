@@ -5,6 +5,9 @@ public class Cerveza : Bebida
     public override string AnimTrigger => "BeberCerveza";
     public override void Activate()
     {
-        Debug.Log("Añadir burbuja protectora aqui D:");
+        Debug.Log("Aï¿½adir burbuja protectora aqui D:");
+    }
+    public override void alcoholDrink(){
+        AlcoholBar.Instance.beber(2);
     }
 }

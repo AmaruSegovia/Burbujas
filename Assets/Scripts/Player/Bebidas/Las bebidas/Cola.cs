@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class Cola : Bebida
@@ -6,6 +7,9 @@ public class Cola : Bebida
     public override string AnimTrigger => "BeberCola";
     public override void Activate()
     {
-        Debug.Log("Tomaste coca cola, dile chau a tus riñones");
+        Debug.Log("Tomaste coca cola, dile chau a tus riï¿½ones");
+    }
+    public override void alcoholDrink(){
+        AlcoholBar.Instance.beber(1);
     }
 }

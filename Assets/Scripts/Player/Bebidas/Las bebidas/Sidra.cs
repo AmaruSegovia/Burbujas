@@ -24,6 +24,10 @@ public class Sidra : Bebida
         transformJugador.GetComponent<MonoBehaviour>().StartCoroutine(ApplyBoost());
     }
 
+    public override void alcoholDrink(){
+        AlcoholBar.Instance.beber(3);
+    }
+
     private IEnumerator ApplyBoost()
     {
         yield return new WaitForSeconds(1f);
