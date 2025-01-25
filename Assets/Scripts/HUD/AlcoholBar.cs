@@ -1,13 +1,30 @@
 using System.Collections;
 using UnityEngine;
 
+
 public class AlcoholBar : MonoBehaviour
 {
-     private int bubblesCant = 10;  // Número inicial de burbujas
-    private const int MaxBubbles = 10;  // Máximo de burbujas
-    private const int MinBubbles = 1;  // Mínimo de burbujas
+    public static AlcoholBar Instance { get; private set ;} 
+
+    public int bubblesCant = 4;  // Número inicial de burbujas
+    public const int MaxBubbles = 10;  // Máximo de burbujas
+    public const int MinBubbles = 1;  // Mínimo de burbujas
     
     [SerializeField] private GameObject[] bubbles;
+    void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
+    private void Start() {
+        InicializarBurbujas();
+    }
 
     private void Update()
     {
@@ -17,23 +34,13 @@ public class AlcoholBar : MonoBehaviour
             StartCoroutine(AgregarBurbujas(3));
         }
         
-        // Con T, agrega 5 burbujas
-        else if (Input.GetKeyDown(KeyCode.T))
-        {
-            StartCoroutine(AgregarBurbujas(5));
-        }
-        
-        // Con Espacio, agrega 1 burbuja
-        else if (Input.GetKeyDown(KeyCode.Space))
-        {
-            StartCoroutine(AgregarBurbujas(1));
-        }
-        
         // Con F1, quita 1 burbuja
         else if (Input.GetKeyDown(KeyCode.F1))
         {
             PerderBubble();
         }
+        // Codigo para agregar burbujas desde otro script
+        // StartCoroutine(AlcoholBar.Instance.AgregarBurbujas(4));
     }
 
     // Activar una burbuja
@@ -72,7 +79,7 @@ public class AlcoholBar : MonoBehaviour
             int newBubbles = Mathf.Min(bubblesCant + cantidad, MaxBubbles);
             for (int i = bubblesCant; i < newBubbles; i++)
             {
-                yield return new WaitForSeconds(0.3f);
+                yield return new WaitForSeconds(0.2f);
                 ActivarBubble(i);
             }
             bubblesCant = newBubbles;
@@ -104,4 +111,17 @@ public class AlcoholBar : MonoBehaviour
     // public void DesactivarHUD(){
     //     this.gameObject.SetActive(false);
     // }
+
+    public void InicializarBurbujas(){
+
+        for (int i = 0; i < bubblesCant; i++)
+        {
+            ActivarBubble(i); // Activa cada burbuja hasta "bubblesCant"
+        }
+
+        for (int i = bubblesCant; i < bubbles.Length; i++)
+        {
+            DesactivarBubble(i); // Asegura que las burbujas restantes esten desactivadas
+        }
+    }
 }

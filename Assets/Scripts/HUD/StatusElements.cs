@@ -6,8 +6,13 @@ public class StatusElements : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Tab)&& tabla != null){
-            tabla.SetActive(true);
+        if (Input.GetKeyDown(KeyCode.Tab)){
+            TogglePanel();
+        }
+    }
+    public void TogglePanel(){
+        if (tabla != null){
+            tabla.SetActive(!tabla.activeSelf);
         }
     }
 }
