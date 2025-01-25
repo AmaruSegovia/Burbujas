@@ -16,7 +16,7 @@ public class Play_Video : MonoBehaviour
     {
         if (videos.Length == 0 || videoDurations.Length == 0 || videos.Length != videoDurations.Length)
         {
-            Debug.LogError("Asegúrate de que los arrays de videos y duraciones sean válidos y tengan el mismo tamaño.");
+            Debug.LogError("los arrays de videos y duraciones no son válidos.");
             return;
         }
 
@@ -24,34 +24,34 @@ public class Play_Video : MonoBehaviour
         foreach (var video in videos)
         {
             video.isLooping = true;
-            video.gameObject.SetActive(false); // Asegúrate de que todos los videos estén inicialmente ocultos
+            video.gameObject.SetActive(false); // que todos los videos esten ocultos
         }
 
-        // Reproduce el primer video
+        // Reproducir el primer video
         PlayNextVideo();
     }
 
     void PlayNextVideo()
     {
-        if (currentVideoIndex >= videos.Length) // Si ya no hay más videos, carga la siguiente escena
+        if (currentVideoIndex >= videos.Length) // Si ya no hay mas videos, cargar la siguiente escena
         {
             GoToGameScene();
             return;
         }
 
-        // Detiene el video anterior, si hay uno
+        // Detiener el video anterior, si hay uno
         if (currentVideoIndex > 0)
         {
             videos[currentVideoIndex - 1].Pause();  // Pausa el video actual
-            videos[currentVideoIndex - 1].gameObject.SetActive(false); // Oculta el video actual
+            videos[currentVideoIndex - 1].gameObject.SetActive(false); // Ocultar el video actual
         }
 
         // Reproduce el video actual
-        videos[currentVideoIndex].gameObject.SetActive(true); // Muestra el video
-        videos[currentVideoIndex].Play(); // Reproduce el video
+        videos[currentVideoIndex].gameObject.SetActive(true); // Moestrar el video
+        videos[currentVideoIndex].Play(); // Reproducir el video
 
-        // Establece el siguiente video para que se reproduzca después del tiempo correspondiente
-        Invoke(nameof(PlayNextVideo), videoDurations[currentVideoIndex]); // Llama al siguiente video después del tiempo de duración
+        // enviar el siguiente video para que se reproduzca después del tiempo estimado
+        Invoke(nameof(PlayNextVideo), videoDurations[currentVideoIndex]); // Llama al siguiente video
 
         // Incrementa el índice para el siguiente video
         currentVideoIndex++;
