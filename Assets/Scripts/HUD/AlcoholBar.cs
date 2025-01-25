@@ -1,5 +1,7 @@
 using System.Collections;
+using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 
 public class AlcoholBar : MonoBehaviour
@@ -11,6 +13,13 @@ public class AlcoholBar : MonoBehaviour
     public const int MinBubbles = 1;  // Mínimo de burbujas
     
     [SerializeField] private GameObject[] bubbles;
+    [SerializeField] private float tiempoParaQuitarBurbuja;
+    [SerializeField] private float tiempoParaAgregarBurbuja;
+
+    [SerializeField] private int minutes;
+    [SerializeField] private TextMeshProUGUI countDownText;
+    private bool isCountdownActive = false; // Verifica si el contador está activo
+
     void Awake()
     {
         if (Instance == null)
@@ -24,18 +33,17 @@ public class AlcoholBar : MonoBehaviour
     }
     private void Start() {
         InicializarBurbujas();
+
+        if (countDownText != null)
+        {
+            countDownText.text = "";
+        }
     }
 
     private void Update()
     {
-        // Con R, agrega 3 burbujas
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            StartCoroutine(AgregarBurbujas(3));
-        }
-        
-        // Con F1, quita 1 burbuja
-        else if (Input.GetKeyDown(KeyCode.F1))
+        // Con F1, quita 1 burbuja ( para depurar)
+        if (Input.GetKeyDown(KeyCode.F1))
         {
             PerderBubble();
         }
@@ -69,6 +77,21 @@ public class AlcoholBar : MonoBehaviour
             bubblesCant--;
             DesactivarBubble(bubblesCant);
         }
+
+        // Detener el contador si las burbujas ya no están al máximo
+        if (isCountdownActive && bubblesCant < MaxBubbles)
+        {
+            StopCoroutine(CountdownToGameOver());
+            isCountdownActive = false;
+
+            // Limpiar el texto del contador
+                if (countDownText != null)
+                {
+                    countDownText.text = "";
+                }
+
+            Debug.Log("Contador cancelado: las burbujas ya no están al máximo.");
+        }
     }
 
     public void beber(int cant){
@@ -83,28 +106,64 @@ public class AlcoholBar : MonoBehaviour
             int newBubbles = Mathf.Min(bubblesCant + cantidad, MaxBubbles);
             for (int i = bubblesCant; i < newBubbles; i++)
             {
-                yield return new WaitForSeconds(0.2f);
+                yield return new WaitForSeconds(tiempoParaAgregarBurbuja);
                 ActivarBubble(i);
             }
             bubblesCant = newBubbles;
             Debug.Log($"Agregaste {cantidad} burbujas, ahora hay {bubblesCant}");
 
-            // Si alcanzamos el máximo, comenzamos a quitar las burbujas una por una
-            if (bubblesCant == MaxBubbles)
+            // Si alcanzo el máximo, comenzamos a quitar las burbujas una por una
+            // if (bubblesCant == MaxBubbles)
+            // {
+            //     yield return new WaitForSeconds(1f);
+            //     StartCoroutine(QuitarBurbujasUnaPorUna());
+            // }
+
+            // Si alcanzo el maximo de burbujas, iniciar contador
+            if (bubblesCant == MaxBubbles && !isCountdownActive)
             {
-                yield return new WaitForSeconds(1f);
-                StartCoroutine(QuitarBurbujasUnaPorUna());
+                StartCoroutine(CountdownToGameOver());
             }
         }
+    }
+
+    private IEnumerator CountdownToGameOver()
+    {
+        isCountdownActive = true;
+        int countdownTime = minutes ; // *60
+
+        while (countdownTime > 0)
+        {
+            // Calcula minutos y segundos
+            int minutes = countdownTime / 60;
+            int seconds = countdownTime % 60;
+
+            // Actualiza el texto del contador
+            if (countDownText != null)
+            {
+                countDownText.text = $" {minutes:D2}:{seconds:D2}";
+            }
+
+            // Espera un segundo antes de decrementar
+            yield return new WaitForSeconds(1f);
+            countdownTime--;
+        }
+
+        // Cuando el tiempo llega a 0, cargar la escena de GameOver
+        if (countDownText != null)
+        {
+            countDownText.text = "Tiempo Fuera!";
+        }
+
+        SceneManager.LoadScene("GameOver");
     }
 
     // Quitar burbujas segun la cantidad
     public IEnumerator QuitarBurbujasUnaPorUna()
     {
-            
         while (bubblesCant > MinBubbles)
         {
-            yield return new WaitForSeconds(0.2f);
+            yield return new WaitForSeconds(tiempoParaQuitarBurbuja);
             bubblesCant--;
             DesactivarBubble(bubblesCant);
             Debug.Log($"Quitaste una burbuja, ahora hay {bubblesCant} burbujas.");
