@@ -13,6 +13,7 @@ public class PlayerColision : MonoBehaviour
         // Registrar los manejadores de colisiones para cada tag
         collisionHandlers.Add("Vacio", new VacioCollision());
         collisionHandlers.Add("Door", new DoorCollision());
+        collisionHandlers.Add("NextScene", new NextSceneCollision());
     }
 
     public void OnTriggerStay2D(Collider2D other)

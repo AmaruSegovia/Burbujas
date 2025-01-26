@@ -29,6 +29,10 @@ public class SceneLoad : MonoBehaviour
         StartCoroutine(LoadingScene(nextScene));
     }
 
+    public void LoadNextScene (int index){ // Cargar la escena siguente con respecto a la actual
+        StartCoroutine(LoadingScene(index));
+    }
+
     public void LoadScene(int index) // Cargar la escena segun su numero
     {
         SceneManager.LoadScene(index);
@@ -60,6 +64,12 @@ public class SceneLoad : MonoBehaviour
         int previousScene = currentScene - 1;
         if (previousScene >= 0){
             StartCoroutine(LoadingScene(previousScene));
+        } else Debug.Log("Ya estas en la prmera escena, no puedes volver");
+    }
+
+    public void LoadPreviousScene (int index){ // Cargar la escena anterior con respecto a la actual
+        if (index >= 0){
+            StartCoroutine(LoadingScene(index));
         } else Debug.Log("Ya estas en la prmera escena, no puedes volver");
     }
 
