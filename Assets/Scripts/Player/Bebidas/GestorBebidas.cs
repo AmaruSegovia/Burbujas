@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GestorBebidas : MonoBehaviour
 {
@@ -47,8 +48,26 @@ public class GestorBebidas : MonoBehaviour
             else
             {
                 Debug.Log("El jugador murió al caer al agua.");
-                // aqui deberia ir la logica de muerte del jugador
+                SceneManager.LoadScene("GameOver");
             }
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D colision)
+    {
+
+        if (colision.collider.CompareTag("Enemigo"))
+        {
+            if (escudoActivo)
+            {
+                Debug.Log("El jugador tiene escudo, el perro no puede atacar");
+            }
+            else {
+
+                SceneManager.LoadScene("GameOver");
+            }
+
+
         }
     }
 

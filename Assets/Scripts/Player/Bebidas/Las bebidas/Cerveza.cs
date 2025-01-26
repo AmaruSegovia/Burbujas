@@ -29,20 +29,24 @@ public class Cerveza : Bebida
         yield return new WaitForSeconds(esperaAntesDeActivar);
 
         escudo.SetActive(true);
-        GestorBebidas.Instance.SetEscudoActivo(true); 
+        GestorBebidas.Instance.SetEscudoActivo(true);
+        Debug.Log("Escudo activado.");
 
         yield return new WaitForSeconds(duracionEscudo);
 
         float tiempoRestante = duracionEscudo;
         while (tiempoRestante > 0)
         {
-            escudo.transform.position = jugador.position; // Sincronizar la posición del escudo con el jugador
-            tiempoRestante -= Time.deltaTime;             // Reducir el tiempo restante
-            yield return null;                            // Esperar un frame
+            escudo.transform.position = jugador.position;
+            tiempoRestante -= Time.deltaTime;
+            yield return null;
         }
+
         escudo.SetActive(false);
         GestorBebidas.Instance.SetEscudoActivo(false);
+        Debug.Log("Escudo desactivado.");
     }
+
     public override void alcoholDrink(){
         AlcoholBar.Instance.beber(1);
     }
