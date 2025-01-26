@@ -11,5 +11,6 @@ public class DoorCollision: ICollision
         {
             door.HandlePlayerCollision(other);
         }
+        else Debug.Log("Scene load Manager desactivado");
     }
 }

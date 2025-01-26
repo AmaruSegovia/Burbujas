@@ -1,25 +1,22 @@
 fileFormatVersion: 2
-guid: 61029f84d6a8c0144b7a2241d2b96a59
+guid: d256ccc585da63846b61278b6c29a3db
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8953563243399081618
-    second: gatos_0
+      213: 8059667629871346815
+    second: alcolimetro_0
   - first:
-      213: -2551382822816403716
-    second: gatos_1
+      213: 154736135703347577
+    second: alcolimetro_1
   - first:
-      213: -2657709998592067207
-    second: gatos_2
+      213: -6230383051545451176
+    second: alcolimetro_2
   - first:
-      213: -8360982316852226747
-    second: gatos_3
+      213: 3984739593042722043
+    second: alcolimetro_3
   - first:
-      213: -3655207919829703118
-    second: gatos_4
-  - first:
-      213: -8198181435454333762
-    second: gatos_5
+      213: -760625354887271254
+    second: alcolimetro_4
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -115,13 +112,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: gatos_0
+      name: alcolimetro_0
       rect:
         serializedVersion: 2
-        x: 52
-        y: 369
-        width: 258
-        height: 121
+        x: 41
+        y: 226
+        width: 290
+        height: 221
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -130,20 +127,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e61143b0bad8eb380800000000000000
-      internalID: -8953563243399081618
+      spriteID: f743236e101b9df60800000000000000
+      internalID: 8059667629871346815
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: gatos_1
+      name: alcolimetro_1
       rect:
         serializedVersion: 2
-        x: 340
-        y: 376
-        width: 258
-        height: 118
+        x: 293
+        y: 199
+        width: 1408
+        height: 267
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -152,20 +149,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: cfeaef727daa79cd0800000000000000
-      internalID: -2551382822816403716
+      spriteID: 971c38212bbb52200800000000000000
+      internalID: 154736135703347577
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: gatos_2
+      name: alcolimetro_2
       rect:
         serializedVersion: 2
-        x: 57
-        y: 213
-        width: 242
-        height: 124
+        x: 1694
+        y: 283
+        width: 37
+        height: 29
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -174,20 +171,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9797ae166daed1bd0800000000000000
-      internalID: -2657709998592067207
+      spriteID: 855e406ef9b3989a0800000000000000
+      internalID: -6230383051545451176
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: gatos_3
+      name: alcolimetro_3
       rect:
         serializedVersion: 2
-        x: 337
-        y: 215
-        width: 247
-        height: 128
+        x: 1139
+        y: 195
+        width: 34
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -196,20 +193,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 54553b691e2d7fb80800000000000000
-      internalID: -8360982316852226747
+      spriteID: bfcfebd3c83ac4730800000000000000
+      internalID: 3984739593042722043
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: gatos_4
+      name: alcolimetro_4
       rect:
         serializedVersion: 2
-        x: 44
-        y: 52
-        width: 247
-        height: 128
+        x: 173
+        y: 34
+        width: 114
+        height: 114
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -218,30 +215,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2362b5653c7164dc0800000000000000
-      internalID: -3655207919829703118
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: gatos_5
-      rect:
-        serializedVersion: 2
-        x: 341
-        y: 57
-        width: 247
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ebcda879b653a3e80800000000000000
-      internalID: -8198181435454333762
+      spriteID: aace9ca0547b175f0800000000000000
+      internalID: -760625354887271254
       vertices: []
       indices: 
       edges: []
@@ -260,12 +235,11 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      gatos_0: -8953563243399081618
-      gatos_1: -2551382822816403716
-      gatos_2: -2657709998592067207
-      gatos_3: -8360982316852226747
-      gatos_4: -3655207919829703118
-      gatos_5: -8198181435454333762
+      alcolimetro_0: 8059667629871346815
+      alcolimetro_1: 154736135703347577
+      alcolimetro_2: -6230383051545451176
+      alcolimetro_3: 3984739593042722043
+      alcolimetro_4: -760625354887271254
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
