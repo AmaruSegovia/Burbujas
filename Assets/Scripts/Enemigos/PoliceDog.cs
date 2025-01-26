@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ComportamientoPerroPolicia : MonoBehaviour
 {
@@ -132,11 +133,6 @@ public class ComportamientoPerroPolicia : MonoBehaviour
         {
             // Cambia la dirección al chocar con una pared
             Voltear();
-        }
-
-        if (colision.collider.CompareTag("Player"))
-        {
-            Debug.Log("¡El perro policía atrapó al jugador!");
         }
     }
 
