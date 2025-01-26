@@ -1058,6 +1058,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PuertaAtras
       objectReference: {fileID: 0}
+    - target: {fileID: 1999589118263197752, guid: d2cbce7fb7c08c6489d0c39712549fdd, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6002880117979289784, guid: d2cbce7fb7c08c6489d0c39712549fdd, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -1120,12 +1124,20 @@ PrefabInstance:
       value: PuertaAdelante
       objectReference: {fileID: 0}
     - target: {fileID: 4074483300566057407, guid: d27c30fb55faf9f4a93fb4101f21042c, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3.293633
+      objectReference: {fileID: 0}
+    - target: {fileID: 4074483300566057407, guid: d27c30fb55faf9f4a93fb4101f21042c, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 4.9597974
+      objectReference: {fileID: 0}
+    - target: {fileID: 4074483300566057407, guid: d27c30fb55faf9f4a93fb4101f21042c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 23.11
+      value: 21.7782
       objectReference: {fileID: 0}
     - target: {fileID: 4074483300566057407, guid: d27c30fb55faf9f4a93fb4101f21042c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.87
+      value: -3.5382
       objectReference: {fileID: 0}
     - target: {fileID: 4074483300566057407, guid: d27c30fb55faf9f4a93fb4101f21042c, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3512,7 +3524,7 @@ Transform:
   m_GameObject: {fileID: 658907283}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.18666, y: 1.3707399, z: -10}
+  m_LocalPosition: {x: -8.1873045, y: 1.3707399, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
