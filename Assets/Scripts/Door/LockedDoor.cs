@@ -9,5 +9,6 @@ public class LockedDoor : Door
 
         // Cambiando de escena
         SceneLoad.Instance.LoadNextScene();
+        
     }
 }

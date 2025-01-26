@@ -15,7 +15,7 @@ public class PlayerColision : MonoBehaviour
         collisionHandlers.Add("Door", new DoorCollision());
     }
 
-    public void OnTriggerEnter2D(Collider2D other)
+    public void OnTriggerStay2D(Collider2D other)
     {
         // Verificar si existe un manejador para el tag del objeto
         if (collisionHandlers.ContainsKey(other.tag))
