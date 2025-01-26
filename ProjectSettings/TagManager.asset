@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Vacio
   - Door
+  - Wall
+  - Agua
+  - Enemigo
   layers:
   - Default
   - TransparentFX
@@ -14,8 +17,8 @@ TagManager:
   - Water
   - UI
   - suelo
-  - 
-  - 
+  - Jugador
+  - Escudo
   - 
   - 
   - 

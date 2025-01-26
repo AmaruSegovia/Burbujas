@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class GestorBebidas : MonoBehaviour
 {
+    public static GestorBebidas Instance { get; private set; }
     private List<Bebida> bebidas = new List<Bebida>();
     private int indiceBebidaActual = 0;
     private float tiempoEspera = 3f;
     private float tiempoUltimaBebidaUsada = -Mathf.Infinity;
-
+    private bool escudoActivo = false; 
     [Header("Bebidas UI")]
     public SpriteRenderer spriteRendererBebidas;
     public List<Sprite> bebidasIconos;
@@ -20,6 +21,42 @@ public class GestorBebidas : MonoBehaviour
     [Header("Part�culas")]
     public ParticleSystem sistemaParticulasBurbujasSidra;
     public ParticleSystem particulasCerveza;
+
+    [Header("Escudo")]
+    public GameObject escudoJugador;  
+    void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Agua"))
+        {
+            if (escudoActivo)
+            {
+                Debug.Log("El jugador cayó al agua, pero fue protegido por el escudo.");
+            }
+            else
+            {
+                Debug.Log("El jugador murió al caer al agua.");
+                // aqui deberia ir la logica de muerte del jugador
+            }
+        }
+    }
+
+    public void SetEscudoActivo(bool activo)
+    {
+        escudoActivo = activo;
+    }
+
     void Start()
     {
         transformJugador = GetComponent<Transform>();
@@ -28,7 +65,7 @@ public class GestorBebidas : MonoBehaviour
 
         bebidas.Add(new Vodka(8, 5000, transformJugador, particulasCerveza));
         bebidas.Add(new Sidra(75, transformJugador, rigidBodyJugador, sistemaParticulasBurbujasSidra));
-        bebidas.Add(new Cerveza());
+        bebidas.Add(new Cerveza(transformJugador, escudoJugador, 4f));
         ActualizarSprite();
     }
 

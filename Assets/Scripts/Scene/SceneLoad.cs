@@ -34,6 +34,18 @@ public class SceneLoad : MonoBehaviour
         SceneManager.LoadScene(index);
     }
 
+    public void LoadSceneByName(string nombre)
+    {
+        if (SceneManager.GetSceneByName(nombre) != null) // Verifica que la escena exista
+        {
+            SceneManager.LoadScene(nombre);
+        }
+        else
+        {
+            Debug.LogError($"La escena '{nombre}' no existe. Verifica el nombre.");
+        }
+    }
+
     public void LoadSceneAnimation(int index){ // Cargar la escena segun su numero y poner una animacion
         StartCoroutine(LoadingScene(index));
     }

@@ -34,6 +34,8 @@ public class Vodka : Bebida
         Explosion(); 
     }
 
+
+
     private void Explosion()
     {
         Collider2D[] objetos = Physics2D.OverlapCircleAll(playerTransform.position, radioExplosion);
