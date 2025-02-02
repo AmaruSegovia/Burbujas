@@ -769,7 +769,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slowMotionScale: 0.2
-  normalTimeScale: 1
   slowMotionDuration: 10
 --- !u!4 &1339836185
 Transform:
@@ -897,7 +896,8 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7928025132116279460, guid: 16652d76f329fa04194127fe3f192dd4, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
