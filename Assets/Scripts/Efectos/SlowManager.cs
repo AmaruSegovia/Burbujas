@@ -2,10 +2,12 @@ using UnityEngine;
 
 public class SlowManager : MonoBehaviour
 {
-    public float slowMotionScale = 0.2f; // Velocidad en cámara lenta
-    public float normalTimeScale = 1f; // Velocidad normal
+    [Header("Velocidad en camara lenta")]
+    [SerializeField] float slowMotionScale = 0.2f; 
+    private float normalTimeScale = 1f; // Velocidad normal
     private bool isCameraSlowed = false; // Verifica si la cámara lenta está activada
-    
+
+    [Header("Duracion del efecto de la camara lenta")]
     [SerializeField] float slowMotionDuration; // Duración del efecto de la cámara lenta
     private float slowMotionTimer = 0f; // Temporizador para la duración
 
@@ -34,7 +36,7 @@ public class SlowManager : MonoBehaviour
         isCameraSlowed = true;
         slowMotionTimer = slowMotionDuration;
         Time.timeScale = slowMotionScale;
-        Time.fixedDeltaTime = 0.02f * Time.timeScale; // Ajustamos FixedDeltaTime
+        Time.fixedDeltaTime = 0.02f * Time.timeScale;
         Debug.Log("Cámara lenta activada");
     }
     /*Desactivar la camara lenta*/
