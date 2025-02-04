@@ -5,10 +5,12 @@ public class AgarrarObjeto : MonoBehaviour
     public GameObject objeto;
     public Transform personaje;
     public float fuerza=25f;
-    private bool activo;
+    private bool activo=false;
+    private Vector3 posicionInicialMouse;
+    private Vector3 direccionLanzamiento;
     void Update()
     {
-        if(activo == true)
+        if(activo)
         {
             if(Input.GetKeyDown(KeyCode.E))
             {
@@ -18,13 +20,21 @@ public class AgarrarObjeto : MonoBehaviour
                 Debug.Log("Agarrraste un objeto");
                 //objeto.GetComponent<Rigidbody2D>().isKinematic = true;
                 objeto.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Kinematic;
+                posicionInicialMouse = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             }
-            if(Input.GetMouseButtonDown(1))
+
+            if (Input.GetMouseButton(1))
+            {
+                Vector3 posicionActualMouse = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                direccionLanzamiento = (posicionActualMouse - posicionInicialMouse).normalized;
+            }
+            if(Input.GetMouseButtonUp(1))
             {
                 objeto.transform.SetParent(null);
                 //objeto.GetComponent<Rigidbody2D>().isKinematic = false;
                 objeto.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
-                objeto.GetComponent<Rigidbody2D>().AddForce(transform.right * fuerza, ForceMode2D.Impulse);
+                //objeto.GetComponent<Rigidbody2D>().AddForce(transform.right * fuerza, ForceMode2D.Impulse);
+                objeto.GetComponent<Rigidbody2D>().AddForce(direccionLanzamiento * fuerza, ForceMode2D.Impulse);
             }
 
             if(Input.GetKeyDown(KeyCode.G))
