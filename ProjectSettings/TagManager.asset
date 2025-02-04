@@ -10,7 +10,7 @@ TagManager:
   - Agua
   - Enemigo
   - NextScene
-  - Contenedor
+  - suelo
   layers:
   - Default
   - TransparentFX
