@@ -68,6 +68,7 @@ public class BebidaManager : MonoBehaviour
 
         bebida.Activate(transform);
         AlcoholBar.Instance.beber(bebida.AlcoholValue);
+        AlcoholBar02.Instance.AgregarAlcohol(bebida.AlcoholValue, 1f, 0.4f);    //estos ultimos 2 serian el tiempo de espera antes de la animacion y el tiempo de la animacion; esto podria variar segun la bebida
         OnBebidaTomada?.Invoke(bebida);
 
         tiemposUltimaBebida[bebida] = Time.time;
