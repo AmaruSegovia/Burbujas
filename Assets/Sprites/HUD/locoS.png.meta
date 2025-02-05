@@ -156,6 +156,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -634,7 +647,28 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      locoS_0: 1318341145134938352
+      locoS_1: 3799513368954353977
+      locoS_10: 8279049267291559227
+      locoS_11: 8123572125446814139
+      locoS_12: 7497543177979912234
+      locoS_13: 1672242778010982800
+      locoS_14: 3811184436316735434
+      locoS_15: 8036363422300759279
+      locoS_16: 9090377150787115327
+      locoS_17: 5986532406666787538
+      locoS_18: 4928103689170464764
+      locoS_19: -2956907632290798426
+      locoS_2: 702133783077749053
+      locoS_20: -806669879922532266
+      locoS_3: -8331089839109109120
+      locoS_4: 7147546431450606800
+      locoS_5: -3121778982190273554
+      locoS_6: 437980608308437963
+      locoS_7: -1492621694327439411
+      locoS_8: -7558318781933912212
+      locoS_9: 3708781441899725918
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
