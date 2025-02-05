@@ -16,14 +16,14 @@ public class AgarrarObjeto : MonoBehaviour
             {
                 objeto.transform.SetParent(personaje);
                 objeto.transform.position = personaje.position;
-                objeto.transform.rotation = personaje.rotation;
+                //objeto.transform.rotation = personaje.rotation;
                 Debug.Log("Agarrraste un objeto");
                 //objeto.GetComponent<Rigidbody2D>().isKinematic = true;
                 objeto.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Kinematic;
-                posicionInicialMouse = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                //posicionInicialMouse = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             }
 
-            if (Input.GetMouseButton(1))
+            /*if (Input.GetMouseButton(1))
             {
                 Vector3 posicionActualMouse = Camera.main.ScreenToWorldPoint(Input.mousePosition);
                 direccionLanzamiento = (posicionActualMouse - posicionInicialMouse).normalized;
@@ -35,7 +35,7 @@ public class AgarrarObjeto : MonoBehaviour
                 objeto.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
                 //objeto.GetComponent<Rigidbody2D>().AddForce(transform.right * fuerza, ForceMode2D.Impulse);
                 objeto.GetComponent<Rigidbody2D>().AddForce(direccionLanzamiento * fuerza, ForceMode2D.Impulse);
-            }
+            }*/
 
             if(Input.GetKeyDown(KeyCode.G))
             {
