@@ -32,8 +32,13 @@ public class AlcoholBar02 : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.R))
         {
-            // Al presionar R, quitar todo el alcohol actual con animación
-            QuitarAlcohol(0f, 2f); // 0f: tiempo de espera, 2f: duración de la animación
+            // Al presionar R, quita todo el alcohol actual con animación
+            QuitarAlcohol(0.5f, 1.5f); // 0.5f: tiempo de espera, 1.5f: duración de la animación
+        }
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            // Al presionar R, quita todo el alcohol actual con animación
+            QuitarAlcohol(3f, 0.5f, 1.5f); // 3f: cantidad de alcohol a quitar, 0.5f: tiempo de espera, 1.5f: duración de la animación
         }
     }
 
@@ -50,6 +55,8 @@ public class AlcoholBar02 : MonoBehaviour
         CambiarNivelAlcohol(alcoholActual);
     }
 
+    // ----- Metodos para Cambiar el valor actual del alcohol 
+
     
     // Método para agregar alcohol
     public void AgregarAlcohol(float alcoholValue)
@@ -57,26 +64,26 @@ public class AlcoholBar02 : MonoBehaviour
         alcoholActual+=alcoholValue;
         CambiarNivelAlcohol(alcoholActual);
     }
-    // Método para agregar alcohol con animación
+    // Método para agregar X cantidad de alcohol con animación
     public void AgregarAlcohol(float alcoholValue, float timeEspera, float timeAnimation)
     {
-        StartCoroutine(ActualizarBarraDeAlcoholAnimado(alcoholValue, timeEspera, timeAnimation, true));
+        StartCoroutine(ActualizarBarraDeAlcoholAnimado(alcoholValue, timeEspera, timeAnimation));
     }
 
-    // Método para quitar alcohol por unidades con animación
+    // Método para quitar X canitdad de alcohol con animación
     public void QuitarAlcohol(float alcoholValue, float timeEspera, float timeAnimation)
     {
-        StartCoroutine(ActualizarBarraDeAlcoholAnimado(-alcoholValue, timeEspera, timeAnimation, false));
+        StartCoroutine(ActualizarBarraDeAlcoholAnimado(-alcoholValue, timeEspera, timeAnimation));
     }
 
     // Método para quitar alcohol por unidades con animación
     public void QuitarAlcohol(float timeEspera, float timeAnimation)
     {
-        StartCoroutine(ActualizarBarraDeAlcoholAnimado(-alcoholActual, timeEspera, timeAnimation, false));
+        StartCoroutine(ActualizarBarraDeAlcoholAnimado(-alcoholActual, timeEspera, timeAnimation));
     }
 
     // Corutina que anima el valor del slider
-    private IEnumerator ActualizarBarraDeAlcoholAnimado(float alcoholValue, float tiempoEspera, float duracionAnimation, bool esAgregar)
+    private IEnumerator ActualizarBarraDeAlcoholAnimado(float alcoholValue, float tiempoEspera, float duracionAnimation)
     {
         float valorInicial = slider.value; // Valor actual del slider
         float valorFinal = Mathf.Clamp(alcoholActual + alcoholValue, 0, slider.maxValue); // Valor final con el alcohol agregado
@@ -94,6 +101,7 @@ public class AlcoholBar02 : MonoBehaviour
 
         // Asegurarse de que el valor final se ajuste al valor esperado
         alcoholActual = valorFinal;
+        Debug.Log("canitdad actual: "+alcoholActual);
         CambiarNivelAlcohol(alcoholActual);
     }
 }
