@@ -9,13 +9,18 @@ public class Puntero : MonoBehaviour
     public int speed;
     public GameObject elemento;
     Vector3 finalTarget;
+    public Transform mano;
+     private AgarrarObjeto agarrarObjeto;
     //private Camera cam;
     /*void Start()
     {
         cam = Camera.main;
     }*/
 
-    
+     void Start()
+    {
+        agarrarObjeto = FindAnyObjectByType<AgarrarObjeto>();
+    }
     void Update()
     {
         targetRotation = Input.mousePosition - Camera.main.WorldToScreenPoint(transform.position);
@@ -30,7 +35,7 @@ public class Puntero : MonoBehaviour
         /*Vector2 mouseWorldPoint = cam.ScreenToWorldPoint(Input.mousePosition);
         Vector2 direction = mouseWorldPoint - (Vector2)transform.position;
         transform.up = direction;*/
-        if(Input.GetKeyDown(KeyCode.Mouse0)){
+        if(Input.GetKeyDown(KeyCode.Mouse0) && agarrarObjeto.TieneObjeto()){
             Shoot();
         }
     }
@@ -40,5 +45,8 @@ public class Puntero : MonoBehaviour
         targetRotation.z=0;
         finalTarget = (targetRotation - transform.position).normalized;
         elemento.GetComponent<Rigidbody2D>().AddForce(finalTarget * speed, ForceMode2D.Impulse);
+
+        agarrarObjeto.TieneObjeto();
     }
+    
 }

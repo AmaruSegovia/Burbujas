@@ -1126,6 +1126,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: objetoPrueba
       objectReference: {fileID: 0}
+    - target: {fileID: 8344468740401620614, guid: d0ada881f84e577449b119b03bc6242e, type: 3}
+      propertyPath: m_TagString
+      value: Objeto
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1328,6 +1332,7 @@ MonoBehaviour:
   brazoSprite: {fileID: 296656870}
   speed: 20
   elemento: {fileID: 280122062}
+  mano: {fileID: 296656869}
 --- !u!1001 &375671075
 PrefabInstance:
   m_ObjectHideFlags: 0

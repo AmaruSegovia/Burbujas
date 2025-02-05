@@ -11,6 +11,8 @@ TagManager:
   - Enemigo
   - NextScene
   - suelo
+  - Contenedor
+  - Objeto
   layers:
   - Default
   - TransparentFX

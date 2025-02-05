@@ -8,11 +8,17 @@ public class AgarrarObjeto : MonoBehaviour
     private bool activo=false;
     private Vector3 posicionInicialMouse;
     private Vector3 direccionLanzamiento;
+    private bool tieneObjeto = false;
+
+    public bool TieneObjeto()
+    {
+        return tieneObjeto;
+    }
     void Update()
     {
         if(activo)
         {
-            if(Input.GetKeyDown(KeyCode.E))
+            if(Input.GetKeyDown(KeyCode.E) && !tieneObjeto)
             {
                 objeto.transform.SetParent(personaje);
                 objeto.transform.position = personaje.position;
@@ -20,6 +26,7 @@ public class AgarrarObjeto : MonoBehaviour
                 Debug.Log("Agarrraste un objeto");
                 //objeto.GetComponent<Rigidbody2D>().isKinematic = true;
                 objeto.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Kinematic;
+                tieneObjeto = true;
                 //posicionInicialMouse = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             }
 
@@ -37,11 +44,12 @@ public class AgarrarObjeto : MonoBehaviour
                 objeto.GetComponent<Rigidbody2D>().AddForce(direccionLanzamiento * fuerza, ForceMode2D.Impulse);
             }*/
 
-            if(Input.GetKeyDown(KeyCode.G))
+            if(Input.GetKeyDown(KeyCode.G)  && tieneObjeto)
             {
                 objeto.transform.SetParent(null);
                 //objeto.GetComponent<Rigidbody2D>().isKinematic = false;
                 objeto.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
+                tieneObjeto = false;
             }
         }
     }
