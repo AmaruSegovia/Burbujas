@@ -1250,6 +1250,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PerroPolicia (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 2933191385229364409, guid: ba624a7c9cceb8c439d1872a1af02d6a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6208278578336113886, guid: ba624a7c9cceb8c439d1872a1af02d6a, type: 3}
       propertyPath: moviendoDerecha
       value: 1
@@ -1829,6 +1833,29 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &762670356 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2933191385229364409, guid: ba624a7c9cceb8c439d1872a1af02d6a, type: 3}
+  m_PrefabInstance: {fileID: 1787684646}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &762670359
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 762670356}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65a6df662b4737447be3735d94a75fe4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  patrolSpeed: 3
+  chaseSpeed: 4.5
+  detectionRange: 5
+  attackRange: 2
+  attackCooldown: 1.5
+  attackDamage: 10
 --- !u!1 &768109205
 GameObject:
   m_ObjectHideFlags: 0
@@ -1959,7 +1986,7 @@ Transform:
   m_GameObject: {fileID: 768109205}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -18.39, y: -4.8, z: 0}
+  m_LocalPosition: {x: -18.39, y: -5.47, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2437,6 +2464,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PerroPolicia (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 2933191385229364409, guid: ba624a7c9cceb8c439d1872a1af02d6a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6208278578336113886, guid: ba624a7c9cceb8c439d1872a1af02d6a, type: 3}
       propertyPath: moviendoDerecha
       value: 1
@@ -2497,6 +2528,10 @@ PrefabInstance:
     - target: {fileID: 2933191385229364409, guid: ba624a7c9cceb8c439d1872a1af02d6a, type: 3}
       propertyPath: m_Name
       value: PerroPolicia (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2933191385229364409, guid: ba624a7c9cceb8c439d1872a1af02d6a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6208278578336113886, guid: ba624a7c9cceb8c439d1872a1af02d6a, type: 3}
       propertyPath: moviendoDerecha
@@ -3435,6 +3470,7 @@ GameObject:
   - component: {fileID: 1388285276}
   - component: {fileID: 1388285275}
   - component: {fileID: 1388285274}
+  - component: {fileID: 1388285278}
   m_Layer: 0
   m_Name: Triangle
   m_TagString: Untagged
@@ -3495,7 +3531,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1388285273}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 86526e697923bf8428d5bb97c7e0f15b, type: 3}
   m_Name: 
@@ -3565,12 +3601,25 @@ Transform:
   m_GameObject: {fileID: 1388285273}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -13.39, y: -5.09, z: 0}
+  m_LocalPosition: {x: -21.92, y: -4.48, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1388285278
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1388285273}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1335c8f7abba62d49a984c015577e2c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scoreDamage: 10
 --- !u!1 &1406280565
 GameObject:
   m_ObjectHideFlags: 0
@@ -4042,7 +4091,7 @@ Transform:
   m_GameObject: {fileID: 1515539309}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -11.018446, y: -0.11032009, z: -10}
+  m_LocalPosition: {x: -12.640719, y: -0.11163998, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4448,6 +4497,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PerroPolicia (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 2933191385229364409, guid: ba624a7c9cceb8c439d1872a1af02d6a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6208278578336113886, guid: ba624a7c9cceb8c439d1872a1af02d6a, type: 3}
       propertyPath: moviendoDerecha
       value: 1
@@ -4508,6 +4561,10 @@ PrefabInstance:
     - target: {fileID: 2933191385229364409, guid: ba624a7c9cceb8c439d1872a1af02d6a, type: 3}
       propertyPath: m_Name
       value: PerroPolicia (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2933191385229364409, guid: ba624a7c9cceb8c439d1872a1af02d6a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6208278578336113886, guid: ba624a7c9cceb8c439d1872a1af02d6a, type: 3}
       propertyPath: moviendoDerecha
@@ -4664,7 +4721,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 280782491140142288, guid: ba624a7c9cceb8c439d1872a1af02d6a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.68
+      value: -4.29
       objectReference: {fileID: 0}
     - target: {fileID: 280782491140142288, guid: ba624a7c9cceb8c439d1872a1af02d6a, type: 3}
       propertyPath: m_LocalPosition.z
@@ -4698,18 +4755,41 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2889868080484309095, guid: ba624a7c9cceb8c439d1872a1af02d6a, type: 3}
+      propertyPath: m_BodyType
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2889868080484309095, guid: ba624a7c9cceb8c439d1872a1af02d6a, type: 3}
+      propertyPath: m_GravityScale
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 2933191385229364409, guid: ba624a7c9cceb8c439d1872a1af02d6a, type: 3}
       propertyPath: m_Name
       value: PerroPolicia
       objectReference: {fileID: 0}
     - target: {fileID: 6208278578336113886, guid: ba624a7c9cceb8c439d1872a1af02d6a, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6208278578336113886, guid: ba624a7c9cceb8c439d1872a1af02d6a, type: 3}
       propertyPath: moviendoDerecha
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6532949465047382026, guid: ba624a7c9cceb8c439d1872a1af02d6a, type: 3}
+      propertyPath: m_Size.y
+      value: 0.9875318
+      objectReference: {fileID: 0}
+    - target: {fileID: 6532949465047382026, guid: ba624a7c9cceb8c439d1872a1af02d6a, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.07197875
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2933191385229364409, guid: ba624a7c9cceb8c439d1872a1af02d6a, type: 3}
+      insertIndex: 4
+      addedObject: {fileID: 762670359}
   m_SourcePrefab: {fileID: 100100000, guid: ba624a7c9cceb8c439d1872a1af02d6a, type: 3}
 --- !u!1001 &2022244173
 PrefabInstance:
@@ -4721,7 +4801,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 466677002221034364, guid: 5b56f5daa85d63b4a93d929439a266be, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 650229589683459959, guid: 5b56f5daa85d63b4a93d929439a266be, type: 3}
       propertyPath: m_Sprite
@@ -5239,6 +5319,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -760625354887271254, guid: d256ccc585da63846b61278b6c29a3db, type: 3}
+    - target: {fileID: 7425813502227643086, guid: 5b56f5daa85d63b4a93d929439a266be, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7544027370708690325, guid: 5b56f5daa85d63b4a93d929439a266be, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -5258,6 +5342,10 @@ PrefabInstance:
     - target: {fileID: 8149967452727433384, guid: 5b56f5daa85d63b4a93d929439a266be, type: 3}
       propertyPath: m_fontSizeBase
       value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 8149967452727433384, guid: 5b56f5daa85d63b4a93d929439a266be, type: 3}
+      propertyPath: m_isRightToLeft
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8149967452727433384, guid: 5b56f5daa85d63b4a93d929439a266be, type: 3}
       propertyPath: m_HorizontalAlignment
