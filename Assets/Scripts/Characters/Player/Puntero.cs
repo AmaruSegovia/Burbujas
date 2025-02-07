@@ -11,6 +11,9 @@ public class Puntero : MonoBehaviour
     Vector3 finalTarget;
     public Transform mano;
      private AgarrarObjeto agarrarObjeto;
+
+     public SpriteRenderer personajeSprite;
+     public Transform personaje;
     //private Camera cam;
     /*void Start()
     {
@@ -23,15 +26,31 @@ public class Puntero : MonoBehaviour
     }
     void Update()
     {
-        targetRotation = Input.mousePosition - Camera.main.WorldToScreenPoint(transform.position);
+        brazo.position = personaje.position;
+
+        //targetRotation = Input.mousePosition - Camera.main.WorldToScreenPoint(transform.position);
+        targetRotation = Input.mousePosition - Camera.main.WorldToScreenPoint(brazo.position);
         var angle = Mathf.Atan2(targetRotation.y, targetRotation.x) * Mathf.Rad2Deg + 180;
-        brazo.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
-        if(angle>90 || angle<-90){
+        //brazo.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
+        //brazo.rotation = Quaternion.Euler(0, 0, angle);
+        
+        if (personajeSprite.flipX)
+        {
+            brazo.rotation = Quaternion.Euler(0, 0, angle + 180);
+            brazoSprite.flipY = true;
+        }
+        else
+        {
+            brazo.rotation = Quaternion.Euler(0, 0, angle);
+            brazoSprite.flipY = false;
+        }
+
+        /*if(angle>90 || angle<-90){
             brazoSprite.flipY = true;
         }
         else{
             brazoSprite.flipY = false;
-        }
+        }*/
         /*Vector2 mouseWorldPoint = cam.ScreenToWorldPoint(Input.mousePosition);
         Vector2 direction = mouseWorldPoint - (Vector2)transform.position;
         transform.up = direction;*/
