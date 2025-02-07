@@ -23,9 +23,12 @@ public class Puntero : MonoBehaviour
      void Start()
     {
         agarrarObjeto = FindAnyObjectByType<AgarrarObjeto>();
+        brazoSprite.enabled = false;
     }
     void Update()
     {
+        if (!brazoSprite.enabled) return;
+
         brazo.position = personaje.position;
 
         //targetRotation = Input.mousePosition - Camera.main.WorldToScreenPoint(transform.position);
@@ -66,6 +69,11 @@ public class Puntero : MonoBehaviour
         elemento.GetComponent<Rigidbody2D>().AddForce(finalTarget * speed, ForceMode2D.Impulse);
 
         agarrarObjeto.TieneObjeto();
+        brazoSprite.enabled = false;
+    }
+    public void ActivarBrazo(bool estado)
+    {
+        brazoSprite.enabled = estado;
     }
     
 }

@@ -10,6 +10,12 @@ public class AgarrarObjeto : MonoBehaviour
     private Vector3 direccionLanzamiento;
     private bool tieneObjeto = false;
 
+    private Puntero puntero;
+
+    void Start()
+    {
+        puntero = FindAnyObjectByType<Puntero>();
+    }
     public bool TieneObjeto()
     {
         return tieneObjeto;
@@ -20,6 +26,10 @@ public class AgarrarObjeto : MonoBehaviour
         {
             if(Input.GetKeyDown(KeyCode.E) && !tieneObjeto)
             {
+                if (puntero != null)
+                {
+                    puntero.ActivarBrazo(true); // Activar brazo
+                }
                 objeto.transform.SetParent(personaje);
                 objeto.transform.position = personaje.position;
                 //objeto.transform.rotation = personaje.rotation;
@@ -50,6 +60,10 @@ public class AgarrarObjeto : MonoBehaviour
                 //objeto.GetComponent<Rigidbody2D>().isKinematic = false;
                 objeto.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
                 tieneObjeto = false;
+                if (puntero != null)
+                {
+                    puntero.ActivarBrazo(false); // Desactivar brazo
+                }
             }
         }
     }
