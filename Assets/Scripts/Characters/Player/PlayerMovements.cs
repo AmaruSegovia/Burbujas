@@ -13,10 +13,11 @@ public class PlayerMovements : MonoBehaviour
     private bool isGrounded;
     private bool jumpPressed;
     private bool facingRight = true;
-
+    private Animator animator;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
     }
 
     void Update()
@@ -24,6 +25,8 @@ public class PlayerMovements : MonoBehaviour
 
         float move = Input.GetAxisRaw("Horizontal"); // Movimiento horizontal del personaje
         rb.linearVelocity = new Vector2(move * moveSpeed, rb.linearVelocity.y);
+
+        animator.SetBool("caminando", move != 0);
 
         /* Condicional para voltear el sprite del personaje*/
         if (move > 0 && !facingRight)
