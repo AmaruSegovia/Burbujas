@@ -6,9 +6,11 @@ public class InteraccionContenedor : MonoBehaviour
     private bool enContenedor = false;
     private AlcoholBar bubble;
     private Animator animator;
+    public PlayerMovements movimiento;
     void Start(){
         animator = GetComponent<Animator>();
         bubble = FindAnyObjectByType<AlcoholBar>();
+        movimiento = FindAnyObjectByType<PlayerMovements>();
     }
 
     //Compara los tags y verifica si el personaje está colisionando con el tag "Contenedor".
@@ -31,10 +33,10 @@ public class InteraccionContenedor : MonoBehaviour
     //Verifica si el booleano es verdadero y si se está presionando la tecla "E".
     void Update()
     {
-        if (enContenedor && Input.GetKeyDown(KeyCode.E))
+        if (enContenedor && Input.GetKeyDown(KeyCode.E) && bubble.bubblesCant>1)
         {
             StartCoroutine(VaciarBurbujas());
-            animator.SetTrigger("Vomit");
+            //animator.SetTrigger("Vomit");
 
             //bubble.PerderBubble();
             // Debug.Log("El personaje está interactuando con el contenedor.");
@@ -43,11 +45,17 @@ public class InteraccionContenedor : MonoBehaviour
 
     private IEnumerator VaciarBurbujas()
     {
+        movimiento.enabled = false;
+        animator.SetTrigger("Vomit");
+
         while (bubble.bubblesCant > AlcoholBar.MinBubbles){
             bubble.PerderBubble();
             Debug.Log("El personaje está interactuando con el contenedor.");
             yield return new WaitForSeconds(0.25f);
         }
         
+        yield return new WaitForSeconds(0.50f);
+
+        movimiento.enabled = true;
     }
 }
