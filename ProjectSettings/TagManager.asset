@@ -13,6 +13,9 @@ TagManager:
   - suelo
   - Contenedor
   - Objeto
+  - CameraPoint
+  - Obstaculo
+  - fin
   layers:
   - Default
   - TransparentFX

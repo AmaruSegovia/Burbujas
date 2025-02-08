@@ -1,0 +1,676 @@
+fileFormatVersion: 2
+guid: 7fd711e1142595040ab1bc58420ead22
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1318341145134938352
+    second: locoS_0
+  - first:
+      213: 3799513368954353977
+    second: locoS_1
+  - first:
+      213: 702133783077749053
+    second: locoS_2
+  - first:
+      213: -8331089839109109120
+    second: locoS_3
+  - first:
+      213: 7147546431450606800
+    second: locoS_4
+  - first:
+      213: -3121778982190273554
+    second: locoS_5
+  - first:
+      213: 437980608308437963
+    second: locoS_6
+  - first:
+      213: -1492621694327439411
+    second: locoS_7
+  - first:
+      213: -7558318781933912212
+    second: locoS_8
+  - first:
+      213: 3708781441899725918
+    second: locoS_9
+  - first:
+      213: 8279049267291559227
+    second: locoS_10
+  - first:
+      213: 8123572125446814139
+    second: locoS_11
+  - first:
+      213: 7497543177979912234
+    second: locoS_12
+  - first:
+      213: 1672242778010982800
+    second: locoS_13
+  - first:
+      213: 3811184436316735434
+    second: locoS_14
+  - first:
+      213: 8036363422300759279
+    second: locoS_15
+  - first:
+      213: 9090377150787115327
+    second: locoS_16
+  - first:
+      213: 5986532406666787538
+    second: locoS_17
+  - first:
+      213: 4928103689170464764
+    second: locoS_18
+  - first:
+      213: -2956907632290798426
+    second: locoS_19
+  - first:
+      213: -806669879922532266
+    second: locoS_20
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: locoS_0
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 0
+        width: 829
+        height: 624
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f8bc806940bb4210800000000000000
+      internalID: 1318341145134938352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: locoS_1
+      rect:
+        serializedVersion: 2
+        x: 858
+        y: 0
+        width: 829
+        height: 624
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9393fd347459ab430800000000000000
+      internalID: 3799513368954353977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: locoS_2
+      rect:
+        serializedVersion: 2
+        x: 1728
+        y: 0
+        width: 827
+        height: 616
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d318625a4fa7eb900800000000000000
+      internalID: 702133783077749053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: locoS_3
+      rect:
+        serializedVersion: 2
+        x: 2594
+        y: 0
+        width: 813
+        height: 624
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08a090c6ee5026c80800000000000000
+      internalID: -8331089839109109120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: locoS_4
+      rect:
+        serializedVersion: 2
+        x: 3439
+        y: 0
+        width: 830
+        height: 632
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0dc693e2c9f213360800000000000000
+      internalID: 7147546431450606800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: locoS_5
+      rect:
+        serializedVersion: 2
+        x: 4286
+        y: 0
+        width: 829
+        height: 624
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eeba44b3e863da4d0800000000000000
+      internalID: -3121778982190273554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: locoS_6
+      rect:
+        serializedVersion: 2
+        x: 5133
+        y: 0
+        width: 829
+        height: 624
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc3ebb0fa05041600800000000000000
+      internalID: 437980608308437963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: locoS_7
+      rect:
+        serializedVersion: 2
+        x: 6014
+        y: 0
+        width: 813
+        height: 624
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dcf329d2a74294be0800000000000000
+      internalID: -1492621694327439411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: locoS_8
+      rect:
+        serializedVersion: 2
+        x: 6858
+        y: 0
+        width: 827
+        height: 616
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c6f7aaf0d157b1790800000000000000
+      internalID: -7558318781933912212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: locoS_9
+      rect:
+        serializedVersion: 2
+        x: 7714
+        y: 0
+        width: 830
+        height: 632
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e548ef9421d387330800000000000000
+      internalID: 3708781441899725918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: locoS_10
+      rect:
+        serializedVersion: 2
+        x: 8561
+        y: 0
+        width: 829
+        height: 624
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b351fdeb17715e270800000000000000
+      internalID: 8279049267291559227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: locoS_11
+      rect:
+        serializedVersion: 2
+        x: 9408
+        y: 0
+        width: 829
+        height: 624
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb9b58cbec9bcb070800000000000000
+      internalID: 8123572125446814139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: locoS_12
+      rect:
+        serializedVersion: 2
+        x: 10278
+        y: 0
+        width: 827
+        height: 616
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2065a3fbcf9c0860800000000000000
+      internalID: 7497543177979912234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: locoS_13
+      rect:
+        serializedVersion: 2
+        x: 11134
+        y: 0
+        width: 830
+        height: 632
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0999e8952fff43710800000000000000
+      internalID: 1672242778010982800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: locoS_14
+      rect:
+        serializedVersion: 2
+        x: 11981
+        y: 0
+        width: 829
+        height: 624
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac708246d0c04e430800000000000000
+      internalID: 3811184436316735434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: locoS_15
+      rect:
+        serializedVersion: 2
+        x: 12828
+        y: 0
+        width: 829
+        height: 624
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe4ed2044f5e68f60800000000000000
+      internalID: 8036363422300759279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: locoS_16
+      rect:
+        serializedVersion: 2
+        x: 13709
+        y: 0
+        width: 813
+        height: 624
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f395ef21bd1872e70800000000000000
+      internalID: 9090377150787115327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: locoS_17
+      rect:
+        serializedVersion: 2
+        x: 14553
+        y: 0
+        width: 827
+        height: 616
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2dafcbf718f641350800000000000000
+      internalID: 5986532406666787538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: locoS_18
+      rect:
+        serializedVersion: 2
+        x: 15409
+        y: 0
+        width: 830
+        height: 632
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cff2c41f134246440800000000000000
+      internalID: 4928103689170464764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: locoS_19
+      rect:
+        serializedVersion: 2
+        x: 16248
+        y: 0
+        width: 829
+        height: 624
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a46aafbc24f6f6d0800000000000000
+      internalID: -2956907632290798426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: locoS_20
+      rect:
+        serializedVersion: 2
+        x: 17103
+        y: 0
+        width: 829
+        height: 624
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 650e534a4022ec4f0800000000000000
+      internalID: -806669879922532266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      locoS_0: 1318341145134938352
+      locoS_1: 3799513368954353977
+      locoS_10: 8279049267291559227
+      locoS_11: 8123572125446814139
+      locoS_12: 7497543177979912234
+      locoS_13: 1672242778010982800
+      locoS_14: 3811184436316735434
+      locoS_15: 8036363422300759279
+      locoS_16: 9090377150787115327
+      locoS_17: 5986532406666787538
+      locoS_18: 4928103689170464764
+      locoS_19: -2956907632290798426
+      locoS_2: 702133783077749053
+      locoS_20: -806669879922532266
+      locoS_3: -8331089839109109120
+      locoS_4: 7147546431450606800
+      locoS_5: -3121778982190273554
+      locoS_6: 437980608308437963
+      locoS_7: -1492621694327439411
+      locoS_8: -7558318781933912212
+      locoS_9: 3708781441899725918
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

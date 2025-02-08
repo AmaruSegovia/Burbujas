@@ -1,0 +1,455 @@
+fileFormatVersion: 2
+guid: a95ee6b55eb04694db315fbb418d75a2
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5183848185386426442
+    second: mareadoS_0
+  - first:
+      213: -6638005074934045776
+    second: mareadoS_1
+  - first:
+      213: 2821546666219003863
+    second: mareadoS_2
+  - first:
+      213: -5681178970365834268
+    second: mareadoS_3
+  - first:
+      213: 169729443082129438
+    second: mareadoS_4
+  - first:
+      213: -6864194367023029616
+    second: mareadoS_5
+  - first:
+      213: -6079090093490904668
+    second: mareadoS_6
+  - first:
+      213: 8873514064702463262
+    second: mareadoS_7
+  - first:
+      213: -5510738901431199123
+    second: mareadoS_8
+  - first:
+      213: 2655341624517090763
+    second: mareadoS_9
+  - first:
+      213: 5270030793734463762
+    second: mareadoS_10
+  - first:
+      213: 6014506756137474568
+    second: mareadoS_11
+  - first:
+      213: -6033223405843219455
+    second: mareadoS_12
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: mareadoS_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 709
+        height: 581
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a626fd51fa763b4ca8b54b089c25a9c
+      internalID: -1144924558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mareadoS_1
+      rect:
+        serializedVersion: 2
+        x: 709
+        y: 0
+        width: 709
+        height: 581
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65f057de3c06e0e4fb6cf287bb665860
+      internalID: 427240117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mareadoS_2
+      rect:
+        serializedVersion: 2
+        x: 1418
+        y: 0
+        width: 709
+        height: 581
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22ecba8eb7c2a924a99a2a2f07312f18
+      internalID: -806793701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mareadoS_3
+      rect:
+        serializedVersion: 2
+        x: 2127
+        y: 0
+        width: 709
+        height: 581
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a907a20094aef85478f04c1c241c27e2
+      internalID: 180956346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mareadoS_4
+      rect:
+        serializedVersion: 2
+        x: 2836
+        y: 0
+        width: 709
+        height: 581
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1d357b1269088e45b8104e0bc4a927c
+      internalID: 564437623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mareadoS_5
+      rect:
+        serializedVersion: 2
+        x: 3545
+        y: 0
+        width: 709
+        height: 581
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5643a6f06e3798646a9b30f5cc51d756
+      internalID: -1144707883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mareadoS_6
+      rect:
+        serializedVersion: 2
+        x: 4254
+        y: 0
+        width: 709
+        height: 581
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5423ef031b995f4188ef78b47205bdf
+      internalID: 2064607885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mareadoS_7
+      rect:
+        serializedVersion: 2
+        x: 4963
+        y: 0
+        width: 709
+        height: 581
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f053bd47e9a840547b9ff187744044f5
+      internalID: -344731919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mareadoS_8
+      rect:
+        serializedVersion: 2
+        x: 5672
+        y: 0
+        width: 709
+        height: 581
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83ef2ece0290d5d489ba437ce43be38e
+      internalID: -1348804274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mareadoS_9
+      rect:
+        serializedVersion: 2
+        x: 6381
+        y: 0
+        width: 709
+        height: 581
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9415aa980698b442a6471521eb6adf9
+      internalID: -52367643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mareadoS_10
+      rect:
+        serializedVersion: 2
+        x: 7090
+        y: 0
+        width: 709
+        height: 581
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d107f2b8dcc52541a9e3499bab3f865
+      internalID: 1811620883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mareadoS_11
+      rect:
+        serializedVersion: 2
+        x: 7799
+        y: 0
+        width: 709
+        height: 581
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c73969f93869e840bb21c392831aee4
+      internalID: 679364926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mareadoS_12
+      rect:
+        serializedVersion: 2
+        x: 8508
+        y: 0
+        width: 709
+        height: 581
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a084a13ac11830c4b93b71cf395913fe
+      internalID: 794060522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: be694b45e6751664299a76b148808bb4
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      mareadoS_0: -1144924558
+      mareadoS_1: 427240117
+      mareadoS_10: 1811620883
+      mareadoS_11: 679364926
+      mareadoS_12: 794060522
+      mareadoS_2: -806793701
+      mareadoS_3: 180956346
+      mareadoS_4: 564437623
+      mareadoS_5: -1144707883
+      mareadoS_6: 2064607885
+      mareadoS_7: -344731919
+      mareadoS_8: -1348804274
+      mareadoS_9: -52367643
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

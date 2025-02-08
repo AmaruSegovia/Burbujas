@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33a16569d34d42448b425fe1fed79e5a, type: 3}
+  m_Name: Cerveza
+  m_EditorClassIdentifier: 
+  Nombre: Cerveza
+  Icono: {fileID: 21300000, guid: 7c16daf3bf8c0fa47ad6e604059f970d, type: 3}
+  AnimTrigger: BeberCerveza
+  AlcoholValue: 1
+  sonido: {fileID: 8300000, guid: 9de3905123494d145ba93eb27dfe6f84, type: 3}
+  cooldown: 3
+  radioExplosion: 100
+  fuerzaExplosion: 2000
+  prefabParticulasExplosion: {fileID: 4537883622615190552, guid: 5040492e1423bb042b1af0e1d45a2f61, type: 3}
