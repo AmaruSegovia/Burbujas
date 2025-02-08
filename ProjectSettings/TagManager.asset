@@ -14,6 +14,9 @@ TagManager:
   - Contenedor
   - Objeto
   - CameraPoint
+  - Obstaculo
+  - fin
+  - CameraFollow
   layers:
   - Default
   - TransparentFX
