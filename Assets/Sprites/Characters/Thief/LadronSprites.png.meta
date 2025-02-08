@@ -422,7 +422,19 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      LadronSprites_0: -2625099193558034584
+      LadronSprites_1: -8863289730206943893
+      LadronSprites_10: 4043476123626204040
+      LadronSprites_11: -7227256378579161216
+      LadronSprites_2: 4050982388524993638
+      LadronSprites_3: 5582983639024919348
+      LadronSprites_4: -5647569083294106017
+      LadronSprites_5: 2177775016632780722
+      LadronSprites_6: 143007232118999866
+      LadronSprites_7: -3889284377714227139
+      LadronSprites_8: 577721243982853105
+      LadronSprites_9: -3260838780574680465
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
