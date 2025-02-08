@@ -1132,6 +1132,10 @@ PrefabInstance:
       value: objetoPrueba
       objectReference: {fileID: 0}
     - target: {fileID: 8344468740401620614, guid: d0ada881f84e577449b119b03bc6242e, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 8344468740401620614, guid: d0ada881f84e577449b119b03bc6242e, type: 3}
       propertyPath: m_TagString
       value: Objeto
       objectReference: {fileID: 0}
