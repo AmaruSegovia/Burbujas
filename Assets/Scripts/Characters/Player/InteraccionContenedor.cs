@@ -8,8 +8,9 @@ public class InteraccionContenedor : MonoBehaviour
     private Animator animator;
     public PlayerMovements movimiento;
 
-    public SpriteRenderer tachoRenderer;
-    public Sprite tachoVomitado;
+    //public SpriteRenderer tachoRenderer;
+    //public Sprite tachoVomitado;
+    private Tacho tachoActual;
     void Start(){
         animator = GetComponent<Animator>();
         bubble = FindAnyObjectByType<AlcoholBar>();
@@ -22,6 +23,7 @@ public class InteraccionContenedor : MonoBehaviour
         if (other.CompareTag("Contenedor"))
         {
             enContenedor = true;
+            tachoActual = other.GetComponent<Tacho>();
         }
     }
 
@@ -30,6 +32,7 @@ public class InteraccionContenedor : MonoBehaviour
         if (other.CompareTag("Contenedor"))
         {
             enContenedor = false;
+            tachoActual = null;
         }
     }
 
@@ -48,6 +51,8 @@ public class InteraccionContenedor : MonoBehaviour
 
     private IEnumerator VaciarBurbujas()
     {
+        if (tachoActual == null) yield break;
+
         movimiento.enabled = false;
         animator.SetTrigger("Vomit");
 
@@ -58,7 +63,8 @@ public class InteraccionContenedor : MonoBehaviour
         }
         
         yield return new WaitForSeconds(0.50f);
-        tachoRenderer.sprite = tachoVomitado;
+        //tachoRenderer.sprite = tachoVomitado;
+        tachoActual.LlenarTacho();
 
         movimiento.enabled = true;
     }
