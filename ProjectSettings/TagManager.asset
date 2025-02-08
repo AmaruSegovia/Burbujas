@@ -16,6 +16,7 @@ TagManager:
   - CameraPoint
   - Obstaculo
   - fin
+  - CameraFollow
   layers:
   - Default
   - TransparentFX
