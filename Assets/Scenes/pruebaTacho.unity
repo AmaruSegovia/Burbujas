@@ -1970,6 +1970,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!212 &777720114 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 2828796417110636698, guid: 35036454c83f46a4097190c4eb6a3a91, type: 3}
+  m_PrefabInstance: {fileID: 1373613089}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &778450899
 GameObject:
   m_ObjectHideFlags: 0
@@ -3677,6 +3682,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 741e60cad168c5546a6a5cfafbf4ce86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  movimiento: {fileID: 0}
+  tachoRenderer: {fileID: 777720114}
+  tachoVomitado: {fileID: 7569073201648298965, guid: 28f14ab6467ce3e46a17b44e532b1e30, type: 3}
 --- !u!212 &1421048072 stripped
 SpriteRenderer:
   m_CorrespondingSourceObject: {fileID: 463958114252145662, guid: 16652d76f329fa04194127fe3f192dd4, type: 3}

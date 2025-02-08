@@ -7,6 +7,9 @@ public class InteraccionContenedor : MonoBehaviour
     private AlcoholBar bubble;
     private Animator animator;
     public PlayerMovements movimiento;
+
+    public SpriteRenderer tachoRenderer;
+    public Sprite tachoVomitado;
     void Start(){
         animator = GetComponent<Animator>();
         bubble = FindAnyObjectByType<AlcoholBar>();
@@ -55,6 +58,7 @@ public class InteraccionContenedor : MonoBehaviour
         }
         
         yield return new WaitForSeconds(0.50f);
+        tachoRenderer.sprite = tachoVomitado;
 
         movimiento.enabled = true;
     }
