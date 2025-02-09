@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class Puntero : MonoBehaviour
@@ -68,7 +69,12 @@ public class Puntero : MonoBehaviour
         finalTarget = (targetRotation - transform.position).normalized;
         elemento.GetComponent<Rigidbody2D>().AddForce(finalTarget * speed, ForceMode2D.Impulse);
 
-        agarrarObjeto.TieneObjeto();
+        agarrarObjeto.tieneObjeto = false;
+        
+        agarrarObjeto.activo = false;
+
+        StartCoroutine(DesactivarTrigger(elemento));
+        //agarrarObjeto.tieneObjeto = false;
         brazoSprite.enabled = false;
     }
     public void ActivarBrazo(bool estado)
@@ -76,4 +82,12 @@ public class Puntero : MonoBehaviour
         brazoSprite.enabled = estado;
     }
     
+    private IEnumerator DesactivarTrigger(GameObject objeto)
+    {
+        yield return new WaitForSeconds(0.1f);
+        Collider2D objetoCollider = objeto.GetComponent<Collider2D>();
+        if (objetoCollider != null) {
+            objetoCollider.isTrigger = false;
+        }
+    }
 }
