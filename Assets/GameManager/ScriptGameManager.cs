@@ -52,11 +52,11 @@ public class ScriptGameManager : MonoBehaviour
             // Al presionar R, quita todo el alcohol actual con animación
             QuitarAlcohol(0.5f, 1.5f); // 0.5f: tiempo de espera, 1.5f: duración de la animación
         }
-        if (Input.GetKeyDown(KeyCode.E))
+        /*if (Input.GetKeyDown(KeyCode.E))
         {
             // Al presionar E, quita un poco de alcohol con animación
             QuitarAlcohol(3f, 0.5f, 1.5f); // 3f: cantidad de alcohol a quitar, 0.5f: tiempo de espera, 1.5f: duración de la animación
-        }
+        }*/
     }
     /*Este metodo se llama al comienzo de la ejecucion del juego, antes del metodo Start. 
      * Se comprueba si ya existe una instancia de ScriptGameManager y, en caso contrario, se establece esta instancia como la actual. 
