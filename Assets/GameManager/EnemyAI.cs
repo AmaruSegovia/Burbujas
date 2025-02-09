@@ -95,7 +95,7 @@ public class EnemyAI : MonoBehaviour
         if (Time.time > nextAttackTime)
         {
             Debug.Log("Enemy attacks the player!");
-            ScriptGameManager.instance.RestarPuntosV(attackDamage);
+            ScriptGameManager.instance.AgregarAlcohol(attackDamage, 0.2f, 0.9f);
             nextAttackTime = Time.time + attackCooldown;
         }
     }
