@@ -5,35 +5,58 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class ScriptGameManager : MonoBehaviour
 {
-    /*Variable tipo Hud para representar el objeto Hud de nuestro juego*/
-    public HUD hud;
+    
     /*Esto declara una propiedad estatica llamada instance que permite acceder a una instancia ?nica de la clase ScriptGameManager. 
      * El acceso a la instancia es a traves de ScriptGameManager.instance.*/
+
+    // --- Referencias a componentes ---
+    [Header("Referencias a Componentes")]
     public static ScriptGameManager instance { get; private set; }
+    /*Variable tipo Hud para representar el objeto Hud de nuestro juego*/
+    public HUD hud;
+    public Contador contador;
+    public AlcoholBar02 barraAlcohol;
+
+    // --- Acceso de lectura a estos valores ---
     /*Esto declara una propiedad publica llamada PuntosTotales que proporciona acceso a la variable privada puntosTotales. 
      * Esto permite a otras clases obtener el valor de puntos totales sin modificarlo directamente.*/
     public int PuntosTotales { get { return puntos; } }
 
-    public int PuntosTotalesV { get { return puntosVida; } }
+    public float PuntosTotalAlcohol { get { return alcoholActual; } }
+
+    // --- Variables de Alcohol / Vida ---
+    [Header("Alcohol Settings")]
+    
+    /* Representa la maxima cantidad de alcohol del jugador */
+    public float alcoholMax = 100; 
+    /* Almacena la cantidad total de vida/Alcohol del jugador */
+    private float alcoholActual = 0;
 
     /*Esta variable privada almacena el puntaje del jugador en el juego.*/
     private int puntos;
 
-    /*Esta variable privada almacena la cantidad total de vida del jugador en el juego.*/
-    private int puntosVida = 100;
 
+    /* --- Eventos --- */
+    public delegate void AlcoholFull(); // Evento que se dispara cuando el alcohol esta lleno
+    public event AlcoholFull OnAlcoholFull; // El evento
 
-
-    // Start is called before the first frame update
     void Start()
     {
-
+        barraAlcohol.InicializarBarraAlcohol(alcoholActual, alcoholMax);
     }
 
-    // Update is called once per frame
     void Update()
     {
-
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            // Al presionar R, quita todo el alcohol actual con animación
+            QuitarAlcohol(0.5f, 1.5f); // 0.5f: tiempo de espera, 1.5f: duración de la animación
+        }
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            // Al presionar E, quita un poco de alcohol con animación
+            QuitarAlcohol(3f, 0.5f, 1.5f); // 3f: cantidad de alcohol a quitar, 0.5f: tiempo de espera, 1.5f: duración de la animación
+        }
     }
     /*Este metodo se llama al comienzo de la ejecucion del juego, antes del metodo Start. 
      * Se comprueba si ya existe una instancia de ScriptGameManager y, en caso contrario, se establece esta instancia como la actual. 
@@ -48,6 +71,7 @@ public class ScriptGameManager : MonoBehaviour
         {
             Debug.Log("Mas de un GameManager en escena");
         }
+        OnAlcoholFull += contador.StartCountdown; // Suscripción al evento
     }
     /*Este metodo se utiliza para agregar puntos al puntaje total del jugador. Se suma la cantidad puntosASumar a puntosTotales,
      se actualiza la interfaz de usuario a traves de hud, y se verifica si el jugador ha alcanzado ciertos puntos en escenas especificas
@@ -57,22 +81,44 @@ public class ScriptGameManager : MonoBehaviour
         puntos += puntosASumar;
         Debug.Log(puntos);
         hud.ActualizarPuntos(puntos);
-
-
-        /* if (SceneManager.GetActiveScene().name == "Level1" && puntosDesechos >= 1)
-         {
-             SceneManager.LoadScene("YouWin");
-         }*/
-
-
     }
 
-    public void SumarPuntosV(int puntosASumar)
+    /* Método para agregar puntos de alcohol al jugador. Se suma la cantidad de alcoholASumar a alcoholActual, se actualiza la interfaz de
+       usuario desde la barra de Alcohol */
+    public void ActualizarAlcohol(float alcoholASumar)
     {
-        puntosVida += puntosASumar;
-        Debug.Log(puntosVida);
-        hud.ActualizarPuntosV(puntosVida);
+        alcoholActual += alcoholASumar;
+        barraAlcohol.CambiarNivelAlcohol(alcoholActual); 
+        if (alcoholActual >= alcoholMax)
+        {
+            OnAlcoholFull?.Invoke(); // Llamando al evento
+        }
+    }
+    /* Método para agregar X cantidad de alcohol con animación. */ 
+    public void AgregarAlcohol(float alcoholValue, float timeEspera, float timeAnimation)
+    {
+        StartCoroutine(barraAlcohol.ActualizarBarraDeAlcoholAnimado(alcoholValue, timeEspera, timeAnimation, () => // cuando termine la corrutina:
+        {
+            ActualizarAlcohol(alcoholValue);
+        }));
+    }
 
+    // Método para quitar X canitdad de alcohol con animación desde la barra de alcohol
+    public void QuitarAlcohol(float alcoholValue, float timeEspera, float timeAnimation)
+    {
+        StartCoroutine(barraAlcohol.ActualizarBarraDeAlcoholAnimado(-alcoholValue, timeEspera, timeAnimation, () => // cuando termine la corrutina:
+        {
+            ActualizarAlcohol(-alcoholValue);
+        }));
+    }
+
+    // Método para quitar todo el alcohol con animación desde la barra de alcohol
+    public void QuitarAlcohol(float timeEspera, float timeAnimation)
+    {
+        StartCoroutine(barraAlcohol.ActualizarBarraDeAlcoholAnimado(-alcoholActual, timeEspera, timeAnimation, () => // cuando termine la corrutina:
+        {
+            ActualizarAlcohol(-alcoholActual);
+        }));
     }
 
     /*Este m?todo se utiliza para restar puntos al puntaje total del jugador. Se suma la cantidad puntosASumar a puntosTotales,
@@ -84,21 +130,6 @@ public class ScriptGameManager : MonoBehaviour
 
         Debug.Log(puntos);
         hud.ActualizarPuntos(puntos);
-
-
-    }
-
-    public void RestarPuntosV(int puntosARestar)
-    {
-        puntosVida -= puntosARestar;
-
-
-        Debug.Log(puntosVida);
-        hud.ActualizarPuntosV(puntosVida);
-        if (puntosVida <= 0)
-        {
-            SceneManager.LoadScene("Game Over");
-        }
 
     }
 }

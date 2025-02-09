@@ -27,7 +27,6 @@ public class HUD : MonoBehaviour
         if (SceneManager.GetActiveScene().name == "StreetsLeandro")
         {
             puntos.text = " Puntos: " + ScriptGameManager.instance.PuntosTotales.ToString();
-            puntosV.text = ScriptGameManager.instance.PuntosTotalesV.ToString() + " %";
 
             /*if (ScriptGameManager.instance.PuntosTotalesD == 10)
             {
@@ -44,10 +43,6 @@ public class HUD : MonoBehaviour
     public void ActualizarPuntos(int puntosTotales)
     {
         puntos.text = puntosTotales.ToString();
-    }
-    public void ActualizarPuntosV(int puntosTotales)
-    {
-        puntosV.text = puntosTotales.ToString();
     }
     
 }

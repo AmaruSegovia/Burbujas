@@ -15,7 +15,7 @@ MonoBehaviour:
   Nombre: Sidra
   Icono: {fileID: 21300000, guid: 23433f3efae71eb4db4b69bc2c9e4f19, type: 3}
   AnimTrigger: BeberSidra
-  AlcoholValue: 2
+  AlcoholValue: 25
   sonido: {fileID: 8300000, guid: 9de3905123494d145ba93eb27dfe6f84, type: 3}
   cooldown: 3
   fuerzaLanzamiento: 50

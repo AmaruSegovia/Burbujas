@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class DanarJugador : MonoBehaviour, IDamageHandler
 {
-    /*Esta variable representa el valor de los puntos de daño.*/
+    /*Esta variable representa el valor de los puntos de daï¿½o.*/
     [SerializeField] private int scoreDamage = 10;
 
     /* Este metodo implementado de la interfaz TakeDamage. 
@@ -10,7 +10,7 @@ public class DanarJugador : MonoBehaviour, IDamageHandler
     public void TakeDamage(Player player)
     {
         // Encuentra el objeto GameManager en la escena y le resta los puntos correspondientes.
-        ScriptGameManager.instance.RestarPuntosV(scoreDamage);
+        ScriptGameManager.instance.AgregarAlcohol(scoreDamage, 0.2f, 0.8f);
 
         Destroy(gameObject);        // Destruye el objeto moneda para eliminarlo del juego.
 

@@ -9,7 +9,7 @@ public class Enemy2 : MonoBehaviour {
         { // Muestra un mensaje en la consola indicando que la moneda fue recogida y la cantidad de puntos obtenidos.
             Debug.Log("Moneda recogida, puntos: " + scoreValue);
 
-            ScriptGameManager.instance.RestarPuntosV(scoreValue); // Resta los puntos de vida al GameManager
+            ScriptGameManager.instance.AgregarAlcohol(scoreValue, 0.2f, 0.8f); // Resta los puntos de vida al GameManager
             //Destroy(gameObject); // Destruye la moneda
         }
     }
