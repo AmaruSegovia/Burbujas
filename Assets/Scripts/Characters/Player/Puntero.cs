@@ -58,7 +58,7 @@ public class Puntero : MonoBehaviour
         /*Vector2 mouseWorldPoint = cam.ScreenToWorldPoint(Input.mousePosition);
         Vector2 direction = mouseWorldPoint - (Vector2)transform.position;
         transform.up = direction;*/
-        if(Input.GetKeyDown(KeyCode.Mouse0) && agarrarObjeto.TieneObjeto()){
+        if(Input.GetKeyDown(KeyCode.F) && agarrarObjeto.TieneObjeto()){
             Shoot();
         }
     }

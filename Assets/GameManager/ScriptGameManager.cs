@@ -47,11 +47,11 @@ public class ScriptGameManager : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.R))
+        /*if (Input.GetKeyDown(KeyCode.R))
         {
             // Al presionar R, quita todo el alcohol actual con animación
             QuitarAlcohol(0.5f, 1.5f); // 0.5f: tiempo de espera, 1.5f: duración de la animación
-        }
+        }*/
         /*if (Input.GetKeyDown(KeyCode.E))
         {
             // Al presionar E, quita un poco de alcohol con animación
