@@ -35,7 +35,7 @@ public class SliderPorcentaje : MonoBehaviour
         slider.onValueChanged.AddListener(delegate { UpdatePercentage(); });
     }
 
-    void UpdatePercentage()
+    public void UpdatePercentage()
     {
         // Obtiene el valor actual del slider y lo utiliza directamente como porcentaje
         float percentage = slider.value;

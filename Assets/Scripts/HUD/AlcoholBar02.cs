@@ -10,6 +10,9 @@ public class AlcoholBar02 : MonoBehaviour
     public float alcoholMax = 10; 
     [SerializeField] private float alcoholActual = 1;
 
+    public Contador contador;
+    public delegate void AlcoholFull(); // Evento que se dispara cuando el alcohol esta lleno
+    public event AlcoholFull OnAlcoholFull; // El evento
     void Awake()
     {
         if (Instance == null)
@@ -26,6 +29,14 @@ public class AlcoholBar02 : MonoBehaviour
     {
         slider = GetComponent<Slider>();
         InicializarBarraAlcohol();
+        if (contador == null)
+        {
+            Debug.LogError("Contador no asignado en el Inspector. Asegúrate de asignar el Contador.");
+        }
+        else
+        {
+            OnAlcoholFull += contador.StartCountdown; // Suscripción al evento
+        }
     }
 
     void Update()
@@ -39,6 +50,11 @@ public class AlcoholBar02 : MonoBehaviour
         {
             // Al presionar R, quita todo el alcohol actual con animación
             QuitarAlcohol(3f, 0.5f, 1.5f); // 3f: cantidad de alcohol a quitar, 0.5f: tiempo de espera, 1.5f: duración de la animación
+        }
+        if (alcoholActual >= alcoholMax)
+        {
+            Debug.Log("Alcohol completo. Ejecutando evento.");
+            OnAlcoholFull?.Invoke(); // Llamando al evento
         }
     }
 
