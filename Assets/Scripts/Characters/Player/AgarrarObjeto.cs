@@ -5,10 +5,10 @@ public class AgarrarObjeto : MonoBehaviour
     public GameObject objeto;
     public Transform personaje;
     public float fuerza=25f;
-    private bool activo=false;
+    public bool activo=false;
     private Vector3 posicionInicialMouse;
     private Vector3 direccionLanzamiento;
-    private bool tieneObjeto = false;
+    public bool tieneObjeto = false;
 
     private Puntero puntero;
 
@@ -52,31 +52,22 @@ public class AgarrarObjeto : MonoBehaviour
                 //posicionInicialMouse = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             }
 
-            /*if (Input.GetMouseButton(1))
-            {
-                Vector3 posicionActualMouse = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-                direccionLanzamiento = (posicionActualMouse - posicionInicialMouse).normalized;
-            }
-            if(Input.GetMouseButtonUp(1))
-            {
-                objeto.transform.SetParent(null);
-                //objeto.GetComponent<Rigidbody2D>().isKinematic = false;
-                objeto.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
-                //objeto.GetComponent<Rigidbody2D>().AddForce(transform.right * fuerza, ForceMode2D.Impulse);
-                objeto.GetComponent<Rigidbody2D>().AddForce(direccionLanzamiento * fuerza, ForceMode2D.Impulse);
-            }*/
-
             if(Input.GetKeyDown(KeyCode.G)  && tieneObjeto)
             {
                 objeto.transform.SetParent(null);
                 //objeto.GetComponent<Rigidbody2D>().isKinematic = false;
                 objeto.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
                 tieneObjeto = false;
+                activo = false;
                 if (puntero != null)
                 {
                     puntero.ActivarBrazo(false); // Desactivar brazo
                 }
             }
+            /*if (tieneObjeto)
+            {
+                objeto.transform.position = personaje.position;
+            }*/
         }
     }
 
@@ -87,7 +78,7 @@ public class AgarrarObjeto : MonoBehaviour
             activo = true;
             //Physics2D.IgnoreCollision(objetoCollider, jugadorCollider, true);
         }
-        if (other.gameObject.layer == LayerMask.NameToLayer("suelo"))
+        if (other.gameObject.layer == LayerMask.NameToLayer("suelo") && !tieneObjeto)
         {
             Debug.Log("El objeto tocó el suelo.");
             
@@ -102,11 +93,11 @@ public class AgarrarObjeto : MonoBehaviour
            // objeto.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
            
            //rb.bodyType = RigidbodyType2D.Static;
-           Collider2D objetoCollider = objeto.GetComponent<Collider2D>();
+           /*Collider2D objetoCollider = objeto.GetComponent<Collider2D>();
            if (objetoCollider.isTrigger)
             {
-                objetoCollider.isTrigger = false;  // Dejar de ser Trigger
-            }
+                objetoCollider.isTrigger = false;
+            }*/
         }
         
     }
@@ -114,6 +105,7 @@ public class AgarrarObjeto : MonoBehaviour
     {
         if(other.CompareTag("Player"))
         {
+            Debug.Log("El objeto ha salido del trigger del jugador.");
             activo = false;
              //Physics2D.IgnoreCollision(objetoCollider, jugadorCollider, false);
         }
