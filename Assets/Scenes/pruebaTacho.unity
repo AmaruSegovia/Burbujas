@@ -189,7 +189,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 7348925526340138931, guid: 16652d76f329fa04194127fe3f192dd4, type: 3}
+      insertIndex: 0
+      addedObject: {fileID: 296656869}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 7156892654438087758, guid: 16652d76f329fa04194127fe3f192dd4, type: 3}
       insertIndex: -1
@@ -1173,6 +1176,8 @@ MonoBehaviour:
   objeto: {fileID: 280122062}
   personaje: {fileID: 1624109021}
   fuerza: 20
+  activo: 0
+  tieneObjeto: 0
 --- !u!58 &280122064
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1263,12 +1268,12 @@ Transform:
   m_GameObject: {fileID: 296656868}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -13.84, y: -3.3600001, z: 0}
-  m_LocalScale: {x: 0.4, y: 0.4, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.2, y: 0.2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1624109021}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1421048052}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &296656871
 MonoBehaviour:
@@ -3980,7 +3985,7 @@ Transform:
   m_GameObject: {fileID: 1515539309}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -13.847598, y: -0.11262989, z: -10}
+  m_LocalPosition: {x: -13.8483515, y: -0.11262989, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5396,6 +5401,5 @@ SceneRoots:
   - {fileID: 778450901}
   - {fileID: 1293834859}
   - {fileID: 280122061}
-  - {fileID: 296656869}
   - {fileID: 1154541337}
   - {fileID: 1053542666}
