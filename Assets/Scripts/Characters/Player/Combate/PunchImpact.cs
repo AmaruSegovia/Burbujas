@@ -4,18 +4,16 @@ public class PunchImpact : MonoBehaviour
 {
     public float punchForce = 10f; // Fuerza del golpe
 
-    void OnTriggerEnter(Collider other)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (other.CompareTag("Enemy") || other.CompareTag("Object")) // Filtrar los objetos afectados
+        if (collision.gameObject.CompareTag("Enemigo") || collision.gameObject.CompareTag("Objeto")) // Filtrar los objetos afectados
         {
-            Rigidbody rb = other.GetComponent<Rigidbody>();
-
+            Rigidbody rb = collision.gameObject.GetComponent<Rigidbody>();
             if (rb != null)
             {
                 // Calcular la dirección del golpe
-                Vector3 punchDirection = other.transform.position - transform.position;
+                Vector3 punchDirection = collision.gameObject.transform.position - transform.position;
                 punchDirection.Normalize();
-
                 // Aplicar la fuerza en la dirección del golpe
                 rb.AddForce(punchDirection * punchForce, ForceMode.Impulse);
             }
