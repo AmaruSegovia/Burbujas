@@ -84,7 +84,7 @@ public class Puntero : MonoBehaviour
     
     private IEnumerator DesactivarTrigger(GameObject objeto)
     {
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(0.2f);
         Collider2D objetoCollider = objeto.GetComponent<Collider2D>();
         if (objetoCollider != null) {
             objetoCollider.isTrigger = false;
