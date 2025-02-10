@@ -3168,12 +3168,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2933191385229364409, guid: ba624a7c9cceb8c439d1872a1af02d6a, type: 3}
   m_PrefabInstance: {fileID: 1133359036}
   m_PrefabAsset: {fileID: 0}
---- !u!50 &897617606 stripped
-Rigidbody2D:
-  m_CorrespondingSourceObject: {fileID: 2889868080484309095, guid: ba624a7c9cceb8c439d1872a1af02d6a, type: 3}
-  m_PrefabInstance: {fileID: 1133359036}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &897617612
+--- !u!114 &897617617
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3182,10 +3177,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 897617605}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7115e0d2ea2568a42b7eb375e67e9c34, type: 3}
+  m_Script: {fileID: 11500000, guid: 87d16e3b7ee7b4049bb8a502c67d7cab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radioBusqueda: 5
+  radioBusqueda: 6
   capaJugador:
     serializedVersion: 2
     m_Bits: 128
@@ -3195,10 +3190,9 @@ MonoBehaviour:
   transformJugador: {fileID: 1421048052}
   estadoActual: 0
   velocidadMovimiento: 3
-  distanciaMaxima: 11
+  distanciaMaxima: 10
   puntoInicial: {x: 12, y: -5, z: 0}
   mirandoDerecha: 0
-  rb: {fileID: 897617606}
 --- !u!1 &1006830526
 GameObject:
   m_ObjectHideFlags: 0
@@ -3591,6 +3585,14 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3306959741587214236, guid: ba624a7c9cceb8c439d1872a1af02d6a, type: 3}
+      propertyPath: m_FlipX
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3306959741587214236, guid: ba624a7c9cceb8c439d1872a1af02d6a, type: 3}
+      propertyPath: m_FlipY
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6208278578336113886, guid: ba624a7c9cceb8c439d1872a1af02d6a, type: 3}
       propertyPath: moviendoDerecha
       value: 1
@@ -3602,7 +3604,7 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 2933191385229364409, guid: ba624a7c9cceb8c439d1872a1af02d6a, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 897617612}
+      addedObject: {fileID: 897617617}
   m_SourcePrefab: {fileID: 100100000, guid: ba624a7c9cceb8c439d1872a1af02d6a, type: 3}
 --- !u!1001 &1284869023
 PrefabInstance:
