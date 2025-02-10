@@ -11,6 +11,21 @@ public class CameraController : MonoBehaviour
     [SerializeField] CinemachineConfiner2D confiner;
     Transform playerTransform;
 
+    public static CameraController instance { get; private set; }
+
+    private void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else
+        {
+            Debug.LogWarning("Más de un CameraController en la escena");
+            Destroy(gameObject);
+        }
+    }
+
     private void Start()
     {
         playerTransform = GetComponent<Transform>();
@@ -18,7 +33,6 @@ public class CameraController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-       
         if (collision.CompareTag("CameraFollow"))
         {
             cameraLevel.Follow = playerTransform;
@@ -34,4 +48,31 @@ public class CameraController : MonoBehaviour
             }
         }
     }
+
+    public void ShakeCamera(float duration, float magnitude)
+    {
+        StartCoroutine(Shake(duration, magnitude));
+    }
+
+    private IEnumerator Shake(float duration, float magnitude)
+    {
+        Vector3 originalPosition = transform.localPosition;
+
+        float elapsed = 0.0f;
+
+        while (elapsed < duration)
+        {
+            float x = UnityEngine.Random.Range(-1f, 1f) * magnitude;
+            float y = UnityEngine.Random.Range(-1f, 1f) * magnitude;
+
+            transform.localPosition = new Vector3(originalPosition.x + x, originalPosition.y + y, originalPosition.z);
+
+            elapsed += Time.deltaTime;
+
+            yield return null;
+        }
+
+        transform.localPosition = originalPosition;
+    }
 }
+

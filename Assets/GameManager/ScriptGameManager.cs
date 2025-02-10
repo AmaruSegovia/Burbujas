@@ -1,13 +1,12 @@
-
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+
 public class ScriptGameManager : MonoBehaviour
 {
-    
-    /*Esto declara una propiedad estatica llamada instance que permite acceder a una instancia ?nica de la clase ScriptGameManager. 
-     * El acceso a la instancia es a traves de ScriptGameManager.instance.*/
+    /*Esto declara una propiedad estatica llamada instance que permite acceder a una instancia única de la clase ScriptGameManager. 
+     * El acceso a la instancia es a través de ScriptGameManager.instance.*/
 
     // --- Referencias a componentes ---
     [Header("Referencias a Componentes")]
@@ -26,15 +25,18 @@ public class ScriptGameManager : MonoBehaviour
 
     // --- Variables de Alcohol / Vida ---
     [Header("Alcohol Settings")]
-    
+
     /* Representa la maxima cantidad de alcohol del jugador */
-    public float alcoholMax = 100; 
+    public float alcoholMax = 100;
     /* Almacena la cantidad total de vida/Alcohol del jugador */
     private float alcoholActual = 0;
 
     /*Esta variable privada almacena el puntaje del jugador en el juego.*/
     private int puntos;
 
+    /* --- Variables de Fuerza --- */
+    [Header("Fuerza Settings")]
+    public int fuerza = 1; // Fuerza del jugador, por defecto es 1
 
     /* --- Eventos --- */
     public delegate void AlcoholFull(); // Evento que se dispara cuando el alcohol esta lleno
@@ -88,13 +90,13 @@ public class ScriptGameManager : MonoBehaviour
     public void ActualizarAlcohol(float alcoholASumar)
     {
         alcoholActual += alcoholASumar;
-        barraAlcohol.CambiarNivelAlcohol(alcoholActual); 
+        barraAlcohol.CambiarNivelAlcohol(alcoholActual);
         if (alcoholActual >= alcoholMax)
         {
             OnAlcoholFull?.Invoke(); // Llamando al evento
         }
     }
-    /* Método para agregar X cantidad de alcohol con animación. */ 
+    /* Método para agregar X cantidad de alcohol con animación. */
     public void AgregarAlcohol(float alcoholValue, float timeEspera, float timeAnimation)
     {
         StartCoroutine(barraAlcohol.ActualizarBarraDeAlcoholAnimado(alcoholValue, timeEspera, timeAnimation, () => // cuando termine la corrutina:
@@ -121,7 +123,7 @@ public class ScriptGameManager : MonoBehaviour
         }));
     }
 
-    /*Este m?todo se utiliza para restar puntos al puntaje total del jugador. Se suma la cantidad puntosASumar a puntosTotales,
+    /*Este metodo se utiliza para restar puntos al puntaje total del jugador. Se suma la cantidad puntosASumar a puntosTotales,
     se actualiza la interfaz de usuario a traves de hud, y se verifica si el jugador ha alcanzado ciertos puntos en escenas especificas
     para cargar pantalla gameover.*/
     public void RestarPuntos(int puntosARestar)
@@ -132,4 +134,12 @@ public class ScriptGameManager : MonoBehaviour
         hud.ActualizarPuntos(puntos);
 
     }
+
+    /* Método para actualizar la fuerza del jugador */
+    public void ActualizarFuerza(int nuevaFuerza)
+    {
+        fuerza = nuevaFuerza;
+        Debug.Log("Fuerza actualizada a: " + fuerza);
+    }
 }
+

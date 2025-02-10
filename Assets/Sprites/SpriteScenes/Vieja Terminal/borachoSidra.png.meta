@@ -1,10 +1,16 @@
 fileFormatVersion: 2
-guid: 0e4c6b277bb9b2f45872d92d34e447f5
+guid: 9f8fd1feabc53ec4f917d405baf23d09
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8605912529564128122
-    second: Fondo de todo_0
+      213: -7659349011222029915
+    second: borachoSidra_0
+  - first:
+      213: -2507098913529311976
+    second: borachoSidra_1
+  - first:
+      213: -4976792575574258186
+    second: borachoSidra_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +43,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -72,10 +78,10 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 4096
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -113,13 +119,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Fondo de todo_0
+      name: borachoSidra_0
       rect:
         serializedVersion: 2
-        x: 94
-        y: 129
-        width: 566
-        height: 1942
+        x: 7
+        y: 4
+        width: 111
+        height: 52
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +134,52 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a73d0cc79d75e6770800000000000000
-      internalID: 8605912529564128122
+      spriteID: 5a91f5fb7a684b590800000000000000
+      internalID: -7659349011222029915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: borachoSidra_1
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 4
+        width: 111
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81d415242def43dd0800000000000000
+      internalID: -2507098913529311976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: borachoSidra_2
+      rect:
+        serializedVersion: 2
+        x: 251
+        y: 4
+        width: 111
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6fd481c4581eeeab0800000000000000
+      internalID: -4976792575574258186
       vertices: []
       indices: 
       edges: []
@@ -147,8 +197,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      Fondo de todo_0: 8605912529564128122
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

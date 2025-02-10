@@ -1,43 +1,43 @@
 fileFormatVersion: 2
-guid: 7d3742b02a5578a43bedd01894460ee3
+guid: 3d1275677481005409d20015307e6fe6
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2625099193558034584
-    second: LadronSprites_0
+      213: 2248876234633885665
+    second: cosas_0
   - first:
-      213: -8863289730206943893
-    second: LadronSprites_1
+      213: 7283612335116613795
+    second: cosas_1
   - first:
-      213: 4050982388524993638
-    second: LadronSprites_2
+      213: 4042073946270766964
+    second: cosas_2
   - first:
-      213: 5582983639024919348
-    second: LadronSprites_3
+      213: -7580364764367769757
+    second: cosas_3
   - first:
-      213: -5647569083294106017
-    second: LadronSprites_4
+      213: 6196947838837942536
+    second: cosas_4
   - first:
-      213: 2177775016632780722
-    second: LadronSprites_5
+      213: -6048240719302711663
+    second: cosas_5
   - first:
-      213: 143007232118999866
-    second: LadronSprites_6
+      213: -5284141924223795859
+    second: cosas_6
   - first:
-      213: -3889284377714227139
-    second: LadronSprites_7
+      213: -9014643559848566427
+    second: cosas_7
   - first:
-      213: 577721243982853105
-    second: LadronSprites_8
+      213: -8694226412077972787
+    second: cosas_8
   - first:
-      213: -3260838780574680465
-    second: LadronSprites_9
+      213: -4104774835720621973
+    second: cosas_9
   - first:
-      213: 4043476123626204040
-    second: LadronSprites_10
+      213: -6146892369536607570
+    second: cosas_10
   - first:
-      213: -7227256378579161216
-    second: LadronSprites_11
+      213: -8253089609327995796
+    second: cosas_11
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -108,7 +108,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -146,13 +146,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: LadronSprites_0
+      name: cosas_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 86
-        width: 60
-        height: 86
+        x: 42
+        y: 446
+        width: 177
+        height: 176
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -161,20 +161,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8671fcb1136c19bd0800000000000000
-      internalID: -2625099193558034584
+      spriteID: 1e7bb25350d953f10800000000000000
+      internalID: 2248876234633885665
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LadronSprites_1
+      name: cosas_1
       rect:
         serializedVersion: 2
-        x: 60
-        y: 86
-        width: 60
-        height: 86
+        x: 260
+        y: 455
+        width: 288
+        height: 127
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -183,20 +183,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b65b5a933f44ff480800000000000000
-      internalID: -8863289730206943893
+      spriteID: 3a8774c14d6941560800000000000000
+      internalID: 7283612335116613795
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LadronSprites_2
+      name: cosas_2
       rect:
         serializedVersion: 2
-        x: 120
-        y: 86
-        width: 60
-        height: 86
+        x: 577
+        y: 432
+        width: 140
+        height: 181
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -205,20 +205,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 66c4563f40bf73830800000000000000
-      internalID: 4050982388524993638
+      spriteID: 477945b96d4581830800000000000000
+      internalID: 4042073946270766964
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LadronSprites_3
+      name: cosas_3
       rect:
         serializedVersion: 2
-        x: 180
-        y: 86
-        width: 60
-        height: 86
+        x: 57
+        y: 268
+        width: 61
+        height: 155
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -227,20 +227,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 433e5ee2a0eba7d40800000000000000
-      internalID: 5582983639024919348
+      spriteID: 36fa8f7c8622dc690800000000000000
+      internalID: -7580364764367769757
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LadronSprites_4
+      name: cosas_4
       rect:
         serializedVersion: 2
-        x: 240
-        y: 86
-        width: 60
-        height: 86
+        x: 214
+        y: 404
+        width: 63
+        height: 49
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -249,20 +249,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f5eb6c147ddcf91b0800000000000000
-      internalID: -5647569083294106017
+      spriteID: 8096f810a3bfff550800000000000000
+      internalID: 6196947838837942536
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LadronSprites_5
+      name: cosas_5
       rect:
         serializedVersion: 2
-        x: 300
-        y: 86
-        width: 60
-        height: 86
+        x: 178
+        y: 304
+        width: 195
+        height: 61
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -271,20 +271,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2b70e1bd6d2093e10800000000000000
-      internalID: 2177775016632780722
+      spriteID: 196a8e95c15501ca0800000000000000
+      internalID: -6048240719302711663
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LadronSprites_6
+      name: cosas_6
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 60
-        height: 86
+        x: 416
+        y: 329
+        width: 167
+        height: 71
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -293,20 +293,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a3bc3c6e1501cf100800000000000000
-      internalID: 143007232118999866
+      spriteID: d6d34ef9ae4faa6b0800000000000000
+      internalID: -5284141924223795859
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LadronSprites_7
+      name: cosas_7
       rect:
         serializedVersion: 2
-        x: 60
-        y: 0
-        width: 60
-        height: 86
+        x: 631
+        y: 334
+        width: 67
+        height: 59
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -315,20 +315,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d380edbf67c760ac0800000000000000
-      internalID: -3889284377714227139
+      spriteID: 561a676a17d85e280800000000000000
+      internalID: -9014643559848566427
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LadronSprites_8
+      name: cosas_8
       rect:
         serializedVersion: 2
-        x: 120
-        y: 0
-        width: 60
-        height: 86
+        x: 39
+        y: 58
+        width: 160
+        height: 181
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -337,20 +337,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1f37bc6196a740800800000000000000
-      internalID: 577721243982853105
+      spriteID: dc206476427e75780800000000000000
+      internalID: -8694226412077972787
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LadronSprites_9
+      name: cosas_9
       rect:
         serializedVersion: 2
-        x: 180
-        y: 0
-        width: 60
-        height: 86
+        x: 214
+        y: 210
+        width: 173
+        height: 72
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -359,20 +359,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f6a370ed76c2fb2d0800000000000000
-      internalID: -3260838780574680465
+      spriteID: b60f8e1f809e807c0800000000000000
+      internalID: -4104774835720621973
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LadronSprites_10
+      name: cosas_10
       rect:
         serializedVersion: 2
-        x: 240
-        y: 0
-        width: 60
-        height: 86
+        x: 409
+        y: 111
+        width: 380
+        height: 186
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -381,20 +381,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 88b63867c105d1830800000000000000
-      internalID: 4043476123626204040
+      spriteID: eaa163125f9d1baa0800000000000000
+      internalID: -6146892369536607570
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LadronSprites_11
+      name: cosas_11
       rect:
         serializedVersion: 2
-        x: 300
-        y: 0
-        width: 60
-        height: 86
+        x: 253
+        y: 20
+        width: 64
+        height: 165
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -403,8 +403,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 08fec168d90a3bb90800000000000000
-      internalID: -7227256378579161216
+      spriteID: c6499802ab2277d80800000000000000
+      internalID: -8253089609327995796
       vertices: []
       indices: 
       edges: []
@@ -413,7 +413,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 599793228a4861145b34ee14647ee0df
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -423,18 +423,18 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      LadronSprites_0: -2625099193558034584
-      LadronSprites_1: -8863289730206943893
-      LadronSprites_10: 4043476123626204040
-      LadronSprites_11: -7227256378579161216
-      LadronSprites_2: 4050982388524993638
-      LadronSprites_3: 5582983639024919348
-      LadronSprites_4: -5647569083294106017
-      LadronSprites_5: 2177775016632780722
-      LadronSprites_6: 143007232118999866
-      LadronSprites_7: -3889284377714227139
-      LadronSprites_8: 577721243982853105
-      LadronSprites_9: -3260838780574680465
+      cosas_0: 2248876234633885665
+      cosas_1: 7283612335116613795
+      cosas_10: -6146892369536607570
+      cosas_11: -8253089609327995796
+      cosas_2: 4042073946270766964
+      cosas_3: -7580364764367769757
+      cosas_4: 6196947838837942536
+      cosas_5: -6048240719302711663
+      cosas_6: -5284141924223795859
+      cosas_7: -9014643559848566427
+      cosas_8: -8694226412077972787
+      cosas_9: -4104774835720621973
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

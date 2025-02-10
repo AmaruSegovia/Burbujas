@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 0e4c6b277bb9b2f45872d92d34e447f5
+guid: bfd56340c88466b48961ebc7f0b6657e
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8605912529564128122
-    second: Fondo de todo_0
+      213: 131359870065619991
+    second: Ciudadcita_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -72,7 +72,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 4096
+    maxTextureSize: 8192
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Fondo de todo_0
+      name: Ciudadcita_0
       rect:
         serializedVersion: 2
-        x: 94
-        y: 129
-        width: 566
-        height: 1942
+        x: 0
+        y: 0
+        width: 5254
+        height: 687
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a73d0cc79d75e6770800000000000000
-      internalID: 8605912529564128122
+      spriteID: 714b0091b1fa2d100800000000000000
+      internalID: 131359870065619991
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Fondo de todo_0: 8605912529564128122
+      Ciudadcita_0: 131359870065619991
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

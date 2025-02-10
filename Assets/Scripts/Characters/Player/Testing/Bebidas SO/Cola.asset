@@ -9,15 +9,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 33a16569d34d42448b425fe1fed79e5a, type: 3}
-  m_Name: Coca
+  m_Script: {fileID: 11500000, guid: 5da48b4a9e0d81d4bad4a77f75dce7ce, type: 3}
+  m_Name: Cola
   m_EditorClassIdentifier: 
-  Nombre: Coca
+  Nombre: Cola
   Icono: {fileID: 21300000, guid: 67121c31758d2ce499696f411ef7f887, type: 3}
   AnimTrigger: BeberCola
-  AlcoholValue: 10
+  AlcoholValue: 0
   sonido: {fileID: 8300000, guid: 9de3905123494d145ba93eb27dfe6f84, type: 3}
   cooldown: 3
-  radioExplosion: 0
-  fuerzaExplosion: 0
-  prefabParticulasExplosion: {fileID: 4537883622615190552, guid: 5040492e1423bb042b1af0e1d45a2f61, type: 3}

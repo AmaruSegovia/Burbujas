@@ -17,6 +17,8 @@ TagManager:
   - Obstaculo
   - fin
   - CameraFollow
+  - ObstaculoDuro
+  - ElevatorDoor
   layers:
   - Default
   - TransparentFX
