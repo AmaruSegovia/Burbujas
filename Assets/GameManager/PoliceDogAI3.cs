@@ -1,9 +1,10 @@
 using System.Collections;
 using UnityEngine;
 
-public class PoliceDogAI2 : MonoBehaviour
+public class PoliceDogAI3 : MonoBehaviour
 {
     public float radioBusqueda;
+    public float anguloVision = 45f;
     public LayerMask capaJugador;
     public LayerMask capaHueso;
     public Transform transformJugador;
@@ -24,13 +25,20 @@ public class PoliceDogAI2 : MonoBehaviour
     public Vector3 puntoInicial;
     public bool mirandoDerecha;
     private Rigidbody2D rb;
+    private Coroutine patrullajeCoroutine;
 
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         puntoInicial = transform.position;
-    }
+        estadoActual = EstadosMovimiento.Esperando;
 
+        // Iniciar mirando en la direccion opuesta
+        mirandoDerecha = !mirandoDerecha;
+        Girar(); // Aplicar el cambio visual y logico
+
+        patrullajeCoroutine = StartCoroutine(PatrullarEsperando());
+    }
     private void Update()
     {
         switch (estadoActual)
@@ -59,32 +67,48 @@ public class PoliceDogAI2 : MonoBehaviour
 
     private void EstadoEsperando()
     {
-        rb.linearVelocity = Vector2.zero;
-        Collider2D jugadorCollider = Physics2D.OverlapCircle(transform.position, radioBusqueda, capaJugador);
-
-        if (jugadorCollider)
+        if (DetectarJugador())
         {
-            PlayerMovements2 player = jugadorCollider.GetComponent<PlayerMovements2>();
-
-            // Si el jugador NO está oculto, el perro lo detecta
-            if (player != null && !player.EstaOculto())
+            if (patrullajeCoroutine != null)
             {
-                transformJugador = jugadorCollider.transform;
-                estadoActual = EstadosMovimiento.Siguiendo;
-                return;
+                StopCoroutine(patrullajeCoroutine);
+                patrullajeCoroutine = null;
             }
+            estadoActual = EstadosMovimiento.Siguiendo;
+            return;
         }
 
-        /* No se busca hueso si ya se está siguiendo al jugador */
         if (estadoActual == EstadosMovimiento.Siguiendo)
             return;
 
-        /* Buscar el hueso más cercano */
         huesoObjetivo = BuscarHuesoMasCercano();
         if (huesoObjetivo != null)
         {
+            if (patrullajeCoroutine != null)
+            {
+                StopCoroutine(patrullajeCoroutine);
+                patrullajeCoroutine = null;
+            }
             estadoActual = EstadosMovimiento.BuscandoHueso;
         }
+    }
+
+    private bool DetectarJugador()
+    {
+        Collider2D[] jugadores = Physics2D.OverlapCircleAll(transform.position, radioBusqueda, capaJugador);
+
+        foreach (var jugador in jugadores)
+        {
+            Vector3 direccionAlJugador = (jugador.transform.position - transform.position).normalized;
+            float angulo = Vector3.Angle(transform.right * (mirandoDerecha ? 1 : -1), direccionAlJugador);
+
+            if (angulo < anguloVision)
+            {
+                transformJugador = jugador.transform;
+                return true;
+            }
+        }
+        return false;
     }
 
     private void EstadoSiguiendo()
@@ -113,6 +137,7 @@ public class PoliceDogAI2 : MonoBehaviour
         {
             rb.linearVelocity = Vector2.zero;
             estadoActual = EstadosMovimiento.Esperando;
+            patrullajeCoroutine = StartCoroutine(PatrullarEsperando());
         }
     }
 
@@ -161,14 +186,14 @@ public class PoliceDogAI2 : MonoBehaviour
     private void MoverHacia(Vector3 objetivo)
     {
         float direccion = (objetivo.x > transform.position.x) ? 1 : -1;
-        rb.linearVelocity = new Vector2(velocidadMovimiento * direccion, rb.linearVelocity.y);
+        rb.linearVelocity = new Vector2(velocidadMovimiento * direccion, 0);
         GiraraAObjetivo(objetivo);
     }
 
     private void GiraraAObjetivo(Vector3 objetivo)
     {
-        if ((objetivo.x > transform.position.x && mirandoDerecha) ||
-            (objetivo.x < transform.position.x && !mirandoDerecha))
+        if ((objetivo.x > transform.position.x && !mirandoDerecha) ||
+            (objetivo.x < transform.position.x && mirandoDerecha))
         {
             Girar();
         }
@@ -176,18 +201,47 @@ public class PoliceDogAI2 : MonoBehaviour
 
     private void Girar()
     {
-        mirandoDerecha = !mirandoDerecha;
-        transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
+        mirandoDerecha = !mirandoDerecha; // Invertir direccion
+
+
+        transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z); // Invertir la escala para reflejar la nueva direccion
+
     }
+    private IEnumerator PatrullarEsperando()
+    {
+        while (estadoActual == EstadosMovimiento.Esperando)
+        {
+            yield return new WaitForSeconds(3f);
+
+           
+            Girar();
+
+            // Mover en la nueva direccion
+            float direccionMovimiento = mirandoDerecha ? 1 : -1;
+            rb.linearVelocity = new Vector2(velocidadMovimiento * direccionMovimiento, 0);
+        }
+    }
+
+
+
 
     private void OnDrawGizmos()
     {
-        Gizmos.color = Color.yellow;
-        Gizmos.DrawWireSphere(transform.position, radioBusqueda);
+
         Gizmos.color = Color.blue;
         Gizmos.DrawWireSphere(transform.position, distanciaMaxima);
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(puntoInicial, distanciaMaxima);
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawWireSphere(transform.position, radioBusqueda);
+
+        // Campo de vision en forma de triangulo amarillo
+        Vector3 origen = transform.position;
+        Vector3 direccionDerecha = Quaternion.Euler(0, 0, anguloVision) * (transform.right * (mirandoDerecha ? 1 : -1)) * radioBusqueda;
+        Vector3 direccionIzquierda = Quaternion.Euler(0, 0, -anguloVision) * (transform.right * (mirandoDerecha ? 1 : -1)) * radioBusqueda;
+
+        Gizmos.DrawLine(origen, origen + direccionDerecha);
+        Gizmos.DrawLine(origen, origen + direccionIzquierda);
+        Gizmos.DrawLine(origen + direccionDerecha, origen + direccionIzquierda);
     }
 }
-
