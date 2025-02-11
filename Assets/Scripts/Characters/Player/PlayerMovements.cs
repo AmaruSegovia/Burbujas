@@ -40,8 +40,9 @@ public class PlayerMovements : MonoBehaviour
     {
 
         float move = Input.GetAxisRaw("Horizontal"); // Movimiento horizontal del personaje
+        float speed = moveSpeed;
         //float move2 = Input.GetAxisRaw("Vertical"); //Movimiento vertical del personaje
-        rb.linearVelocity = new Vector2(move * moveSpeed, rb.linearVelocity.y);
+        //rb.linearVelocity = new Vector2(move * moveSpeed, rb.linearVelocity.y);
 
         animator.SetBool("caminando", move != 0);
 
@@ -56,14 +57,25 @@ public class PlayerMovements : MonoBehaviour
             jumpPressed = true;
         
         
-        if(Input.GetKeyDown(KeyCode.C))
+        /*if(Input.GetKeyDown(KeyCode.C))
         {
             circleCollider.radius = CrouchingSize;
+            speed = speed * 0.3f;
         }
         if(Input.GetKeyUp(KeyCode.C))
         {
             circleCollider.radius = StandingSize;
+        }*/
+        if (Input.GetKey(KeyCode.C)) // Mientras esté presionada la tecla C
+        {
+            circleCollider.radius = CrouchingSize;
+            speed *= 0.3f; // Reducir la velocidad
         }
+        else
+        {
+            circleCollider.radius = StandingSize;
+        }
+        rb.linearVelocity = new Vector2(move * speed, rb.linearVelocity.y);
         /*if(move2 < 0)
         {
             agachar = true;
