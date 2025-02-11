@@ -1,5 +1,7 @@
 using UnityEngine;
 using System.Collections;
+using UnityEngine.Rendering;
+using UnityEngine.Rendering.Universal;
 public class InteraccionContenedor : MonoBehaviour
 {
     //Verifica si el personaje está colisionando con el contenedor.
@@ -12,11 +14,13 @@ public class InteraccionContenedor : MonoBehaviour
     //public SpriteRenderer tachoRenderer;
     //public Sprite tachoVomitado;
     private Tacho tachoActual;
+    public Volume globalVolume;
     void Start(){
         animator = GetComponent<Animator>();
         //bubble = FindAnyObjectByType<AlcoholBar>();
         alcohol = FindAnyObjectByType<ScriptGameManager>();
         movimiento = FindAnyObjectByType<PlayerMovements>();
+        globalVolume.gameObject.SetActive(false);
     }
 
     //Compara los tags y verifica si el personaje está colisionando con el tag "Contenedor".
@@ -41,6 +45,12 @@ public class InteraccionContenedor : MonoBehaviour
     //Verifica si el booleano es verdadero y si se está presionando la tecla "E".
     void Update()
     {
+        if(ScriptGameManager.instance.PuntosTotalAlcohol>=50){
+            globalVolume.gameObject.SetActive(true);
+        }
+        else{
+            globalVolume.gameObject.SetActive(false);
+        }
         if (enContenedor && Input.GetKeyDown(KeyCode.E) && ScriptGameManager.instance.PuntosTotalAlcohol > 0)
         {
             StartCoroutine(VaciarBurbujas());
