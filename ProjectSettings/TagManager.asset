@@ -19,6 +19,7 @@ TagManager:
   - CameraFollow
   - ObstaculoDuro
   - ElevatorDoor
+  - Escondite
   layers:
   - Default
   - TransparentFX
