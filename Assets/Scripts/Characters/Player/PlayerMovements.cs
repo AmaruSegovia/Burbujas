@@ -14,16 +14,33 @@ public class PlayerMovements : MonoBehaviour
     private bool jumpPressed;
     private bool facingRight = true;
     private Animator animator;
+
+    /*[SerializeField] private LayerMask queEsSuelo;
+    [SerializeField] private Transform controladorTecho;
+    [SerializeField] private float radioTecho;
+    [SerializeField] private float multiplicadorVelocidadAgachado;
+    [SerializeField] private Collider2D colisionadorAgachado;
+    private bool estabaAgachado = false;
+    private bool agachar = false;*/
+    public CircleCollider2D circleCollider;
+    public float StandingSize;
+    public float CrouchingSize;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+
+        circleCollider = GetComponent<CircleCollider2D>();
+        //circleCollider.radius = StandingSize;
+
+        StandingSize = circleCollider.radius; 
     }
 
     void Update()
     {
 
         float move = Input.GetAxisRaw("Horizontal"); // Movimiento horizontal del personaje
+        //float move2 = Input.GetAxisRaw("Vertical"); //Movimiento vertical del personaje
         rb.linearVelocity = new Vector2(move * moveSpeed, rb.linearVelocity.y);
 
         animator.SetBool("caminando", move != 0);
@@ -37,6 +54,49 @@ public class PlayerMovements : MonoBehaviour
         /* Condicioal para detectar el slato del personaje*/
         if (Input.GetButtonDown("Jump"))
             jumpPressed = true;
+        
+        
+        if(Input.GetKeyDown(KeyCode.C))
+        {
+            circleCollider.radius = CrouchingSize;
+        }
+        if(Input.GetKeyUp(KeyCode.C))
+        {
+            circleCollider.radius = StandingSize;
+        }
+        /*if(move2 < 0)
+        {
+            agachar = true;
+        }
+        else
+        {
+            agachar = false;
+        }
+
+        if(!agachar)
+        {
+            if(Physics2D.OverlapCircle(controladorTecho.position, radioTecho, queEsSuelo))
+            {
+                agachar = true;
+            }
+        }
+        if(agachar){
+            if(!estabaAgachado){
+                estabaAgachado = true;
+            }
+            
+            move *= multiplicadorVelocidadAgachado;
+            colisionadorAgachado.enabled = false;
+        }
+        else
+        {
+            colisionadorAgachado.enabled = true;
+
+            if(estabaAgachado)
+            {
+                estabaAgachado = false;
+            }
+        }*/
     }
 
     void FixedUpdate()
