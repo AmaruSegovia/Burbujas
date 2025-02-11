@@ -1975,6 +1975,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6208278578336113886, guid: ba624a7c9cceb8c439d1872a1af02d6a, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6208278578336113886, guid: ba624a7c9cceb8c439d1872a1af02d6a, type: 3}
       propertyPath: moviendoDerecha
       value: 1
       objectReference: {fileID: 0}
@@ -3222,7 +3226,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 897617605}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 87d16e3b7ee7b4049bb8a502c67d7cab, type: 3}
   m_Name: 
@@ -3236,7 +3240,7 @@ MonoBehaviour:
     m_Bits: 1024
   transformJugador: {fileID: 1421048052}
   estadoActual: 0
-  velocidadMovimiento: 3
+  velocidadMovimiento: 5
   distanciaMaxima: 10
   puntoInicial: {x: 12, y: -5, z: 0}
   mirandoDerecha: 0
@@ -3586,11 +3590,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 280782491140142288, guid: ba624a7c9cceb8c439d1872a1af02d6a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 11.68
+      value: 16.5
       objectReference: {fileID: 0}
     - target: {fileID: 280782491140142288, guid: ba624a7c9cceb8c439d1872a1af02d6a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.87
+      value: -5.14
       objectReference: {fileID: 0}
     - target: {fileID: 280782491140142288, guid: ba624a7c9cceb8c439d1872a1af02d6a, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3630,7 +3634,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2933191385229364409, guid: ba624a7c9cceb8c439d1872a1af02d6a, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3306959741587214236, guid: ba624a7c9cceb8c439d1872a1af02d6a, type: 3}
       propertyPath: m_FlipX
@@ -3653,6 +3657,37 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 897617617}
   m_SourcePrefab: {fileID: 100100000, guid: ba624a7c9cceb8c439d1872a1af02d6a, type: 3}
+--- !u!1 &1171375342 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2933191385229364409, guid: ba624a7c9cceb8c439d1872a1af02d6a, type: 3}
+  m_PrefabInstance: {fileID: 1627930944}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1171375349
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1171375342}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6afde21c47474448aacc0137a9a7799, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  radioBusqueda: 6
+  anguloVision: 30
+  capaJugador:
+    serializedVersion: 2
+    m_Bits: 128
+  capaHueso:
+    serializedVersion: 2
+    m_Bits: 1024
+  transformJugador: {fileID: 1421048052}
+  estadoActual: 0
+  velocidadMovimiento: 5
+  distanciaMaxima: 10
+  puntoInicial: {x: 12, y: -5, z: 0}
+  mirandoDerecha: 0
 --- !u!1001 &1284869023
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5599,11 +5634,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 280782491140142288, guid: ba624a7c9cceb8c439d1872a1af02d6a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.03
+      value: 11.4
       objectReference: {fileID: 0}
     - target: {fileID: 280782491140142288, guid: ba624a7c9cceb8c439d1872a1af02d6a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.68
+      value: -4.3
       objectReference: {fileID: 0}
     - target: {fileID: 280782491140142288, guid: ba624a7c9cceb8c439d1872a1af02d6a, type: 3}
       propertyPath: m_LocalPosition.z
@@ -5643,16 +5678,24 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2933191385229364409, guid: ba624a7c9cceb8c439d1872a1af02d6a, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6208278578336113886, guid: ba624a7c9cceb8c439d1872a1af02d6a, type: 3}
       propertyPath: moviendoDerecha
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 6532949465047382026, guid: ba624a7c9cceb8c439d1872a1af02d6a, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 6208278578336113886, guid: ba624a7c9cceb8c439d1872a1af02d6a, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2933191385229364409, guid: ba624a7c9cceb8c439d1872a1af02d6a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1171375349}
   m_SourcePrefab: {fileID: 100100000, guid: ba624a7c9cceb8c439d1872a1af02d6a, type: 3}
 --- !u!1001 &1657481269
 PrefabInstance:
