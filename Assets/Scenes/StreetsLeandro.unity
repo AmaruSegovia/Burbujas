@@ -205,7 +205,7 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 7156892654438087758, guid: 16652d76f329fa04194127fe3f192dd4, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1421048061}
+      addedObject: {fileID: 1421048091}
     - targetCorrespondingSourceObject: {fileID: 7156892654438087758, guid: 16652d76f329fa04194127fe3f192dd4, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1421048079}
@@ -1993,9 +1993,10 @@ GameObject:
   m_Component:
   - component: {fileID: 389882411}
   - component: {fileID: 389882412}
+  - component: {fileID: 389882413}
   m_Layer: 0
   m_Name: Palmera 2
-  m_TagString: Untagged
+  m_TagString: Escondite
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2009,7 +2010,7 @@ Transform:
   m_GameObject: {fileID: 389882410}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 15, y: 1, z: 0}
+  m_LocalPosition: {x: 2.89, y: 0.44, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2070,6 +2071,52 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &389882413
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 389882410}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0.31056213, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 10.49, y: 14.334683}
+    newSize: {x: 10.49, y: 14.334683}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 1.7942438, y: 14.334683}
+  m_EdgeRadius: 0
 --- !u!1 &457790669 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7156892654438087758, guid: 16652d76f329fa04194127fe3f192dd4, type: 3}
@@ -2523,7 +2570,7 @@ Transform:
   m_GameObject: {fileID: 670468730}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.01, y: -4.05, z: 0}
+  m_LocalPosition: {x: -19.25, y: -3.43, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4650,9 +4697,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1406280566}
   - component: {fileID: 1406280567}
+  - component: {fileID: 1406280568}
   m_Layer: 0
   m_Name: Palmera 1
-  m_TagString: Untagged
+  m_TagString: Escondite
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4727,6 +4775,52 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &1406280568
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1406280565}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 10.15, y: 14.404706}
+    newSize: {x: 10.15, y: 14.404706}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 10.15, y: 14.404706}
+  m_EdgeRadius: 0
 --- !u!1 &1411444248
 GameObject:
   m_ObjectHideFlags: 0
@@ -4820,21 +4914,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7348925526340138931, guid: 16652d76f329fa04194127fe3f192dd4, type: 3}
   m_PrefabInstance: {fileID: 73524055}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1421048061
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 457790669}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4556cbc0e05066141b486a251b2ecbf1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 5
-  jumpForce: 20
-  coyoteTime: 0.2
 --- !u!114 &1421048079
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4847,6 +4926,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e938892a8608c2d4cb3a1d9ef872384b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1421048091
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 457790669}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: edf98ea783b98494ab2594e58fb96292, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 5
+  jumpForce: 20
+  coyoteTime: 0.2
+  circleCollider: {fileID: 0}
+  StandingSize: 0
+  CrouchingSize: 0
 --- !u!1 &1473691197
 GameObject:
   m_ObjectHideFlags: 0

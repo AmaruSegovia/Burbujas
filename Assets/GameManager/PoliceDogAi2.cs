@@ -64,16 +64,22 @@ public class PoliceDogAI2 : MonoBehaviour
 
         if (jugadorCollider)
         {
-            transformJugador = jugadorCollider.transform;
-            estadoActual = EstadosMovimiento.Siguiendo;
-            return;
+            PlayerMovements2 player = jugadorCollider.GetComponent<PlayerMovements2>();
+
+            // Si el jugador no esta oculto el perro lo detecta
+            if (player != null && !player.EstaOculto())
+            {
+                transformJugador = jugadorCollider.transform;
+                estadoActual = EstadosMovimiento.Siguiendo;
+                return;
+            }
         }
 
-        /* No se buscaa hueso si ya se esta siguiendo al jugador*/
+        /* No se busca hueso si ya se esta siguiendo al jugador */
         if (estadoActual == EstadosMovimiento.Siguiendo)
             return;
 
-        /* Buscar el hueso mas cercano*/
+        /* Buscar el hueso mas cercano */
         huesoObjetivo = BuscarHuesoMasCercano();
         if (huesoObjetivo != null)
         {
@@ -155,7 +161,7 @@ public class PoliceDogAI2 : MonoBehaviour
     private void MoverHacia(Vector3 objetivo)
     {
         float direccion = (objetivo.x > transform.position.x) ? 1 : -1;
-        rb.linearVelocity = new Vector2(velocidadMovimiento * direccion, rb.linearVelocity.y);
+        rb.linearVelocity = new Vector2(velocidadMovimiento * direccion, 0);
         GiraraAObjetivo(objetivo);
     }
 
