@@ -60,6 +60,7 @@ public class Puntero : MonoBehaviour
         transform.up = direction;*/
         if(Input.GetKeyDown(KeyCode.F) && agarrarObjeto.TieneObjeto()){
             Shoot();
+            agarrarObjeto.activo = false;
         }
     }
     void Shoot(){
@@ -71,9 +72,10 @@ public class Puntero : MonoBehaviour
 
         agarrarObjeto.tieneObjeto = false;
         
-        agarrarObjeto.activo = false;
+        //agarrarObjeto.activo = false;
 
-        StartCoroutine(DesactivarTrigger(elemento));
+        //StartCoroutine(DesactivarTrigger(elemento));
+        StartCoroutine(ReactivarCollider(elemento));
         //agarrarObjeto.tieneObjeto = false;
         brazoSprite.enabled = false;
     }
@@ -82,12 +84,28 @@ public class Puntero : MonoBehaviour
         brazoSprite.enabled = estado;
     }
     
-    private IEnumerator DesactivarTrigger(GameObject objeto)
+    /*private IEnumerator DesactivarTrigger(GameObject objeto)
     {
         yield return new WaitForSeconds(0.2f);
         Collider2D objetoCollider = objeto.GetComponent<Collider2D>();
         if (objetoCollider != null) {
             objetoCollider.isTrigger = false;
         }
+    }*/
+    private IEnumerator ReactivarCollider(GameObject objeto)
+{
+    // Desactiva el collider para forzar OnTriggerExit2D
+    Collider2D objetoCollider = objeto.GetComponent<Collider2D>();
+    if (objetoCollider != null)
+    {
+        objetoCollider.enabled = false;
     }
+    yield return new WaitForSeconds(0.2f);
+    // Reactiva el collider como no-trigger para que colisione con el entorno
+    if (objetoCollider != null)
+    {
+        objetoCollider.isTrigger = false;
+        objetoCollider.enabled = true;
+    }
+}
 }
