@@ -9,7 +9,6 @@ public class ElevatorButton : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            Debug.Log("Llamado al ascensor");
             elevator.CallElevator(goUp);
         }
     }

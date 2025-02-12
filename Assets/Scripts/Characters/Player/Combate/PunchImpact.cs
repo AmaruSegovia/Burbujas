@@ -30,6 +30,7 @@ public class PunchImpact : MonoBehaviour
             {
                 // Cambiar el sprite de la mano a una mano rota
                 spriteRenderer.sprite = manoRotaSprite;
+                MessageFloatingUI.Instance.ShowMessage("Auch :(");
                 // Aumentar ligeramente la barra de alcohol
                 ScriptGameManager.instance.ActualizarAlcohol(5f); // Ajusta este valor según la cantidad de alcohol que desees aumentar
                 // Iniciar la corrutina para restaurar el sprite y temblar la cámara
@@ -49,7 +50,7 @@ public class PunchImpact : MonoBehaviour
                     // Añadir una componente vertical a la dirección del golpe
                     punchDirection.y = 2f; // Ajusta este valor según la cantidad de fuerza vertical que desees
                     // Aplicar la fuerza en la dirección del golpe
-                    door.ApplyForce(punchDirection * punchForce);
+                    door.ApplyForce(punchDirection * punchForce * 4);
                 }
             }
             else
@@ -69,6 +70,7 @@ public class PunchImpact : MonoBehaviour
         Rigidbody2D rb = obstaculo.GetComponent<Rigidbody2D>();
         if (rb != null)
         {
+            MessageFloatingUI.Instance.ShowMessage("!!!");
             // Calcular la dirección del golpe
             Vector3 punchDirection = obstaculo.transform.position - transform.position;
             punchDirection.Normalize();

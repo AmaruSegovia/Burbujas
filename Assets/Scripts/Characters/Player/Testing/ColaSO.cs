@@ -5,6 +5,7 @@ public class Cola : BebidaSO
 {
     public override void Activate(Transform jugador)
     {
+        MessageFloatingUI.Instance.ShowMessage("+FUERZA");
         // Aumentar la fuerza del jugador a 2
         ScriptGameManager.instance.ActualizarFuerza(2);
         // Aumentar ligeramente la barra de alcohol

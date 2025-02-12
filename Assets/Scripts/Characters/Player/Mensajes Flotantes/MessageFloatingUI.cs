@@ -7,18 +7,15 @@ public class MessageFloatingUI : MonoBehaviour
     public static MessageFloatingUI Instance; // Permite llamarlo desde cualquier parte del código
 
     [SerializeField] private TextMeshPro textMesh; // Texto flotante
-    [SerializeField] private CanvasGroup canvasGroup; // Para el fade
     [SerializeField] private Transform player; // Referencia al jugador
     [SerializeField] private Vector3 offset = new Vector3(0, 2, 0); // Offset sobre el jugador
-    [SerializeField] private float fadeDuration = 0.5f; // Duración del fade
-
+    [SerializeField] private Animator animator;
     private Coroutine currentRoutine;
 
     void Awake()
     {
         Instance = this;
         textMesh.text = "";
-        canvasGroup.alpha = 0;
     }
 
     void LateUpdate()
@@ -30,7 +27,7 @@ public class MessageFloatingUI : MonoBehaviour
         }
     }
 
-    public void ShowMessage(string message, float duration = 1.5f)
+    public void ShowMessage(string message, float duration = 1.1f)
     {
         if (currentRoutine != null)
             StopCoroutine(currentRoutine);
@@ -42,25 +39,9 @@ public class MessageFloatingUI : MonoBehaviour
     {
         textMesh.text = message;
 
-        // Fade In
-        float t = 0;
-        while (t < fadeDuration)
-        {
-            t += Time.deltaTime;
-            canvasGroup.alpha = Mathf.Lerp(0, 1, t / fadeDuration);
-            yield return null;
-        }
+        animator.SetTrigger("Fade");
 
         yield return new WaitForSeconds(duration);
-
-        // Fade Out
-        t = 0;
-        while (t < fadeDuration)
-        {
-            t += Time.deltaTime;
-            canvasGroup.alpha = Mathf.Lerp(1, 0, t / fadeDuration);
-            yield return null;
-        }
 
         textMesh.text = "";
     }

@@ -17,7 +17,6 @@ public class PlayerPunch : MonoBehaviour
     void ActivatePunch()
     {
         fist.SetActive(true); // Activa el objeto del puño
-        MessageFloatingUI.Instance.ShowMessage("¡Has recogido una moneda!");
         fistAnimator.SetTrigger("Punch"); // Activa la animación
     }
 }

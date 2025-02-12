@@ -54,9 +54,9 @@ public class PlayerMovements : MonoBehaviour
         /* Condicioal para detectar el slato del personaje*/
         if (Input.GetButtonDown("Jump"))
             jumpPressed = true;
-        
-        
-        if(Input.GetKeyDown(KeyCode.C))
+
+
+        if (Input.GetKeyDown(KeyCode.C))
         {
             circleCollider.radius = CrouchingSize;
         }
