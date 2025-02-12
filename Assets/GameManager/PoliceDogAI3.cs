@@ -21,6 +21,8 @@ public class PoliceDogAI3 : MonoBehaviour
     }
 
     public float velocidadMovimiento;
+    public float velocidadPatrullaje;
+
     public float distanciaMaxima;
     public Vector3 puntoInicial;
     public bool mirandoDerecha;
@@ -99,6 +101,15 @@ public class PoliceDogAI3 : MonoBehaviour
 
         foreach (var jugador in jugadores)
         {
+            // Obtener el script del jugador
+            PlayerMovements2 playerScript = jugador.GetComponent<PlayerMovements2>();
+
+            // Si el jugador esta oculto,se lo ignora
+            if (playerScript != null && playerScript.EstaOculto())
+            {
+                continue;
+            }
+
             Vector3 direccionAlJugador = (jugador.transform.position - transform.position).normalized;
             float angulo = Vector3.Angle(transform.right * (mirandoDerecha ? 1 : -1), direccionAlJugador);
 
@@ -211,17 +222,29 @@ public class PoliceDogAI3 : MonoBehaviour
     {
         while (estadoActual == EstadosMovimiento.Esperando)
         {
-            yield return new WaitForSeconds(3f);
+            yield return new WaitForSeconds(2f);
 
-           
             Girar();
 
-            // Mover en la nueva direccion
             float direccionMovimiento = mirandoDerecha ? 1 : -1;
-            rb.linearVelocity = new Vector2(velocidadMovimiento * direccionMovimiento, 0);
+
+            
+            float velocidadObjetivo = velocidadPatrullaje * direccionMovimiento;
+            float velocidadActual = rb.linearVelocity.x;
+
+            float tiempoDeAceleracion = 0.5f; 
+            float tiempoInicio = Time.time;
+
+            while (Time.time < tiempoInicio + tiempoDeAceleracion)
+            {
+                float progreso = (Time.time - tiempoInicio) / tiempoDeAceleracion;
+                rb.linearVelocity = new Vector2(Mathf.Lerp(velocidadActual, velocidadObjetivo, progreso), rb.linearVelocity.y);
+                yield return null; // Esperar un frame antes de continuar
+            }
+
+            rb.linearVelocity = new Vector2(velocidadObjetivo, rb.linearVelocity.y);
         }
     }
-
 
 
 
