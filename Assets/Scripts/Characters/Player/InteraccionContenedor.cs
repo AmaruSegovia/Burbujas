@@ -15,12 +15,24 @@ public class InteraccionContenedor : MonoBehaviour
     //public Sprite tachoVomitado;
     private Tacho tachoActual;
     public Volume globalVolume;
+    private DepthOfField depth;
+    private LensDistortion distortion;
+    private Bloom bloom;
     void Start(){
         animator = GetComponent<Animator>();
         //bubble = FindAnyObjectByType<AlcoholBar>();
         alcohol = FindAnyObjectByType<ScriptGameManager>();
         movimiento = FindAnyObjectByType<PlayerMovements>();
         globalVolume.gameObject.SetActive(false);
+        if(globalVolume.profile.TryGet(out depth)){
+            depth.active = false;
+        }
+        if(globalVolume.profile.TryGet(out distortion)){
+            distortion.active = false;
+        }
+        if(globalVolume.profile.TryGet(out bloom)){
+            bloom.active = false;
+        }
     }
 
     //Compara los tags y verifica si el personaje está colisionando con el tag "Contenedor".
@@ -48,9 +60,31 @@ public class InteraccionContenedor : MonoBehaviour
         if(ScriptGameManager.instance.PuntosTotalAlcohol>=50){
             globalVolume.gameObject.SetActive(true);
         }
+        /*else if(ScriptGameManager.instance.PuntosTotalAlcohol>=65){
+            depth.active = true;
+        }*/
         else{
             globalVolume.gameObject.SetActive(false);
         }
+
+        if (ScriptGameManager.instance.PuntosTotalAlcohol >= 75)
+        {
+            depth.active = true;
+        }
+        else
+        {
+            depth.active = false;
+        }
+
+        if(ScriptGameManager.instance.PuntosTotalAlcohol == 100){
+            distortion.active = true;
+            bloom.active = true;
+        }
+        else{
+            distortion.active = false;
+            bloom.active = false;
+        }
+
         if (enContenedor && Input.GetKeyDown(KeyCode.E) && ScriptGameManager.instance.PuntosTotalAlcohol > 0)
         {
             StartCoroutine(VaciarBurbujas());
