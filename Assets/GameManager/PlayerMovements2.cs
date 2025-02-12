@@ -57,11 +57,13 @@ public class PlayerMovements2 : MonoBehaviour
         {
             ocultandose = true;
             SetTransparency(0.2f);
+            gameObject.layer = LayerMask.NameToLayer("JugadorOculto");  // Cambiar a la capa que no tiene colision con el policía
         }
         else
         {
             ocultandose = false;
             SetTransparency(1f);
+            gameObject.layer = LayerMask.NameToLayer("Jugador"); // Restaurar la capa normal
         }
     }
 
