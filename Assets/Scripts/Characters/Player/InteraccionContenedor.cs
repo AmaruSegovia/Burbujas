@@ -18,12 +18,17 @@ public class InteraccionContenedor : MonoBehaviour
     private DepthOfField depth;
     private LensDistortion distortion;
     private Bloom bloom;
+
+    //public Contador contador;
     void Start(){
         animator = GetComponent<Animator>();
         //bubble = FindAnyObjectByType<AlcoholBar>();
         alcohol = FindAnyObjectByType<ScriptGameManager>();
         movimiento = FindAnyObjectByType<PlayerMovements>();
         globalVolume.gameObject.SetActive(false);
+
+        //bool estado = contador.GetIsCountdownActive();
+
         if(globalVolume.profile.TryGet(out depth)){
             depth.active = false;
         }
@@ -88,6 +93,7 @@ public class InteraccionContenedor : MonoBehaviour
         if (enContenedor && Input.GetKeyDown(KeyCode.E) && ScriptGameManager.instance.PuntosTotalAlcohol > 0)
         {
             StartCoroutine(VaciarBurbujas());
+            //contador.SetIsCountdownActive(false);
             //animator.SetTrigger("Vomit");
 
             //bubble.PerderBubble();

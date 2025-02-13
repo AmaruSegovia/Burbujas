@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class AgarrarObjeto : MonoBehaviour
@@ -89,6 +90,8 @@ public class AgarrarObjeto : MonoBehaviour
             {
                 rb.bodyType = RigidbodyType2D.Dynamic;
             }
+
+            //StartCoroutine(DesactivarObjeto());
             //rb.linearVelocity = Vector2.zero;
            // objeto.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
            
@@ -110,4 +113,9 @@ public class AgarrarObjeto : MonoBehaviour
              //Physics2D.IgnoreCollision(objetoCollider, jugadorCollider, false);
         }
     }
+
+    /*private IEnumerator DesactivarObjeto(){
+        yield return new WaitForSeconds(5f);
+        objeto.SetActive(false);
+    }*/
 }
