@@ -2,11 +2,15 @@ using UnityEngine;
 
 public class Ladron : MonoBehaviour
 {
-    public float velocidad = 3f;
+    public float velocidad = 1.5f;
+    public float velocidadCerca = 3f;
+    public float distanciaDeteccion = 3f;
     public float fuerzaLanzamiento = 15f;
     private bool mirandoDerecha = true;
     private Rigidbody2D rb;
     private Animator animator;
+
+    public Transform jugador; 
 
     private void Start()
     {
@@ -16,10 +20,15 @@ public class Ladron : MonoBehaviour
 
     private void Update()
     {
-        // Movimiento continuo en la direccion actual
-        rb.linearVelocity = new Vector2((mirandoDerecha ? 1 : -1) * velocidad, 0);
+        if (jugador != null)
+        {
+            float distancia = Vector2.Distance(transform.position, jugador.position);
+            velocidad = (distancia < distanciaDeteccion) ? velocidadCerca : 1f;
+        }
 
-        // Activar la animación de caminar
+       
+        rb.linearVelocity = new Vector2((mirandoDerecha ? 1 : -1) * velocidad, rb.linearVelocity.y);
+
         animator.SetBool("run", true);
     }
 
@@ -27,28 +36,21 @@ public class Ladron : MonoBehaviour
     {
         if (collision.CompareTag("Obstaculo"))
         {
-            LanzarObstaculo(collision.gameObject); // Lanzar el obstaculo en la direccion opuesta
+            LanzarObstaculo(collision.gameObject);
         }
         if (collision.CompareTag("fin"))
         {
-            Girar(); // Cambiar la direccion del enemigo
+            Girar();
         }
     }
 
     private void LanzarObstaculo(GameObject obstaculo)
     {
-        //se intenta obtener el componente de fisicas Rigidbody2D del obstaculo
         Rigidbody2D rbObstaculo = obstaculo.GetComponent<Rigidbody2D>();
-        //se verifica si el obstáculo tiene un Rigidbody2D
         if (rbObstaculo != null)
         {
-            //mirandoaladerecha == true, si el enemigo esta mirando a la derecha el obstaculo debe ser lanzado a la izquierda 
-            //mirandoaladerecha == false, si el enemigo esta mirando a la izquierda el obstaculo debe ser lanzado a la derecha (Vector2.right).
             Vector2 direccionLanzamiento = new Vector2((mirandoDerecha ? -1 : 1), 0.35f).normalized * fuerzaLanzamiento;
-            //se stablece directamente la velocidad del Rigidbody2D, haciendo que el objeto se mueva en una direccion especifica con fuerza determinada
             rbObstaculo.linearVelocity = direccionLanzamiento;
-
-            // Activar la animación de lanzar
             animator.SetTrigger("launch");
         }
     }
