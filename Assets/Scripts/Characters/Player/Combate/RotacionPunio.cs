@@ -5,23 +5,29 @@ public class RotacionPunio : MonoBehaviour
     Camera mainCamera;
     Vector3 mousePosition;
     [SerializeField] SpriteRenderer spriteRenderer;
-    private void Start()
+    GameObject player;
+    PlayerPunch playerPunch;
+    private float rotZ;
+    private void Awake()
     {
         mainCamera = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
+        player = GameObject.FindGameObjectWithTag("Player");
+        playerPunch = player.GetComponent<PlayerPunch>();
     }
     private void Update()
     {
-        mousePosition = mainCamera.ScreenToWorldPoint(Input.mousePosition);
-        Vector3 rotation = mousePosition - transform.position;
-        float rotZ = Mathf.Atan2(rotation.y, rotation.x) * Mathf.Rad2Deg;
-        transform.rotation = Quaternion.Euler(0, 0, rotZ);
-        if (rotZ > 90 || rotZ < -90)
+        transform.position = player.transform.position;
+        RotationPuch();
+    }
+    private void RotationPuch()
+    {
+        if (playerPunch.isPunch)
         {
-            spriteRenderer.flipY = true;
+            mousePosition = mainCamera.ScreenToWorldPoint(Input.mousePosition);
+            Vector2 rotation = mousePosition - transform.position;
+            rotZ = Mathf.Atan2(rotation.y, rotation.x) * Mathf.Rad2Deg;
+            transform.rotation = Quaternion.Euler(0, 0, rotZ);
         }
-        else
-        {
-            spriteRenderer.flipY = false;
-        }
+        spriteRenderer.flipY = rotZ > 90 || rotZ < -90;
     }
 }
