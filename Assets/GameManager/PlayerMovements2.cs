@@ -22,6 +22,7 @@ public class PlayerMovements2 : MonoBehaviour
 
     private bool enEscondite = false;
     private bool ocultandose = false;
+    private bool estaAgachado = false;  // Nueva variable para controlar el estado de agachado
 
     void Start()
     {
@@ -36,38 +37,55 @@ public class PlayerMovements2 : MonoBehaviour
     void Update()
     {
         float move = Input.GetAxisRaw("Horizontal");
-        rb.linearVelocity = new Vector2(move * moveSpeed, rb.linearVelocity.y);
 
-        animator.SetBool("caminando", move != 0);
+        // Si está agachado, reduce la velocidad
+        if (estaAgachado)
+            rb.linearVelocity = new Vector2(move * (moveSpeed * 0.5f), rb.linearVelocity.y);
+        else
+            rb.linearVelocity = new Vector2(move * moveSpeed, rb.linearVelocity.y);
 
+        // Animación de caminar
+        animator.SetBool("caminando", move != 0 && !estaAgachado);
+        animator.SetBool("caminandoAgachado", move != 0 && estaAgachado);
+
+        // Flip del personaje
         if (move > 0 && !facingRight)
             Flip();
         else if (move < 0 && facingRight)
             Flip();
 
+        // Salto
         if (Input.GetButtonDown("Jump"))
             jumpPressed = true;
 
-        if (Input.GetKeyDown(KeyCode.C)){
+        // Agacharse
+        if (Input.GetKeyDown(KeyCode.C))
+        {
+            estaAgachado = true;
             circleCollider.radius = CrouchingSize;
             animator.SetBool("agacharse", true);
         }
-        if (Input.GetKeyUp(KeyCode.C)){
+
+        if (Input.GetKeyUp(KeyCode.C))
+        {
+            estaAgachado = false;
             circleCollider.radius = StandingSize;
             animator.SetBool("agacharse", false);
+            animator.SetBool("caminandoAgachado", false);
         }
 
+        // Ocultarse en escondite
         if (enEscondite && Input.GetKey(KeyCode.E))
         {
             ocultandose = true;
             SetTransparency(0.2f);
-            gameObject.layer = LayerMask.NameToLayer("JugadorOculto");  // Cambiar a la capa que no tiene colision con el policía
+            gameObject.layer = LayerMask.NameToLayer("JugadorOculto");
         }
         else
         {
             ocultandose = false;
             SetTransparency(1f);
-            gameObject.layer = LayerMask.NameToLayer("Jugador"); // Restaurar la capa normal
+            gameObject.layer = LayerMask.NameToLayer("Jugador");
         }
     }
 
