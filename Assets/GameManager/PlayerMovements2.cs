@@ -48,10 +48,14 @@ public class PlayerMovements2 : MonoBehaviour
         if (Input.GetButtonDown("Jump"))
             jumpPressed = true;
 
-        if (Input.GetKeyDown(KeyCode.C))
+        if (Input.GetKeyDown(KeyCode.C)){
             circleCollider.radius = CrouchingSize;
-        if (Input.GetKeyUp(KeyCode.C))
+            animator.SetBool("agacharse", true);
+        }
+        if (Input.GetKeyUp(KeyCode.C)){
             circleCollider.radius = StandingSize;
+            animator.SetBool("agacharse", false);
+        }
 
         if (enEscondite && Input.GetKey(KeyCode.E))
         {
