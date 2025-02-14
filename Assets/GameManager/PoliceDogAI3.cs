@@ -28,10 +28,12 @@ public class PoliceDogAI3 : MonoBehaviour
     public bool mirandoDerecha;
     private Rigidbody2D rb;
     private Coroutine patrullajeCoroutine;
+    private Animator animator;
 
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
         puntoInicial = transform.position;
         estadoActual = EstadosMovimiento.Esperando;
 
@@ -41,6 +43,7 @@ public class PoliceDogAI3 : MonoBehaviour
 
         patrullajeCoroutine = StartCoroutine(PatrullarEsperando());
     }
+
     private void Update()
     {
         switch (estadoActual)
@@ -69,6 +72,8 @@ public class PoliceDogAI3 : MonoBehaviour
 
     private void EstadoEsperando()
     {
+        animator.SetBool("caminata", false);
+
         if (DetectarJugador())
         {
             if (patrullajeCoroutine != null)
@@ -116,6 +121,7 @@ public class PoliceDogAI3 : MonoBehaviour
             if (angulo < anguloVision)
             {
                 transformJugador = jugador.transform;
+                animator.SetTrigger("atacar");
                 return true;
             }
         }
@@ -124,6 +130,8 @@ public class PoliceDogAI3 : MonoBehaviour
 
     private void EstadoSiguiendo()
     {
+        animator.SetBool("caminata", true);
+
         if (transformJugador == null)
         {
             estadoActual = EstadosMovimiento.Volviendo;
@@ -142,6 +150,8 @@ public class PoliceDogAI3 : MonoBehaviour
 
     private void EstadoVolviendo()
     {
+        animator.SetBool("caminata", true);
+
         MoverHacia(puntoInicial);
 
         if (Vector2.Distance(transform.position, puntoInicial) < 2f)
@@ -154,6 +164,8 @@ public class PoliceDogAI3 : MonoBehaviour
 
     private void EstadoBuscandoHueso()
     {
+        animator.SetBool("caminata", true);
+
         if (huesoObjetivo == null)
         {
             estadoActual = EstadosMovimiento.Volviendo;
@@ -214,10 +226,9 @@ public class PoliceDogAI3 : MonoBehaviour
     {
         mirandoDerecha = !mirandoDerecha; // Invertir direccion
 
-
         transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z); // Invertir la escala para reflejar la nueva direccion
-
     }
+
     private IEnumerator PatrullarEsperando()
     {
         while (estadoActual == EstadosMovimiento.Esperando)
@@ -228,11 +239,10 @@ public class PoliceDogAI3 : MonoBehaviour
 
             float direccionMovimiento = mirandoDerecha ? 1 : -1;
 
-            
             float velocidadObjetivo = velocidadPatrullaje * direccionMovimiento;
             float velocidadActual = rb.linearVelocity.x;
 
-            float tiempoDeAceleracion = 0.5f; 
+            float tiempoDeAceleracion = 0.5f;
             float tiempoInicio = Time.time;
 
             while (Time.time < tiempoInicio + tiempoDeAceleracion)
@@ -246,11 +256,8 @@ public class PoliceDogAI3 : MonoBehaviour
         }
     }
 
-
-
     private void OnDrawGizmos()
     {
-
         Gizmos.color = Color.blue;
         Gizmos.DrawWireSphere(transform.position, distanciaMaxima);
         Gizmos.color = Color.red;
@@ -268,3 +275,5 @@ public class PoliceDogAI3 : MonoBehaviour
         Gizmos.DrawLine(origen + direccionDerecha, origen + direccionIzquierda);
     }
 }
+
+

@@ -121,7 +121,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -159,7 +159,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -213,12 +213,12 @@ TextureImporter:
       name: PerroPoliciaCaminaryGolpear_0
       rect:
         serializedVersion: 2
-        x: 17
-        y: 3
-        width: 140
-        height: 129
+        x: 0
+        y: 0
+        width: 171
+        height: 140
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -235,12 +235,12 @@ TextureImporter:
       name: PerroPoliciaCaminaryGolpear_2
       rect:
         serializedVersion: 2
-        x: 194
-        y: 4
-        width: 140
-        height: 123
+        x: 342
+        y: 0
+        width: 171
+        height: 140
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -257,12 +257,12 @@ TextureImporter:
       name: PerroPoliciaCaminaryGolpear_4
       rect:
         serializedVersion: 2
-        x: 367
-        y: 4
-        width: 140
-        height: 125
+        x: 684
+        y: 0
+        width: 171
+        height: 140
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -279,12 +279,12 @@ TextureImporter:
       name: PerroPoliciaCaminaryGolpear_6
       rect:
         serializedVersion: 2
-        x: 538
-        y: 6
-        width: 140
-        height: 122
+        x: 1026
+        y: 0
+        width: 171
+        height: 140
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -301,12 +301,12 @@ TextureImporter:
       name: PerroPoliciaCaminaryGolpear_8
       rect:
         serializedVersion: 2
-        x: 706
-        y: 4
-        width: 140
-        height: 121
+        x: 1368
+        y: 0
+        width: 171
+        height: 140
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -323,12 +323,12 @@ TextureImporter:
       name: PerroPoliciaCaminaryGolpear_10
       rect:
         serializedVersion: 2
-        x: 882
-        y: 5
-        width: 140
-        height: 123
+        x: 1710
+        y: 0
+        width: 171
+        height: 140
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -345,12 +345,12 @@ TextureImporter:
       name: PerroPoliciaCaminaryGolpear_12
       rect:
         serializedVersion: 2
-        x: 1053
-        y: 4
-        width: 140
-        height: 124
+        x: 2052
+        y: 0
+        width: 171
+        height: 140
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -367,12 +367,12 @@ TextureImporter:
       name: PerroPoliciaCaminaryGolpear_14
       rect:
         serializedVersion: 2
-        x: 1220
-        y: 4
-        width: 140
-        height: 122
+        x: 2394
+        y: 0
+        width: 171
+        height: 140
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -386,155 +386,155 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PerroPoliciaCaminaryGolpear_16
+      name: PerroPoliciaCaminaryGolpear_1
       rect:
         serializedVersion: 2
-        x: 1387
-        y: 3
-        width: 145
-        height: 124
+        x: 171
+        y: 0
+        width: 171
+        height: 140
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 18000ede0806f5c00800000000000000
-      internalID: 891537358105608321
+      spriteID: 12e9d7e24e4500b4886558df927b30ad
+      internalID: 1476447152
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PerroPoliciaCaminaryGolpear_18
+      name: PerroPoliciaCaminaryGolpear_3
       rect:
         serializedVersion: 2
-        x: 1557
-        y: 3
-        width: 140
-        height: 126
+        x: 513
+        y: 0
+        width: 171
+        height: 140
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: fbc6e529571397c60800000000000000
-      internalID: 7816333009314802879
+      spriteID: 2257bb91bb3ed4d46959078faab86719
+      internalID: 409202805
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PerroPoliciaCaminaryGolpear_20
+      name: PerroPoliciaCaminaryGolpear_5
       rect:
         serializedVersion: 2
-        x: 1731
-        y: 3
-        width: 151
-        height: 121
+        x: 855
+        y: 0
+        width: 171
+        height: 140
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 40ade5bb710b104e0800000000000000
-      internalID: -2017137542110979580
+      spriteID: be1e0fad6cc6db04b9bd77b9e1f37df7
+      internalID: 347137832
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PerroPoliciaCaminaryGolpear_22
+      name: PerroPoliciaCaminaryGolpear_7
       rect:
         serializedVersion: 2
-        x: 1902
-        y: 3
-        width: 151
-        height: 123
+        x: 1197
+        y: 0
+        width: 171
+        height: 140
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 23cbe501563c2a0d0800000000000000
-      internalID: -3412950728759657422
+      spriteID: d43def01a2a702b41a3500c73b6a4ea5
+      internalID: -1402985923
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PerroPoliciaCaminaryGolpear_24
+      name: PerroPoliciaCaminaryGolpear_9
       rect:
         serializedVersion: 2
-        x: 2071
-        y: 3
-        width: 146
-        height: 124
+        x: 1539
+        y: 0
+        width: 171
+        height: 140
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 465772509d6d6b130800000000000000
-      internalID: 3582286781202527588
+      spriteID: d4ad64ec5e6323a42ad4a54171af7953
+      internalID: 1649215921
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PerroPoliciaCaminaryGolpear_26
+      name: PerroPoliciaCaminaryGolpear_11
       rect:
         serializedVersion: 2
-        x: 2241
-        y: 3
-        width: 115
-        height: 137
+        x: 1881
+        y: 0
+        width: 171
+        height: 140
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 9bc0cd43238805170800000000000000
-      internalID: 8165175873639287993
+      spriteID: 287ef869046112a469abfca7206085e6
+      internalID: 546282678
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PerroPoliciaCaminaryGolpear_27
+      name: PerroPoliciaCaminaryGolpear_13
       rect:
         serializedVersion: 2
-        x: 2416
-        y: 4
-        width: 146
-        height: 116
+        x: 2223
+        y: 0
+        width: 171
+        height: 140
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 50dfdca28245e36b0800000000000000
-      internalID: -5314717978757038843
+      spriteID: ee85ac07a980a9a4f8c0ba4198d3d09e
+      internalID: -220587906
       vertices: []
       indices: 
       edges: []
@@ -554,20 +554,20 @@ TextureImporter:
       entries: []
     nameFileIdTable:
       PerroPoliciaCaminaryGolpear_0: -8343861115035849613
+      PerroPoliciaCaminaryGolpear_1: 1476447152
       PerroPoliciaCaminaryGolpear_10: 8248716338973456598
+      PerroPoliciaCaminaryGolpear_11: 546282678
       PerroPoliciaCaminaryGolpear_12: 7285128343231213314
+      PerroPoliciaCaminaryGolpear_13: -220587906
       PerroPoliciaCaminaryGolpear_14: -4206520092286259347
-      PerroPoliciaCaminaryGolpear_16: 891537358105608321
-      PerroPoliciaCaminaryGolpear_18: 7816333009314802879
       PerroPoliciaCaminaryGolpear_2: 1971512872944347197
-      PerroPoliciaCaminaryGolpear_20: -2017137542110979580
-      PerroPoliciaCaminaryGolpear_22: -3412950728759657422
-      PerroPoliciaCaminaryGolpear_24: 3582286781202527588
-      PerroPoliciaCaminaryGolpear_26: 8165175873639287993
-      PerroPoliciaCaminaryGolpear_27: -5314717978757038843
+      PerroPoliciaCaminaryGolpear_3: 409202805
       PerroPoliciaCaminaryGolpear_4: -2175346498993994132
+      PerroPoliciaCaminaryGolpear_5: 347137832
       PerroPoliciaCaminaryGolpear_6: 3392266850037285566
+      PerroPoliciaCaminaryGolpear_7: -1402985923
       PerroPoliciaCaminaryGolpear_8: 9187827477492508913
+      PerroPoliciaCaminaryGolpear_9: 1649215921
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
