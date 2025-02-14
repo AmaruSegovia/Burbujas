@@ -3,10 +3,10 @@ using UnityEngine;
 
 public class Teletransportacion : MonoBehaviour
 {
-
     public Transform[] puntoTeleport;
     int ultimoPunto = -1;
     private bool estaTeleportando = false;
+    public FadeOut fadeOut;
 
     private void Update()
     {
@@ -18,20 +18,22 @@ public class Teletransportacion : MonoBehaviour
 
     private IEnumerator RespawnTeleport()
     {
-        estaTeleportando = true; 
+        estaTeleportando = true;
 
-
-        yield return new WaitForSeconds(1f);
+        yield return StartCoroutine(fadeOut.DarkenSprite());
 
         int posRandom;
         do
         {
             posRandom = Random.Range(0, puntoTeleport.Length);
         }
-        while (posRandom == ultimoPunto); 
+        while (posRandom == ultimoPunto);
 
         transform.position = puntoTeleport[posRandom].position;
         ultimoPunto = posRandom;
+
+        yield return new WaitForSeconds(1f);
+        yield return StartCoroutine(fadeOut.FadeOutSprite());
 
         estaTeleportando = false;
     }
