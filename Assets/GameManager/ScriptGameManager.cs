@@ -95,6 +95,7 @@ public class ScriptGameManager : MonoBehaviour
         {
             OnAlcoholFull?.Invoke(); // Llamando al evento
         }
+        Debug.Log("Cantidad de alcohol: " + alcoholActual);
     }
     /* Método para agregar X cantidad de alcohol con animación. */
     public void AgregarAlcohol(float alcoholValue, float timeEspera, float timeAnimation)

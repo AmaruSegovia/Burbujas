@@ -15,6 +15,6 @@ MonoBehaviour:
   Nombre: Cola
   Icono: {fileID: 21300000, guid: 67121c31758d2ce499696f411ef7f887, type: 3}
   AnimTrigger: BeberCola
-  AlcoholValue: 0
+  AlcoholValue: 5
   sonido: {fileID: 8300000, guid: 9de3905123494d145ba93eb27dfe6f84, type: 3}
   cooldown: 3
