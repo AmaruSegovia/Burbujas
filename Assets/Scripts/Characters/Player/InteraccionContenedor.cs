@@ -47,6 +47,7 @@ public class InteraccionContenedor : MonoBehaviour
         {
             enContenedor = true;
             tachoActual = other.GetComponent<Tacho>();
+            Debug.Log("Dentro");
         }
     }
 
@@ -55,6 +56,7 @@ public class InteraccionContenedor : MonoBehaviour
         if (other.CompareTag("Contenedor"))
         {
             enContenedor = false;
+            Debug.Log("Fuera");
             tachoActual = null;
         }
     }
@@ -97,7 +99,7 @@ public class InteraccionContenedor : MonoBehaviour
             //animator.SetTrigger("Vomit");
 
             //bubble.PerderBubble();
-            // Debug.Log("El personaje está interactuando con el contenedor.");
+            Debug.Log("El personaje está interactuando con el contenedor.");
         }
     }
 
@@ -114,7 +116,9 @@ public class InteraccionContenedor : MonoBehaviour
             yield return new WaitForSeconds(0.25f);
         }*/
         //alcohol.QuitarAlcohol(0.5f, 1.5f);
+        // Llamar al método para quitar todo el alcohol
         ScriptGameManager.instance.QuitarAlcohol(0.5f, 1.5f);
+        Contador.instance.DetenerYParpadearContador(5);
         animator.SetTrigger("Vomit");
         //yield return new WaitForSeconds(animator.GetCurrentAnimatorStateInfo(0).length);
         yield return new WaitForSeconds(2f);
