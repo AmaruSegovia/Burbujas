@@ -31,24 +31,29 @@ public class CameraController : MonoBehaviour
         playerTransform = GetComponent<Transform>();
     }
 
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("CameraFollow"))
         {
-            cameraLevel.Follow = playerTransform;
-            BoxCollider2D childCollider = collision.GetComponentInChildren<BoxCollider2D>();
-            if (childCollider != null)
+            CameraSettings cameraSettings = collision.GetComponent<CameraSettings>();
+            if (cameraSettings != null)
             {
-                confiner.BoundingShape2D = childCollider;
-                composer.Composition.ScreenPosition = new Vector3(0f, 0.3f, 0);
+                ApplyCameraSettings(cameraSettings);
             }
             else
             {
-                Debug.LogWarning("No se encontró un BoxCollider2D en el objeto hijo.");
+                Debug.LogWarning("No se encontró un componente CameraSettings en el objeto colisionado.");
             }
         }
     }
-
+    private void ApplyCameraSettings(CameraSettings settings)
+    {
+        cameraLevel.Lens.OrthographicSize = settings.orthographicSize;
+        composer.TargetOffset = settings.targetOffset;
+        composer.Lookahead.IgnoreY = settings.ignoreY;
+        confiner.BoundingShape2D = settings.boundingShape;
+    }
     public void ShakeCamera(float duration, float magnitude)
     {
         StartCoroutine(Shake(duration, magnitude));
