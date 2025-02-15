@@ -9,7 +9,7 @@ public class InteraccionContenedor : MonoBehaviour
     //private AlcoholBar bubble;
     private ScriptGameManager alcohol;
     private Animator animator;
-    public PlayerMovements movimiento;
+    public PlayerMovements2 movimiento;
 
     //public SpriteRenderer tachoRenderer;
     //public Sprite tachoVomitado;
@@ -24,7 +24,7 @@ public class InteraccionContenedor : MonoBehaviour
         animator = GetComponent<Animator>();
         //bubble = FindAnyObjectByType<AlcoholBar>();
         alcohol = FindAnyObjectByType<ScriptGameManager>();
-        movimiento = FindAnyObjectByType<PlayerMovements>();
+        movimiento = FindAnyObjectByType<PlayerMovements2>();
         globalVolume.gameObject.SetActive(false);
 
         //bool estado = contador.GetIsCountdownActive();

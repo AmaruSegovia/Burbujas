@@ -89,6 +89,8 @@ public class Puntero : MonoBehaviour
         //StartCoroutine(ReactivarCollider(elemento));
         StartCoroutine(ReactivarCollider(objeto));
 
+        objeto.layer = LayerMask.NameToLayer("hueso");
+
         //agarrarObjeto.tieneObjeto = false;
         brazoSprite.enabled = false;
     }
