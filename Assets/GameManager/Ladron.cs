@@ -1,4 +1,6 @@
 using UnityEngine;
+using DG.Tweening;
+using System.Collections;
 
 public class Ladron : MonoBehaviour
 {
@@ -9,13 +11,16 @@ public class Ladron : MonoBehaviour
     private bool mirandoDerecha = true;
     private Rigidbody2D rb;
     private Animator animator;
-
-    public Transform jugador; 
+    private SpriteRenderer spriteRenderer;
+    public Transform jugador;
+    private Transform ladronTransform;
 
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        ladronTransform = GetComponent<Transform>();
     }
 
     private void Update()
@@ -26,7 +31,7 @@ public class Ladron : MonoBehaviour
             velocidad = (distancia < distanciaDeteccion) ? velocidadCerca : 1f;
         }
 
-       
+
         rb.linearVelocity = new Vector2((mirandoDerecha ? 1 : -1) * velocidad, rb.linearVelocity.y);
 
         animator.SetBool("run", true);
@@ -41,6 +46,10 @@ public class Ladron : MonoBehaviour
         if (collision.CompareTag("fin"))
         {
             Girar();
+        }
+        if (collision.CompareTag("Alcantarilla"))
+        {
+            StartCoroutine(HandleAlcantarillaCollision());
         }
     }
 
@@ -60,4 +69,19 @@ public class Ladron : MonoBehaviour
         mirandoDerecha = !mirandoDerecha;
         transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
     }
+
+    private IEnumerator HandleAlcantarillaCollision()
+    {
+        distanciaDeteccion = 0f;
+        velocidad = 0f;
+        spriteRenderer.DOColor(Color.black, 1f);
+        ladronTransform.DOMoveY(transform.position.y - 2f, 1f);
+        yield return new WaitForSeconds(1f); // :D
+    }
 }
+
+
+
+
+
+

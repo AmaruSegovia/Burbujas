@@ -20,6 +20,7 @@ TagManager:
   - ObstaculoDuro
   - ElevatorDoor
   - Escondite
+  - Alcantarilla
   layers:
   - Default
   - TransparentFX
@@ -35,8 +36,6 @@ TagManager:
   - JugadorOculto
   - Enemigo
   - PostProcessing
-  - 
-  - 
   - 
   - 
   - 
