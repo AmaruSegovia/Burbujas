@@ -437,7 +437,7 @@ MonoBehaviour:
   videoDurations:
   - 3
   - 2
-  NextScene: 2
+  NextScene: 3
 --- !u!4 &1186831525
 Transform:
   m_ObjectHideFlags: 0
