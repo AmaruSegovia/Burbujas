@@ -19,6 +19,20 @@ public class Tacho : MonoBehaviour
             spriteRenderer.sprite = tachoVomitado;
             tachoCollider.enabled = false; 
             usado = true; 
+
         }
     }
+    public void OcultarSprite()
+    {
+        spriteRenderer.enabled = false;
+    }
+    public void MostrarSprite()
+    {
+        spriteRenderer.enabled = true;
+    }
+    /*public void Reaparecer()
+    {   
+        gameObject.SetActive(true);
+        tachoCollider.enabled = true;
+    }*/
 }
