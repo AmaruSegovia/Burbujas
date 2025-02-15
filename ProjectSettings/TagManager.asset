@@ -21,6 +21,7 @@ TagManager:
   - ElevatorDoor
   - Escondite
   - Alcantarilla
+  - Humano
   layers:
   - Default
   - TransparentFX

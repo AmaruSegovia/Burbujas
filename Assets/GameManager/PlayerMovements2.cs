@@ -114,13 +114,13 @@ public class PlayerMovements2 : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("suelo"))
+        if (collision.gameObject.CompareTag("suelo") || collision.gameObject.layer == LayerMask.NameToLayer("suelo"))
             isGrounded = true;
     }
 
     void OnCollisionExit2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("suelo"))
+        if (collision.gameObject.CompareTag("suelo") || collision.gameObject.layer == LayerMask.NameToLayer("suelo"))
             isGrounded = false;
     }
 
@@ -153,3 +153,13 @@ public class PlayerMovements2 : MonoBehaviour
         return ocultandose;
     }
 }
+
+
+
+
+
+
+
+
+
+

@@ -63,6 +63,15 @@ public class PunchImpact : MonoBehaviour
                 StartCoroutine(RestoreHandAndShakeCamera());
             }
         }
+        else if (collision.CompareTag("Humano"))
+        {
+            // Activar la animación de "muriendo" en el enemigo
+            Enemy enemy = collision.GetComponent<Enemy>();
+            if (enemy != null)
+            {
+                enemy.Die();
+            }
+        }
     }
 
     private void RomperObstaculo(GameObject obstaculo)
@@ -99,3 +108,12 @@ public class PunchImpact : MonoBehaviour
         gameObject.SetActive(false);
     }
 }
+
+
+
+
+
+
+
+
+
