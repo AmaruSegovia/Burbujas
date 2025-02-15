@@ -119,12 +119,18 @@ public class InteraccionContenedor : MonoBehaviour
         // Llamar al método para quitar todo el alcohol
         ScriptGameManager.instance.QuitarAlcohol(0.5f, 1.5f);
         Contador.instance.DetenerYParpadearContador(5);
+
+        //tachoActual.gameObject.SetActive(false);
         animator.SetTrigger("Vomit");
-        //yield return new WaitForSeconds(animator.GetCurrentAnimatorStateInfo(0).length);
+
+        tachoActual.OcultarSprite();
         yield return new WaitForSeconds(2f);
         //tachoRenderer.sprite = tachoVomitado;
+        tachoActual.MostrarSprite();
         tachoActual.LlenarTacho();
-
+        
+        //tachoActual.Reaparecer();
         movimiento.enabled = true;
+        
     }
 }
