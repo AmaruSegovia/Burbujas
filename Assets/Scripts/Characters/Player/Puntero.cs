@@ -8,10 +8,11 @@ public class Puntero : MonoBehaviour
     Vector3 targetRotation;
 
     public int speed;
-    public GameObject elemento;
+    //public GameObject elemento;
     Vector3 finalTarget;
     public Transform mano;
-     private AgarrarObjeto agarrarObjeto;
+    private AgarrarObjeto agarrarObjeto;
+    private AgarrarObjeto objetoActual;
 
      public SpriteRenderer personajeSprite;
      public Transform personaje;
@@ -48,34 +49,48 @@ public class Puntero : MonoBehaviour
             brazo.rotation = Quaternion.Euler(0, 0, angle);
             brazoSprite.flipY = false;
         }
-
-        /*if(angle>90 || angle<-90){
-            brazoSprite.flipY = true;
-        }
-        else{
-            brazoSprite.flipY = false;
-        }*/
-        /*Vector2 mouseWorldPoint = cam.ScreenToWorldPoint(Input.mousePosition);
-        Vector2 direction = mouseWorldPoint - (Vector2)transform.position;
-        transform.up = direction;*/
-        if(Input.GetKeyDown(KeyCode.F) && agarrarObjeto.TieneObjeto()){
+        /*if(Input.GetKeyDown(KeyCode.F) && agarrarObjeto.TieneObjeto()){
             Shoot();
             agarrarObjeto.activo = false;
+        }*/
+
+        if (Input.GetKeyDown(KeyCode.F) && objetoActual != null)
+        {
+            /*AgarrarObjeto[] objetos = FindObjectsOfType<AgarrarObjeto>(true);
+            foreach (AgarrarObjeto obj in objetos)
+            {
+                if (obj.TieneObjeto())
+                {
+                    Shoot(obj.gameObject);
+                    obj.activo = false;
+                }
+            }*/
+            Shoot(objetoActual.gameObject);
+            objetoActual.activo = false;
+            objetoActual = null; // Limpiar referencia después de lanzar
         }
     }
-    void Shoot(){
-        elemento.transform.SetParent(null);
-        elemento.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
+    void Shoot(GameObject objeto){
+        //elemento.transform.SetParent(null);
+        //elemento.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
+        objeto.transform.SetParent(null);
+        objeto.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
+
         targetRotation.z=0;
         finalTarget = (targetRotation - transform.position).normalized;
-        elemento.GetComponent<Rigidbody2D>().AddForce(finalTarget * speed, ForceMode2D.Impulse);
+        //elemento.GetComponent<Rigidbody2D>().AddForce(finalTarget * speed, ForceMode2D.Impulse);
+        objeto.GetComponent<Rigidbody2D>().AddForce(finalTarget * speed, ForceMode2D.Impulse);
 
         agarrarObjeto.tieneObjeto = false;
         
         //agarrarObjeto.activo = false;
 
         //StartCoroutine(DesactivarTrigger(elemento));
-        StartCoroutine(ReactivarCollider(elemento));
+        //StartCoroutine(ReactivarCollider(elemento));
+        StartCoroutine(ReactivarCollider(objeto));
+
+        objeto.layer = LayerMask.NameToLayer("hueso");
+
         //agarrarObjeto.tieneObjeto = false;
         brazoSprite.enabled = false;
     }
@@ -107,5 +122,10 @@ public class Puntero : MonoBehaviour
             objetoCollider.isTrigger = false;
             objetoCollider.enabled = true;
         }
+    }
+
+    public void SetObjetoActual(AgarrarObjeto objeto)
+    {
+        objetoActual = objeto;
     }
 }
