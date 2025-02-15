@@ -59,6 +59,7 @@ public class CameraController : MonoBehaviour
         StartCoroutine(Shake(duration, magnitude));
     }
 
+
     private IEnumerator Shake(float duration, float magnitude)
     {
         Vector3 originalPosition = transform.localPosition;
