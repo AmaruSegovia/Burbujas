@@ -72,7 +72,7 @@ public class PoliceDogAI3 : MonoBehaviour
 
     private void EstadoEsperando()
     {
-        animator.SetBool("caminata", false);
+        animator.SetBool("caminata", true);
 
         if (DetectarJugador())
         {
@@ -229,7 +229,7 @@ public class PoliceDogAI3 : MonoBehaviour
         transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z); // Invertir la escala para reflejar la nueva direccion
     }
 
-    private IEnumerator PatrullarEsperando()
+    /*private IEnumerator PatrullarEsperando()
     {
         while (estadoActual == EstadosMovimiento.Esperando)
         {
@@ -253,6 +253,31 @@ public class PoliceDogAI3 : MonoBehaviour
             }
 
             rb.linearVelocity = new Vector2(velocidadObjetivo, rb.linearVelocity.y);
+        }
+    }*/
+
+    private IEnumerator PatrullarEsperando()
+    {
+        while (estadoActual == EstadosMovimiento.Esperando)
+        {
+            float direccionMovimiento = mirandoDerecha ? 1 : -1;
+            float velocidadObjetivo = velocidadPatrullaje * direccionMovimiento;
+            float velocidadInicial = rb.linearVelocity.x;
+            float tiempoInicio = Time.time;
+            float tiempoDuracion = 3f;
+
+            while (Time.time < tiempoInicio + tiempoDuracion)
+            {
+                float progreso = (Time.time - tiempoInicio) / tiempoDuracion;
+                rb.linearVelocity = new Vector2(Mathf.Lerp(velocidadInicial, velocidadObjetivo, progreso), rb.linearVelocity.y);
+                yield return null;
+            }
+
+            rb.linearVelocity = new Vector2(velocidadObjetivo, rb.linearVelocity.y);
+
+            yield return new WaitForSeconds(0.5f);
+
+            Girar();
         }
     }
 
