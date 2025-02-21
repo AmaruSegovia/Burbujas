@@ -18,6 +18,6 @@ MonoBehaviour:
   AlcoholValue: 15
   sonido: {fileID: 8300000, guid: 9de3905123494d145ba93eb27dfe6f84, type: 3}
   cooldown: 3
-  radioExplosion: 10
-  fuerzaExplosion: 1000
+  radioExplosion: 5
+  fuerzaExplosion: 1500
   prefabParticulasExplosion: {fileID: 4537883622615190552, guid: 5040492e1423bb042b1af0e1d45a2f61, type: 3}
